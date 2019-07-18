@@ -1,0 +1,100 @@
+portal-header {
+  position: absolute;
+  width: 100%;
+  $tabs-md-tab-font-size-active:1.2rem;
+  $tabs-md-tab-icon-transform-y-active:0px;
+
+  .tabs-md .tab-button[aria-selected=true] .tab-button-text {
+    transform: none;
+  }
+
+  .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text {
+    margin-top: 0px;
+  }
+
+  ion-icon {
+    &[class*="logo"] {
+      margin: 0 0px 0 0;
+      vertical-align: middle;
+      background: url("../../assets/imgs/logo_420.png") no-repeat 50% 50%;
+      background-size: contain;
+    }
+    &[class*="custom-"] {
+      margin: 0 0px 0 0;
+      vertical-align: middle;
+      $sz: 1.4em;
+      width: $sz;
+      height: $sz;
+    } // custom icons
+  }
+
+  * {
+    word-break: break-word;
+  }
+
+  .grid {
+    padding-bottom: 0px;
+  }
+  ion-col.col {
+    padding: 0px !important;
+  }
+  .toolbar-ios, .toolbar-md {
+    min-height: 0px;
+    padding: 0px;
+  }
+  .bar-buttons-ios[end], .bar-buttons-md[end] {
+    button {
+      padding: 10px;
+      background-color: transparent;
+      font-size: 1.2rem;
+      text-transform: none;
+      color: white;
+      i {
+        color: rgb(239, 167, 32);
+      }
+    }
+    background-color:rgba(0, 0, 0, 0.5);
+  }
+
+  .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    height:0px;
+  }
+
+  .top-logo-img {
+    max-height: 44px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  button.top-tab {
+    background-color: transparent;
+    padding: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    div {
+      line-height: 0.0rem;
+      img {
+        max-height: 48px;
+      }
+      label {
+        font-size: 1.2rem;
+        position: relative;
+        line-height: 1.2rem;
+      }
+    }
+  }
+
+  .vertical-align-content > *
+  {
+      display: flex!important;
+      align-content: center!important;
+      align-items: center!important;
+  }
+}

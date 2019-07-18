@@ -1,0 +1,105 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+
+<ion-content class="menu-items" padding>
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+  </ion-fab>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start #myImage (click)="presentImage(myImage)">
+        <img src="../../assets/imgs/2.png">
+      </ion-avatar>
+      <p item-end class="chatlist">10:00 am</p>
+      <h2 class="chatlist" (click)="openchat()">Edwards bet</h2>
+      <p class="chatlist" (click)="openchat()">Ugh. As if.</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start #myImage (click)="presentImage(myImage)">
+        <img src="../../assets/imgs/avatar.png">
+      </ion-avatar>
+      <p item-end class="chatlist">02:01 pm</p>
+      <h2 class="chatlist" (click)="openchat()">Gram willians</h2>
+      <p class="chatlist" (click)="openchat()">Hi mac how are you...</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start #myImage (click)="presentImage(myImage)">
+        <img src="../../assets/imgs/leaves.jpg">
+      </ion-avatar>
+      <p item-end class="chatlist">09:50 am</p>
+      <h2 class="chatlist" (click)="openchat()">Mountains Williams</h2>
+      <p class="chatlist" (click)="openchat()">are you there?</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start #myImage (click)="presentImage(myImage)">
+        <img src="../../assets/imgs/nature.jpg">
+      </ion-avatar>
+      <p item-end class="chatlist">08:22 pm</p>
+      <h2 class="chatlist" (click)="openchat()">Ena</h2>
+      <p class="chatlist" (click)="openchat()">Mike this side.</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start #myImage (click)="presentImage(myImage)">
+        <img src="../../assets/imgs/plants2.jpg">
+      </ion-avatar>
+      <p item-end class="chatlist">11:09 am</p>
+      <h2 class="chatlist" (click)="openchat()">Cherry watts</h2>
+      <p class="chatlist" (click)="openchat()">Good to see you dude</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/2.png" #myImage (click)="presentImage(myImage)">
+      </ion-avatar>
+      <p item-end class="chatlist">10:00 am</p>
+      <h2 class="chatlist" (click)="openchat()">Edwards bet</h2>
+      <p class="chatlist" (click)="openchat()">Ugh. As if.</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/avatar.png" #myImage (click)="presentImage(myImage)">
+      </ion-avatar>
+      <p item-end class="chatlist">02:01 pm</p>
+      <h2 class="chatlist" (click)="openchat()">Gram willians</h2>
+      <p class="chatlist" (click)="openchat()">Hi mac how are you...</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/leaves.jpg" #myImage (click)="presentImage(myImage)">
+      </ion-avatar>
+      <p item-end class="chatlist">09:50 am</p>
+      <h2 class="chatlist" (click)="openchat()">Mountains Williams</h2>
+      <p class="chatlist" (click)="openchat()">are you there?</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/nature.jpg" #myImage (click)="presentImage(myImage)">
+      </ion-avatar>
+      <p item-end class="chatlist">08:22 pm</p>
+      <h2 class="chatlist" (click)="openchat()">Ena</h2>
+      <p class="chatlist" (click)="openchat()">Mike this side.</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/plants2.jpg" #myImage (click)="presentImage(myImage)">
+      </ion-avatar>
+      <p item-end class="chatlist">11:09 am</p>
+      <h2 class="chatlist" (click)="openchat()">Cherry watts</h2>
+      <p class="chatlist" (click)="openchat()">Good to see you dude</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

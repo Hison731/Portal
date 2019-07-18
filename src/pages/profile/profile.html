@@ -1,0 +1,88 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+
+<ion-content class="menu-items">
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+  </ion-fab>
+
+  <ion-card no-padding no-margin style="width: 100%" class="follower">
+    <ion-row class="sidebarnav" no-padding justify-content-center align-items-center>
+      <ion-col col-4 text-right>
+        <ion-icon class="setting" name="settings"></ion-icon>
+      </ion-col>
+      <ion-col col-4 text-center>
+        <ion-item>
+          <ion-avatar>
+              <div class="user_logo_holder">
+                  <img src="{{userData.profile_pic}}" class="profileimg">
+              </div>
+          </ion-avatar>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4 text-left>
+        <ion-icon class="setting" name="add-circle"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding justify-content-center>
+      <ion-item class="studio45dev">
+        <p text-center class="studio45">{{userData.username}}</p>
+        <p text-center>{{userData.signature}}</p>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-3 text-right class="righthorizline">
+        <p text-center class="studio45">{{userData.following}}</p>
+        <p text-center class="posts">Following</p>
+      </ion-col>
+      <ion-col col-4 text-center>
+        <p text-center class="studio45">{{userData.followers}}</p>
+        <p text-center class="posts">Followers</p>
+      </ion-col>
+      <ion-col col-3 text-left class="lefthorizline">
+        <p text-center class="studio45">{{userPostLength}}</p>
+        <p text-center class="posts">Posts</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-item></ion-item>
+    </ion-row>
+  </ion-card>
+
+  <ion-grid padding>
+    <div class="user_image_container">
+      <div *ngFor="let userImage of userData.userAllPosts">
+        <ion-row>
+          <ion-col *ngIf="userImage.filename=='' && userImage.media_type=='Image'">
+            <img src="https://www.420portal.com/img/uploaded/420portalspiral.png" />
+          </ion-col>
+          <ion-col *ngIf="userImage.filename!='' && userImage.media_type=='Image'">
+            <img src="https://www.420portal.com/img/{{userImage.filename}}" />
+          </ion-col>
+          <ion-col *ngIf="userImage.filename!='' && userImage.media_type=='Video'">
+              <img src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab4866b2c7d3a56d8873f4c/file-MrylO8jADD.png" />
+            </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>

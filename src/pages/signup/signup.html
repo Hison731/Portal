@@ -1,0 +1,68 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+<ion-content class="myview" padding>
+  <form #signup='ngForm'>
+    <div class="logo">
+      <ion-row class="logo-image">
+        <img src="../../assets/imgs/logo_420.png">
+      </ion-row>
+    </div>
+    <div class="login">
+      <ion-item>
+        <ion-label color="light" floating>Username</ion-label>
+        <ion-input type="text" name="username" #username="ngModel" [(ngModel)]="user.username" required>
+        </ion-input>
+      </ion-item>
+      <div *ngIf="username.invalid && (username.touched)" class="alert alert-danger">
+        <div *ngIf="username.errors.required">
+          This is required
+        </div>
+        <div *ngIf="username.errors.pattern">
+          Not a valid Email
+        </div>
+      </div>
+      <ion-item>
+        <ion-label color="light" floating>Email</ion-label>
+        <ion-input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          required>
+        </ion-input>
+      </ion-item>
+      <div *ngIf="email.invalid && (email.touched)" class="alert alert-danger">
+        <div *ngIf="email.errors.required">
+          This is required
+        </div>
+        <div *ngIf="email.errors.pattern">
+          Not a valid Email
+        </div>
+      </div>
+      <ion-item>
+        <ion-label color="light" floating>Password</ion-label>
+        <ion-input type="password" name="pass" #password="ngModel" minlength="6" [(ngModel)]="user.password" required>
+        </ion-input>
+      </ion-item>
+      <div *ngIf="password.invalid && ( password.touched)" class="alert alert-danger">
+        <div *ngIf="password.errors.required">
+          This is required
+        </div>
+        <div *ngIf="password.errors.minlength">
+          Minimum 6 digit
+        </div>
+      </div>
+      <ion-row>
+        <ion-checkbox class="check_box"></ion-checkbox>
+        <ion-label class="aggrement" color="light">18+ or Older</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-checkbox class="check_box"></ion-checkbox>
+        <ion-label color="light" class="aggrement">Accept User Agreement</ion-label>
+      </ion-row>
+    </div>
+    <ion-row class="logo" padding>
+      <button ion-button large block color="applogin" [disabled]="signup.invalid" (click)="dosignup()" class="signuploginbtn">Submit</button>
+    </ion-row>
+  </form>
+</ion-content>

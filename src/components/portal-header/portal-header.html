@@ -1,0 +1,43 @@
+<ion-toolbar no-border-top style="background-color: white;">
+  <ion-grid>
+    <ion-row>
+      <ion-col style="min-width: 25%;" class="vertical-align-content">
+        <div style="display: inline-block;height: 100%; vertical-align: middle;" >
+          <img src="../../assets/imgs/logo_420.png" class="top-logo-img" (click)="onSelectPage(0)">
+        </div>
+      </ion-col>
+      <ion-col>
+        <button class="top-tab" (click)="onSelectPage(1)">
+          <div>
+            <img src="../../assets/imgs/top_icon1.png" class="top-item-img"><br>
+            <label>Dispensary</label>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button class="top-tab" (click)="onSelectPage(2)">
+          <div>
+            <img src="../../assets/imgs/top_icon2.png" class="top-item-img"><br>
+            <label>Strains</label>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button class="top-tab" (click)="onSelectPage(3)">
+          <div>
+            <img src="../../assets/imgs/top_icon3.png" class="top-item-img"><br>
+            <label>Coupons</label>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button class="top-tab" (click)="onSelectPage(4)">
+          <div>
+            <img src="../../assets/imgs/top_icon4.png" class="top-item-img"><br>
+            <label>Add Company</label>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>

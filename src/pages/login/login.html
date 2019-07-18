@@ -1,0 +1,47 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+
+<ion-content class="myview" padding>
+  <div class="logo">
+    <ion-row class="logo-image">
+      <img src="../../assets/imgs/logo_420.png">
+    </ion-row>
+  </div>
+  <form #loginForm='ngForm'>
+    <div class="login">
+      <ion-item>
+        <ion-label color="light" floating>Username</ion-label>
+        <ion-input type="username" name="username" #username='ngModel' [(ngModel)]="user.username" required>
+        </ion-input>
+      </ion-item>
+      <div *ngIf="username.invalid && (username.touched)" class="alert alert-danger">
+        <div *ngIf="username.errors.required">
+          This is required
+        </div>
+      </div>
+      <ion-item>
+        <ion-label color="light" floating>Password</ion-label>
+        <ion-input type="password" #password='ngModel' name="password" [(ngModel)]="user.password" required>
+        </ion-input>
+      </ion-item>
+      <div *ngIf="password.invalid && ( password.touched)" class="alert alert-danger">
+        <div *ngIf="password.errors.required">
+          This is required
+        </div>
+        <div *ngIf="password.errors.minlength">
+          Minimum 8 digit
+        </div>
+
+      </div>
+      <p class="forgetpassword">Forget Password ?</p>
+    </div>
+    <ion-row class="logo">
+      <button ion-button large block color="applogin" [disabled]="loginForm.invalid" (click)="login()" class="signuploginbtn">Login</button>
+    </ion-row>
+  </form>
+  <p class="register" (click)="gotosignup()">Dont Have account ? Register</p>
+</ion-content>

@@ -1,0 +1,28 @@
+page-coupon-detail {
+	.coupon-detail {
+		#map {
+			height: 110px;
+		}
+		img {
+			border-radius: 50%;
+		}
+		.like-comment {
+			font-size: 30px;
+		}
+		.name {
+			font-size: 18px;
+			font-weight: 600;
+		}
+		.dispancary-name {
+			font-size: 16px;
+		}
+		.address {
+			font-size: 16px;
+			font-weight: 700;
+		}
+		.phoneno {
+			font-size: 15px;
+			font-weight: 500;
+		}
+	}
+}

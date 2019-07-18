@@ -1,0 +1,56 @@
+page-imagedetails {
+	.toolbar-title {
+		color: color($colors, dark, base) !important;
+	}
+	.post-content {
+		background-color: color($colors, post-detail-header, base) !important;
+		.header-post {
+			.profilename {
+				color: color($colors, light, base) !important;
+				font-size: 17px;
+			}
+			.person-add {
+				font-size: 30px;
+				margin: 10px 0;
+			}
+		}
+		.like-comment {
+			color: color($colors, light, base) !important;
+		}
+		.username {
+			color: color($colors, light, base) !important;
+			margin: 0 10px;
+			font-size: 17px;
+		}
+		.text-area {
+			border: 1px solid #d48416;
+			margin: 25px 0;
+			color: color($colors, light, base) !important;
+		}
+		.post-click {
+			height: 35px;
+			font-size: 17px;
+			color: #fff;
+			width: 100px;
+			background-color: color($colors, lowercolor, base) !important;
+		}
+	}
+	.uploaded-image {
+		width: 100%;
+		height: 300px;
+		background-size: cover;
+		display: flex;
+		background-position: center;
+		position: relative;
+	}
+	.iconsInnerGrid {
+		display: grid;
+	}
+	.item-md{
+		padding:0 10px !important;
+	}
+	.item-md.item-block .item-inner{
+		padding:0 !important;
+		display:grid;
+	}
+}

@@ -1,0 +1,56 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+
+<ion-content class="pageBackground" padding>
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+  </ion-fab>
+
+  <ion-row class="row-border-bottom">
+    <ion-col col-4>
+      <ion-label color="light">Portals</ion-label>
+    </ion-col>
+    <ion-col col-8>
+      <ion-select [(ngModel)]="selectedPortal" (ionChange)="changeUserPortal()" class="portal-select">
+        <ion-option *ngFor="let portalList of portalsData" value="{{portalList.id}}">{{portalList.name}}</ion-option>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+
+  <div class="selected-portal-logo margin-top-20" col-12>
+    <div class="selected-portal-logo-img">
+      <img *ngIf="toDisplayPortalData.portal_logo==''" src="https://www.420portal.com/img/uploaded/420portalspiral.png" />
+
+     <img *ngIf="toDisplayPortalData.portal_logo!=''" src="https://www.420portal.com/img/{{toDisplayPortalData.portal_logo}}" />
+    </div>
+
+    <p>{{toDisplayPortalData.name}}</p>
+  </div>
+
+  <ion-row class="margin-top-20">
+      <ion-col col-4 class="portal-icon-holder"><ion-icon name="eye" color="420-head-text" class="portal-icon" (click)="openPortalProfile(toDisplayPortalData.id)"></ion-icon></ion-col>
+      <ion-col col-4 class="portal-icon-holder"><ion-icon name="settings" color="420-head-text" class="portal-icon"></ion-icon></ion-col>
+      <ion-col col-4 class="portal-icon-holder"><ion-icon name="clipboard" color="420-head-text" class="portal-icon" (click)="openPortalMenu(toDisplayPortalData.id)"></ion-icon></ion-col>
+  </ion-row>
+
+  <ion-row>
+      <ion-col col-4 class="portal-icon-holder"><ion-icon name="card" color="420-head-text" class="portal-icon"></ion-icon></ion-col>
+      <ion-col col-4 class="portal-icon-holder"><ion-icon name="images" color="420-head-text" class="portal-icon"></ion-icon></ion-col>
+      <ion-col col-4 class="portal-icon-holder"><ion-icon name="chatboxes" color="420-head-text" class="portal-icon"></ion-icon></ion-col>
+  </ion-row>
+</ion-content>

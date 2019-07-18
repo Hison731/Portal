@@ -1,0 +1,89 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+
+
+<ion-content padding class="menu-items">
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+  </ion-fab>
+
+  <ion-list class="strainsInventoryDetails">
+    <ion-item>
+      <div class="inventoryDetailsRowHead">
+        Company
+      </div>
+      <div class="inventoryDetailsRowContent">
+        {{inventoryDetails.portalName}}
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="inventoryDetailsRowHead">
+        Distance
+      </div>
+      <div class="inventoryDetailsRowContent">
+        1.8mi
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="inventoryDetailsRowHead">
+        Gram
+      </div>
+      <div class="inventoryDetailsRowContent">
+        {{inventoryDetails.price_gram}}
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="inventoryDetailsRowHead">
+        Eighth
+      </div>
+      <div class="inventoryDetailsRowContent">
+        {{inventoryDetails.price_eighth}}
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="inventoryDetailsRowHead">
+        Quarter
+      </div>
+      <div class="inventoryDetailsRowContent">
+        {{inventoryDetails.price_quarter}}
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="inventoryDetailsRowHead">
+        Half Oz
+      </div>
+      <div class="inventoryDetailsRowContent">
+        {{inventoryDetails.price_half_oz}}
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="inventoryDetailsRowHead">
+        Oz
+      </div>
+      <div class="inventoryDetailsRowContent">
+        {{inventoryDetails.price_oz}}
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

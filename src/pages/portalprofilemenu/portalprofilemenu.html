@@ -1,0 +1,192 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+
+<ion-content class="pageBackground" padding>
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+  </ion-fab>
+
+  <ion-card>
+    <form #portalMenu='ngForm'>
+      <h2 class="addMenuHeading">Add Your Menu</h2>
+      <ion-row class="addMenuFormRow">
+        <ion-col col-5 class="addMenuLabel">
+          Category Name
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-label>Categories</ion-label>
+              <ion-select [(ngModel)]="formData.selectedStrainCat" required name="categoryName">
+                <ion-option *ngFor="let allStrainCats of allStrainCategories" [value]="allStrainCats.id">
+                  {{allStrainCats.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow">
+        <ion-col col-5 class="addMenuLabel">
+          Select Strain
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-label>Strains</ion-label>
+              <ion-select [(ngModel)]="selectedStrain" required name="strain">
+                <ion-option *ngFor="let allIncStrains of allStrainList" [value]="allIncStrains.id">
+                  {{allIncStrains.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow">
+        <ion-col col-5 class="addMenuLabel">
+          Description
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-textarea [(ngModel)]="formData.selectedStrain" placeholder="Description" name="menuDescription" required></ion-textarea>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow" *ngIf="formData.selectedStrainCat=='9' || formData.selectedStrainCat=='10' || formData.selectedStrainCat=='11' || formData.selectedStrainCat=='12' || formData.selectedStrainCat=='13' || formData.selectedStrainCat=='14' || formData.selectedStrainCat=='15'">
+        <ion-col col-5 class="addMenuLabel">
+          Price Each
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-input type="number" [(ngModel)]="formData.strainPriceEach" name="strainPriceEach"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow" *ngIf="formData.selectedStrainCat=='7'">
+        <ion-col col-5 class="addMenuLabel">
+          Price Half Gram
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-input type="number" [(ngModel)]="formData.strainPriceHalfGram" name="strainPriceHalfGram"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow" *ngIf="formData.selectedStrainCat=='1' || formData.selectedStrainCat=='2' || formData.selectedStrainCat=='3' || formData.selectedStrainCat=='7'">
+        <ion-col col-5 class="addMenuLabel">
+          Price Gram
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-input type="number" [(ngModel)]="formData.strainPriceGram" name="strainPriceGram"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow" *ngIf="formData.selectedStrainCat=='1' || formData.selectedStrainCat=='2' || formData.selectedStrainCat=='3'">
+        <ion-col col-5 class="addMenuLabel">
+          Price Eighth
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-input type="number" [(ngModel)]="formData.strainPriceEighth" name="strainPriceEighth"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow" *ngIf="formData.selectedStrainCat=='1' || formData.selectedStrainCat=='2' || formData.selectedStrainCat=='3'">
+        <ion-col col-5 class="addMenuLabel">
+          Price Quarter
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-input type="number" [(ngModel)]="formData.strainPriceQuarter" name="strainPriceQuarter"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow" *ngIf="formData.selectedStrainCat=='1' || formData.selectedStrainCat=='2' || formData.selectedStrainCat=='3'">
+        <ion-col col-5 class="addMenuLabel">
+          Price Half Oz
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-input type="number" [(ngModel)]="formData.strainPriceHalfOz" name="strainPriceHalfOz"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow" *ngIf="formData.selectedStrainCat=='1' || formData.selectedStrainCat=='2' || formData.selectedStrainCat=='3'">
+        <ion-col col-5 class="addMenuLabel">
+          Price Oz
+        </ion-col>
+        <ion-col col-7>
+          <ion-list>
+            <ion-item>
+              <ion-input type="number" [(ngModel)]="formData.strainPriceOz" name="strainPriceOz"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow">
+        <ion-col col-5 class="addMenuLabel">
+          Strain Photo
+        </ion-col>
+        <ion-col col-7>
+          <div class="customStrainPicCntnr" (click)="openGallery()">
+            <span class="strainPicIcon"><ion-icon name="camera"></ion-icon></span>
+            <span class="strainPicText">Choose Picture</span>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow" *ngIf="clickedStrainPic!=''">
+        <ion-col col-5>
+        </ion-col>
+        <ion-col col-7>
+          <div class="selectedPicCntnr">
+            <img [src]="clickedStrainPic" />
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="addMenuFormRow">
+        <button ion-button color="secondary" (click)="saveAddMenuData()">Save Menu</button>
+      </ion-row>
+    </form>
+  </ion-card>
+</ion-content>

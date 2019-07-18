@@ -1,0 +1,276 @@
+page-strainsubdetail {
+  .follower {
+    margin: 0 !important;
+  }
+
+  .sidebarnav {
+    padding: 4px;
+    background-size: cover;
+    height: 90px;
+
+    .profileimg {
+      display: block;
+      width: 90px !important;
+      height: 90px !important;
+      background: url("../../assets/imgs/user-profile-bg.png") no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      margin: 0 auto !important;
+      padding: 8px;
+      border-radius: 50%;
+    }
+
+    i.fa {
+      font-size: 35px;
+      color: rgb(239, 167, 32);
+    }
+  }
+
+  .subtitle {
+    padding: 12px 10px 10px 10px !important;
+    font-size: 17px !important;
+    color: #fff;
+    line-height: 1.5;
+  }
+
+  .description-strain {
+    margin: 10px;
+    background-color: transparent;
+
+    ion-card-content {
+      height: 150px;
+      margin-top: 16px;
+      padding: 0 0 16px 0;
+      overflow-y: auto;
+    }
+  }
+
+  .chat-icon {
+    color: #fff;
+    font-size: 35px;
+    position: absolute;
+    bottom: 15px;
+    margin: 0px -13px;
+  }
+
+  .logo-menu {
+    height: 142px;
+    width: 130px;
+    margin: 37px -3px;
+  }
+
+  p {
+    color: #fff !important;
+  }
+
+  .studio45 {
+    font-size: 30px;
+  }
+
+  .studio45dev {
+    .input-wrapper {
+      border-bottom: 1px solid #fff !important;
+    }
+  }
+
+  .setting {
+    font-size: 33px;
+  }
+
+  .posts {
+    font-size: 20px;
+    font-weight: 500 !important;
+    color: #D2D1D0 !important;
+    line-height: 0.5 !important;
+  }
+
+  .righthorizline {
+    border-right: 1px solid #fff !important;
+  }
+
+  .lefthorizline {
+    border-left: 1px solid #fff !important;
+  }
+
+  .inventory_companies {
+    border: 1px solid #D2D1D0;
+    background: transparent;
+
+    ion-card-header {
+      color: #D2D1D0;
+    }
+
+    ion-content {
+      //min-height: 150px;
+      background: transparent;
+
+      .data-table {
+        position: absolute;
+        width: 100% !important;
+        height: 178px;
+        margin-top: 40px;
+        overflow: auto;
+
+        .table-header {
+          width: 800px !important;
+          border-radius: 5px;
+          color: #EFA720;
+          background: #3F3F3F;
+          padding: 5px 8px;
+          font-size: 9.5pt;
+        }
+
+        .data-row {
+          width: 800px !important;
+          border-bottom: 2px solid gray !important;
+          color: #EFA720;
+          font-size: 9.5pt;
+          margin: 5px;
+          padding: 2px;
+        }
+
+        label {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 10.5pt;
+          //width: 200px !important;
+        }
+
+        label.company-col {
+          width: 150px;
+        }
+
+        label.company-col, label.price-col {
+          font-size: 11pt;
+        }
+
+        .data-info {
+          position: absolute;
+          width: 300px;
+          min-height: 110px;
+          margin-left: 50px;
+          background-color: black;
+          border: 2px solid gray;
+          border-radius: 5px;
+          padding: 5px;
+          font-size: 9pt;
+          color: #999999;
+
+          .info-image {
+            display: block;
+            float: left;
+            width: 80px;
+            //height: 100px;
+            border: 2px solid gray;
+            margin-right: 10px;
+          }
+        }
+
+        sup {
+          color: #D2D1D0;
+        }
+      }
+    }
+  }
+
+  .strainImagesCntnr {
+    background: transparent;
+  }
+
+  .strainImagesCntnr ion-col img {
+    margin-right: 9px;
+  }
+}
+
+.description::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  -webkit-appearance: none;
+}
+
+.description::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: #D2D1D0;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+.description::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 0;
+}
+
+.data-table::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  -webkit-appearance: none;
+}
+
+.data-table::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: #D2D1D0;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+.data-table::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 0;
+}
+
+.segment-md .segment-button {
+  -webkit-box-font: 0 !important;
+  -webkit-flex: none !important;
+  flex: none !important;
+  text-transform: none !important;
+  width: auto !important;
+  height: auto !important;
+  line-height: 1 !important;
+  font-size: 11.5pt !important;
+  padding: 5px !important;
+  opacity: 1 !important;
+}
+
+.segment-md .segment-button.activated,
+.segment-md .segment-button.segment-activated {
+  border: none !important;
+  background-color: #3F3F3F;
+  padding: 10px !important;
+}
+
+page-strainsubdetail .inventory_companies {
+  border: none !important;
+}
+
+.strainsInventoryList {
+  height: 220px;
+  border: 1px solid #D2D1D0;
+  border-radius: 5px;
+
+  ion-label {
+    color: #D2D1D0;
+    font-size: 15px;
+    margin: 10px 1px 0 5px !important;
+  }
+}
+
+.subtitle.segment-container {
+  padding: 5px !important;
+}
+
+.image-container {
+  padding: 5px !important;
+
+  .thumbimage {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+//.image-container:after {
+//  content: "";
+//  display: block;
+//  padding-bottom: 100%;
+//}

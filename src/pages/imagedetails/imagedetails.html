@@ -1,0 +1,100 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+<ion-content class="menu-items">
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+  </ion-fab>
+
+  <div class="post-content">
+    <ion-row class="header-post">
+      <ion-col col-3>
+        <ion-item no-lines>
+          <ion-avatar item-start>
+            <img [src]="imageData.user_profile_pic">
+          </ion-avatar>
+        </ion-item>
+      </ion-col>
+      <ion-col col-5 text-left>
+        <p class="profilename">{{imageData.user_name}}</p>
+      </ion-col>
+      <ion-col col-2 text-center>
+        <ion-icon class="person-add" name="person-add" color="lowercolor"></ion-icon>
+      </ion-col>
+      <ion-col col-2 text-center>
+        <ion-icon class="person-add" name="flag" color="lowercolor"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <img class="uploaded-image" [src]="imageData.filename">
+    <ion-row class="header-post">
+      <ion-col col-2 text-center>
+        <div class="iconsInnerGrid">
+          <ion-icon name="heart" class="person-add" color="lowercolor"></ion-icon>
+          <span>{{imageData.likes}} likes</span>
+        </div>
+      </ion-col>
+      <ion-col col-4 text-center>
+        <div class="iconsInnerGrid">
+          <ion-icon name="mail" class="person-add" color="lowercolor"></ion-icon>
+          <span>{{imageData.comments}} comments</span>
+        </div>
+      </ion-col>
+      <ion-col col-6 text-right>
+          <ion-icon name="pricetag" class="person-add" color="lowercolor" (click) = "showModal = true"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-item no-lines>
+          <ion-textarea [(ngModel)]="msg" class="text-area"></ion-textarea>
+          <button clear item-right class="post-click">Post</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<div class="custom-modal-container" *ngIf="showModal" (click)="hideUserImageModal($event)">
+  <div class="custom-modal-box">
+    <div class="custom-modal-header">
+        Image Tags
+    </div>
+    <div class="custom-modal-body">
+        <h3>Portal</h3>
+        {{imageDetailsData | json}}
+        <span *ngIf="imageMiscData.taggedPortals != undefined && imageMiscData.taggedPortals.name != undefined">{{imageMiscData.taggedPortals.name}}</span>
+        <span *ngIf="imageMiscData.taggedPortals != undefined && imageMiscData.taggedPortals.name == undefined">No portal tagged</span>
+
+        <h3>Users</h3>
+        <div class="taggedUsersContainer" *ngIf="imageMiscData.taggedUsers != undefined && imageMiscData.taggedUsers?.length>0">
+          <span *ngFor="let taggedUser of imageMiscData.taggedUsers">{{taggedUser.username}}</span>
+        </div>
+        <div class="taggedUsersContainer" *ngIf="imageMiscData.taggedUsers != undefined && imageMiscData.taggedUsers?.length==0">
+          <span>No users tagged.</span>
+        </div>
+
+        <h3>Strains</h3>
+        <span *ngIf="imageMiscData.taggedStrains != undefined && imageMiscData.taggedStrains.id != undefined">{{imageMiscData.taggedPortals.name}}</span>
+        <span *ngIf="imageMiscData.taggedStrains != undefined && imageMiscData.taggedStrains.id == undefined">No strains tagged</span>
+    </div>
+    <div class="custom-modal-footer">
+
+    </div>
+    <ion-icon name="close-circle" class="close-custom-modal" (click) = "showModal = false"></ion-icon>
+  </div>
+</div>

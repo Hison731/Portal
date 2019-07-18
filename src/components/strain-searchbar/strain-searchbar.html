@@ -1,0 +1,40 @@
+<ion-list class="search_result_list" style="display: block !important;" *ngIf="visibleDropdown">
+  <ion-item *ngFor="let strain of filterItems" (click)="openSpecificStrainDetail(strain.id, strain.slug)">
+    <ion-label>
+      {{strain.name}}
+    </ion-label>
+  </ion-item>
+
+</ion-list>
+
+<ion-toolbar ion-fixed transparent class="straintab">
+  <ion-row align-items-center>
+    <div style="width: 34% !important;" class="sub-title-col vertical-align-content">
+      <ion-input class="searchbar-input strain-search" type="text" #strainSearchbar [(ngModel)]="searchText" (ionChange)="FilterItems()" (ionBlur)="onSearchLostFocus()" placeholder="&#xF002; Search Strains"></ion-input>
+    </div>
+    <div style="width: 22% !important;" class="sub-title-col" (click)="getCategoryDetail('indica')">
+      <label class="sub-title">
+        Indica
+      </label>
+    </div>
+    <div style="width: 22% !important;" class="sub-title-col" (click)="getCategoryDetail('sativa')">
+      <label class="sub-title">
+        Sativa
+      </label>
+    </div>
+    <div style="width: 22% !important;" class="sub-title-col" (click)="getCategoryDetail('hybrid')">
+      <label class="sub-title">
+        Hybrid
+      </label>
+    </div>
+  </ion-row>
+</ion-toolbar>
+
+<!-- <ion-list #strainList ion-fixed no-lines [hidden]="visibleDropdown==false" style="max-height: 200px;">
+  <ion-item *ngFor="let strain of strains" class="ion-no-margin">{{ strain.name }}</ion-item>
+</ion-list> -->
+<ion-scroll ion-fixed #strainList scrollY="true" style="max-height:200px;" [hidden]="visibleDropdown==false">
+  <ion-list no-lines>
+    <ion-item *ngFor="let strain of strains" class="ion-no-margin">{{ strain.name }}</ion-item>
+  </ion-list>
+</ion-scroll>

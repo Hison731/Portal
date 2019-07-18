@@ -1,0 +1,38 @@
+portal-footer {
+  .col {
+    padding:0px;
+    button.bottom-tab {
+      background: transparent;
+      font-size: 1.2rem;
+      line-height: 0.8px;
+      padding: 0px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      div {
+        line-height: 0.0rem;
+        img {
+          max-height: 3.5rem;
+        }
+        label {
+          font-size: 1.2rem;
+          position: relative;
+          line-height: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .toolbar-ios, .toolbar-md {
+    padding: 0px;
+  }
+
+  ion-grid.grid{
+    padding-bottom: 0px;
+  }
+
+  body.keyboard-open .has-footer{
+    display: none;
+  }
+
+}

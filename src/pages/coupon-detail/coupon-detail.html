@@ -1,0 +1,92 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+
+
+<ion-content padding class="menu-items">
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+  </ion-fab>
+
+  <div class="coupon-detail">
+    <ion-row>
+      <div #map id='map'></div>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4 align-self-center text-center>
+        <img src="../../assets/imgs/avatar.png">
+      </ion-col>
+      <ion-col col-3 align-self-center text-center>
+        <ion-label class="name">1</ion-label>
+        <p class="phoneno">Post</p>
+      </ion-col>
+      <ion-col col-3 align-self-center text-center>
+        <ion-label class="name">0</ion-label>
+        <p class="phoneno">Follower</p>
+      </ion-col>
+      <ion-col col-2>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-label class="name">Urban Bud</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2 align-self-center text-center>
+        <img src="../../assets/imgs/dispensary.png">
+      </ion-col>
+      <ion-col col-10 self-align-center>
+        <ion-label class="dispancary-name">(StoreFront)</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-label class="address">112 S 24th St, Tacoma</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-label class="phoneno">253-327-1572</ion-label>
+    </ion-row>
+    <ion-row text-center justify-content-center>
+      <ion-col col-3 align-self-center text-center>
+        <ion-icon name="heart" class="like-comment"></ion-icon>
+        <ion-label>10</ion-label>
+      </ion-col>
+      <ion-col col-3>
+        <ion-icon name="paper-plane" class="like-comment"></ion-icon>
+        <ion-label>10</ion-label>
+      </ion-col>
+      <ion-col col-3>
+        <ion-icon name="document" class="like-comment"></ion-icon>
+        <ion-label>10</ion-label>
+      </ion-col>
+      <ion-col col-3>
+        <ion-icon name="home" class="like-comment"></ion-icon>
+        <ion-label>10</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <img src="../../assets/imgs/avatar.png">
+      </ion-col>
+      <ion-col col-4>
+        <label></label>
+      </ion-col>
+      <ion-col col-4>
+      </ion-col>
+    </ion-row>
+
+  </div>
+</ion-content>

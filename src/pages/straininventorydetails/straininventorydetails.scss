@@ -1,0 +1,27 @@
+page-straininventorydetails {
+    .strainsInventoryDetails ion-item {
+        background: #ffffff47;
+        margin: 10px 0;
+        border-radius: 4px;
+    }
+    .list-ios .item-block .item-inner{
+        border:none !important;
+    }
+    .strainsInventoryDetails .item-block{
+        border:none !important;
+    }
+    .strainsInventoryDetails ion-label {
+        display: flex;
+    }
+    .inventoryDetailsRowHead {
+        width: 35%;
+        color: #FF9800;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .inventoryDetailsRowContent {
+        width: 65%;
+        color: #dceff7;
+        font-size: 18px;
+    }
+}

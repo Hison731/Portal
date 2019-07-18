@@ -1,0 +1,25 @@
+<ion-menu [content]="content">
+  <ion-header>
+  </ion-header>
+  <ion-content class="menu-items">
+    <ion-list no-lines>
+      <button class="menu-lists" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+        <ion-badge class="numberCircle" *ngIf="p.title=='Chat'">5</ion-badge>
+      </button>
+      <div *ngIf="authProvider.isUserLogin">
+        <ion-item class="menu-lists">
+          <ion-avatar item-start>
+            <img src="{{userDetails.profileImage}}" class="profileimg" menuClose (click)="openUserProfile(userDetails.username)">
+          </ion-avatar>
+        </ion-item>
+        <p class="username">{{userDetails.username}}</p>
+      </div>
+      <button ion-button menuClose color = "lowercolor" class="menu-lists login-button" (click)="nav.push('LoginPage')" *ngIf="!authProvider.isUserLogin">Login</button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

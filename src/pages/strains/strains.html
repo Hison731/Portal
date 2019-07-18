@@ -1,0 +1,47 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-content padding class="menu-items">
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+  </ion-fab>
+  <strain-searchbar></strain-searchbar>
+
+  <h1 class="title">
+    Marijuana Strains
+  </h1>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <div class="logo-menu" (click)="getCategoryDetail('indica')">
+          <img src="https://www.420portal.com/img/marijuana/indica.jpg">
+        </div>
+      </ion-col>
+      <ion-col col-4>
+        <div class="logo-menu" (click)="getCategoryDetail('sativa')">
+          <img src="https://www.420portal.com/img/marijuana/sativa.jpg">
+        </div>
+      </ion-col>
+      <ion-col col-4>
+        <div class="logo-menu" (click)="getCategoryDetail('hybrid')">
+          <img src="https://www.420portal.com/img/marijuana/hybrid.jpg">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>

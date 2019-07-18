@@ -1,0 +1,58 @@
+page-profile {
+	.sidebarnav {
+		padding: 4px;
+		background-size: cover;
+		height: 110px;
+	}
+	.chat-icon {
+		color: #fff;
+		font-size: 35px;
+		position: absolute;
+		bottom: 15px;
+		margin: 0px -13px;
+	}
+	.logo-menu {
+		height: 142px;
+		width: 130px;
+		margin: 37px -3px;
+	}
+	p {
+		color: #fff !important;
+	}
+	.studio45 {
+		font-size: 22px;
+	}
+	.studio45dev {
+		.input-wrapper {
+			border-bottom: 1px solid #fff !important;
+		}
+	}
+	.setting {
+		font-size: 33px;
+	}
+	.posts {
+		font-size: 15px;
+		font-weight: 200;
+	}
+	.righthorizline {
+		border-right: 1px solid #fff !important;
+	}
+	.lefthorizline {
+		border-left: 1px solid #fff !important;
+	}
+	.user_image_container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.user_logo_holder {
+		display: flex;
+		justify-content: center;
+	}
+	div {
+		img {
+			height: 130px !important;
+			width: 150px !important;
+		}
+	}
+}

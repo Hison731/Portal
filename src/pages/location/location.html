@@ -1,0 +1,42 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+
+<ion-content padding>
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+  </ion-fab>
+
+  <ion-row text-center>
+    <ion-col>
+      <button ion-button round (click)="showCheckbox()">Business Type</button>
+    </ion-col>
+    <ion-col>
+      <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="filterItems($event)"
+        (ionCancel)="onCancel($event)">
+      </ion-searchbar>
+    </ion-col>
+    <!-- <ion-col>
+      <ion-searchbar [(ngModel)]="myInput">
+      </ion-searchbar>
+    </ion-col>
+    <ion-col>
+      <button ion-button round (click)="submit()">Submit</button>
+    </ion-col> -->
+  </ion-row>
+  <div #map id='map'></div>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-toolbar no-border-top style="background-color: white;" class="hide-on-keyboard-open" *ngIf="show_footer">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button class="bottom-tab" (click)="onSelectPage(0)">
+          <div>
+            <img src="../../../assets/imgs/bottom_icon1.png"><br>
+            <label>Weedgram</label>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button class="bottom-tab" (click)="onSelectPage(1)">
+          <div>
+            <img src="../../../assets/imgs/bottom_icon2.png"><br>
+            <label>Messenger</label>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button class="bottom-tab" (click)="onSelectPage(2)">
+          <div>
+            <img src="../../../assets/imgs/bottom_icon3.png"><br>
+            <label>Add Media</label>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button class="bottom-tab" (click)="onSelectPage(3)">
+          <div>
+            <img src="../../../assets/imgs/bottom_icon4.png"><br>
+            <label>Notifications</label>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button class="bottom-tab" (click)="onSelectPage(4)">
+          <div>
+            <img src="../../../assets/imgs/bottom_icon5.png"><br>
+            <label>Account</label>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>

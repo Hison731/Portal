@@ -1,0 +1,77 @@
+page-portaldetail {
+    .portal-description{
+        white-space: normal;
+    }
+    p.portal-name {
+        font-size: 22px;
+        color: color($colors, 420-head-text);;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .portal-description {
+        white-space: normal;
+        color: #f7f7f7;
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+    p.studio45 {
+        color: #efa720;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+    }
+    p.posts {
+        color: #fff;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+    }
+    .portal_image_container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .portal_image_container img {
+        width: 150px;
+    }
+    .portal_logo_holder {
+        display: flex;
+        justify-content: center;
+    }
+    ion-row.portal-address-holder.row {
+        font-size: 14px;
+    }
+    span.portal-address-holder {
+        color: #efa720;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-right: 5px;
+    }
+    span.portal-is-closed {
+        color: #F44336;
+        padding: 5px 10px;
+        background: #000000a1;
+        font-size: 17px;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        margin-left: 5px;
+        border-radius: 4px;
+    }
+    span.portal-is-open {
+        color: #8BC34A;
+        padding: 5px 10px;
+        background: #000000a1;
+        font-size: 17px;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        margin-left: 5px;
+        border-radius: 4px;
+    }
+    #map{
+        height:200px;
+    }
+    img.storeIconImg {
+        width: 25px;
+    }
+}

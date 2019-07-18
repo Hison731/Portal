@@ -1,0 +1,190 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+<ion-content class="menu-items" (click)="hideInfo($event)">
+  <ion-fab top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+  </ion-fab>
+  <strain-searchbar></strain-searchbar>
+  <div class="data-container">
+    <ion-card style="width: 100%;margin-top: 25px !important;" class="follower">
+      <ion-card-content>
+        <ion-row class="sidebarnav" no-padding justify-content-center align-items-center>
+          <ion-col size="4.8">
+            <ion-row>
+              <ion-col size="6"></ion-col>
+              <ion-col size="6" style="margin-top: 20px;font-size: 15px;color: #D2D1D0 !important;line-height: 2;" text-center justify-content-center align-items-center>
+                <p text-center class="posts">9</p>Posts
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="2.4" text-center>
+            <img src="../../assets/imgs/nature.jpg" class="profileimg"/>
+          </ion-col>
+          <ion-col size="4.8">
+            <ion-row>
+              <ion-col size="6" text-center>
+                <i class="fa fa-heart-o"></i>
+                <p text-center class="posts" style="margin-top:1px;">{{strainDetails.likes}}</p>
+                <!--                <p text-center class="posts">9</p>-->
+              </ion-col>
+              <ion-col size="6" text-center>
+                <i class="fa fa-comment-o" style="font-size: 35px !important;margin-top: -2px !important;"></i>
+                <!--                <p text-center class="posts">1</p>-->
+                <p text-center class="posts" style="margin-top: 3px;">{{strainDetails.reviews}}</p>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" text-center style="margin-top: 10px;font-size: 18px;color: #D2D1D0;">
+            <!--            Blue Dream<br>-->
+            <!--            Strain-->
+            {{strainDetails.name}}<br>
+            <ion-label class="ion-text-start" style="font-size: 15px;margin: 0 0 1px 0 !important;">{{strainName}}</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="description-strain">
+      <ion-card-header class="subtitle" text-center>
+        <!--        Blue Dream-->
+        {{strainDetails.name}} Marijuana Strain
+      </ion-card-header>
+      <ion-card-content color="light" class="description">
+        <!--        <div style="padding-top: 10px;height: 120px; overflow-y: auto;">-->
+        <!--          <p><strong>Blue Dream&nbsp;</strong>is an excellent <a-->
+        <!--            href="https://www.420portal.com/marijuana-strains/hybrid">hybrid</a> given the fact that it has the medical-->
+        <!--            qualities&nbsp;of an <a href="https://www.420portal.com/marijuana-strains/indica">indica</a> and the head&nbsp;effects-->
+        <!--            of a <a href="https://www.420portal.com/marijuana-strains/sativa">sativa</a>. The effects&nbsp;are long-->
+        <!--            lasting and you will most surely notice its&nbsp;fruity aroma; the smell is one of a-->
+        <!--            kind.&nbsp;&nbsp;<strong>Blue Dream&nbsp;</strong>is a combination between <a-->
+        <!--              href="https://www.420portal.com/marijuana-strains/haze">Haze</a> and <a-->
+        <!--              href="https://www.420portal.com/marijuana-strains/blueberry">Blueberry</a> and works very well against-->
+        <!--            depression, pain and stress. &nbsp;Most people say Blue Dream is a Sativa but since it's crossed between 2-->
+        <!--            strains, it's really a hybrid. &nbsp;</p>-->
+
+        <!--          <p>&nbsp;</p>-->
+
+        <!--          <p>The yeild on the Blue Dream marijuana strain in very high and is a very quick growing plant. &nbsp;She-->
+        <!--            finishes her flowering time around 60 days. &nbsp;The dense flowers are very green with orange hairs-->
+        <!--            throughout. &nbsp;The trichromes are everywhere on the buds and stick straight upl which can stick on your-->
+        <!--            hands like tar. &nbsp;This is a popular strain&nbsp;in Southern California and you can find it at&nbsp;most-->
+        <!--            marijuana dispensaries and deliveries.. &nbsp;</p>-->
+        <!--        </div>-->
+        <div [innerHtml]="strainDetails.description"></div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="inventory_companies">
+      <ion-card-header class="subtitle segment-container">
+        <ion-segment [(ngModel)]="strainParentType">
+          <ion-segment-button value="flowers">
+            Flowers
+          </ion-segment-button>
+          <ion-segment-button value="concentrates">
+            Concentrates
+          </ion-segment-button>
+          <ion-segment-button value="clones">
+            Clones
+          </ion-segment-button>
+          <ion-segment-button value="seeds">
+            Seeds
+          </ion-segment-button>
+        </ion-segment>
+      </ion-card-header>
+
+      <ion-content [ngSwitch]="strainParentType" style="height: 220px;margin-top: 10px;">
+        <ion-row class="strainsInventoryList" *ngSwitchCase="'flowers'" inset>
+          <ion-label style="position: absolute;">Flowers</ion-label>
+          <div class="data-table">
+            <div class="table-header">
+              <label class="company-col">Company</label>
+              <label class="price-col" style="width: 100px;">Distance</label>
+              <label style="width: 100px;">Gram</label>
+              <label style="width: 100px;">Eighth</label>
+              <label style="width: 100px;">Quarter</label>
+              <label style="width: 100px;">Half Oz</label>
+              <label style="width: 100px;">Oz</label>
+            </div>
+            <div class="data-row">
+              <label class="company-col">Testing company</label>
+              <label class="price-col" style="width: 100px;color: #D2D1D0;">5860.9&nbsp;&nbsp;&nbsp;
+                <a class="info-icon" (click)="toggleInfo($event)">
+                  <ion-icon name="images" style="color: #DD8B19;"></ion-icon>
+                  <div class="data-info" *ngIf="infoShow">
+                    <img src="../../assets/imgs/nature.jpg" class="info-image" />
+                    Hello. This is my image description.
+                  </div>
+                </a>
+              </label>
+              <label style="width: 100px;">10<sup>g</sup></label>
+              <label style="width: 100px;">20<sup>1/8</sup></label>
+              <label style="width: 100px;">30<sup>1/4</sup></label>
+              <label style="width: 100px;">40<sup>1/2</sup></label>
+              <label style="width: 100px;">50<sup>Oz</sup></label>
+            </div>
+          </div>
+        </ion-row>
+        <ion-row class="strainsInventoryList" *ngSwitchCase="'concentrates'" inset>
+          <ion-label>Concentrates</ion-label>
+          <ion-grid>
+            <ion-row class="table-header">
+              <ion-col>Company</ion-col>
+              <ion-col>Distance</ion-col>
+              <ion-col>Half Gram</ion-col>
+              <ion-col>Gram</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-row>
+        <ion-row class="strainsInventoryList" *ngSwitchCase="'clones'" inset>
+          <ion-label>Clones</ion-label>
+          <ion-grid>
+            <ion-row class="table-header">
+              <ion-col>Company</ion-col>
+              <ion-col>Distance</ion-col>
+              <ion-col>Each</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-row>
+        <ion-row class="strainsInventoryList" *ngSwitchCase="'seeds'" inset>
+          <ion-label>Seeds</ion-label>
+          <ion-grid>
+            <ion-row class="table-header">
+              <ion-col>Company</ion-col>
+              <ion-col>Distance</ion-col>
+              <ion-col>Each</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-row>
+      </ion-content>
+    </ion-card>
+
+    <ion-card class="strainImagesCntnr">
+      <ion-card-header class="subtitle" text-center>
+        {{strainDetails.name}} Weed Pictures & Videos
+      </ion-card-header>
+      <ion-card-content style="margin-top: 10px;margin-bottom: 10px;padding: 0 !important;">
+        <ion-row>
+          <ion-col col-4 *ngFor="let strainPicture of strainsPhotos" class="image-container" [ngStyle]="setMyStyles()">
+            <img [src]="strainPicture.strainPic" class="thumbimage "/>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

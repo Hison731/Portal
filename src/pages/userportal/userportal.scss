@@ -1,0 +1,43 @@
+page-userportal {
+    .portal-select{
+        color: color($colors, 420-head-text);
+        max-width: 100%;
+        font-size: 16px;
+    }
+    .selected-portal-logo {
+        display: grid;
+        justify-content: center;
+    }
+    .selected-portal-logo img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .selected-portal-logo p {
+        display: flex;
+        justify-content: center;
+        /*color: color($colors, 420-head-text);*/
+        color:#fff;
+        font-size: 25px;
+        margin: 10px 0;
+        font-weight: 600;
+    }
+    .selected-portal-logo-img {
+        display: flex;
+        justify-content: center;
+    }
+    ion-icon.portal-icon:before {
+        font-size: 40px;
+    }
+    ion-icon.portal-icon{
+        background: #eaeaea47;
+        padding: 15px;
+        border-radius: 4px;
+    }
+    .portal-icon-holder{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+}

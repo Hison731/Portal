@@ -1,0 +1,51 @@
+page-portalprofilemenu {
+    ion-card.card.card-ios{
+        background:transparent;
+    }
+    ion-card.card.card-ios h2 {
+        text-align: left;
+        font-size: 20px;
+        font-weight: 600;
+        color: #97c93c;
+        border-bottom: 1px solid #97c93c;
+        padding-bottom: 5px;
+    }
+    ion-card.card.card-ios ion-row {
+        margin: 10px 0;
+        color: #FF9800;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+    ion-item.item.item-block.item-ios.item-select{
+        border:none !important;
+    }
+    ion-card {
+        background: transparent !important;
+    }
+    h2.addMenuHeading {
+        font-size: 23px;
+        color: #96c83b;
+        padding: 10px 0;
+        border-bottom: 1px solid #96c83b;
+    }
+    .addMenuFormRow {
+        color: #efa720;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .customStrainPicCntnr {
+        padding: 15px;
+        border: 1px solid #94c53a;
+        color: #94c53a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+    }
+    span.strainPicIcon {
+        margin-right: 10px;
+    }
+}

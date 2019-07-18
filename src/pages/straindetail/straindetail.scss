@@ -1,0 +1,112 @@
+.data-container {
+  position: absolute !important;
+  width: 100%;
+  //height: 100%;
+  height: calc(100% - 93px);
+  top: 93px;
+  overflow-y: auto;
+}
+
+.card-md {
+  width: 100% !important;
+  margin: 0 !important;
+  margin-top: 10px !important;
+  background: transparent !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  box-shadow: none !important;
+
+  p {
+    color: #D2D1D0 !important;
+
+    a {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.card-content-md {
+  padding: 0 5px !important;
+}
+
+.subtitle {
+  width: 100% !important;
+  padding: 12px 10px 10px 10px !important;
+  font-size: 17px !important;
+  color: #EFA720 !important;
+  border: 1px solid #D2D1D0 !important;
+  border-radius: 5px !important;
+  line-height: 1;
+}
+
+.description-container {
+  height: 150px;
+  margin-top: 15px;
+  color: #D2D1D0;
+  font-size: 15px;
+  overflow-y: auto;
+}
+
+.description-container h2 {
+  color: #D2D1D0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sub-item {
+  display: inline-block !important;
+  height: 150px;
+  padding: 0 5px !important;
+  margin-top: 10px !important;
+}
+
+.sub-item-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 3px solid gray;
+}
+
+.sub-item:nth-of-type(even) {
+}
+
+.thumbimage {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.strain_title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 34px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+  padding: 9px;
+  color: #EFA720;
+}
+
+.description-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  -webkit-appearance: none;
+}
+
+.description-container::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: #D2D1D0;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+.description-container::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 0;
+}

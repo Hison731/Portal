@@ -1,0 +1,7 @@
+{
+  "name": "420-Portal",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

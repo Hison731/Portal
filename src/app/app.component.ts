@@ -48,7 +48,7 @@ export class MyApp {
 
   openUserProfile(username: any) {
     console.log(username);
-    this.nav.setRoot("Page1");
-    // this.nav.push("ProfilePage", {userName: username})
+    // this.nav.setRoot("Page1");
+    this.nav.push("ProfilePage", {userName: username})
   }
 }

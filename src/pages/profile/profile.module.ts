@@ -4,7 +4,7 @@ import { ProfilePage } from './profile';
 import { ComponentsModule } from '../../components/components.module'; 
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     ProfilePage,
   ],
   imports: [

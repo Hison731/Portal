@@ -12,7 +12,7 @@ import {jsonpCallbackContext} from '@angular/common/http/src/module';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = "HomePage";
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, component: any }>; 
   userDetails: any = [];
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public authProvider: AuthProvider) {
@@ -47,7 +47,8 @@ export class MyApp {
   }
 
   openUserProfile(username: any) {
-    // console.log(username);
-    this.nav.push("ProfilePage", {userName: username})
+    console.log(username);
+    this.nav.setRoot("Page1");
+    // this.nav.push("ProfilePage", {userName: username})
   }
 }

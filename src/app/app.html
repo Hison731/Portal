@@ -2,7 +2,7 @@
   <ion-header>
   </ion-header>
   <ion-content class="menu-items">
-    <ion-list no-lines>
+    <ion-list no-lines> 
       <button class="menu-lists" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
         <ion-badge class="numberCircle" *ngIf="p.title=='Chat'">5</ion-badge>

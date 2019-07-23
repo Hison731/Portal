@@ -11,11 +11,17 @@ import { DataProvider } from '../providers/data/data';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthProvider } from '../providers/auth/auth';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+// modal
+import { FollowerModalPage } from '../pages/follower-modal/follower-modal';
+import { FollowingModalPage } from '../pages/following-modal/following-modal';
+
 
 
 @NgModule({
   declarations: [
     MyApp,
+    FollowerModalPage,
+    FollowingModalPage
   ],
   imports: [
     BrowserModule,
@@ -27,6 +33,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    FollowerModalPage,
+    FollowingModalPage
   ],
   providers: [
     StatusBar,

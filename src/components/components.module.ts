@@ -5,6 +5,7 @@ import { AuthFabComponent } from './auth-fab/auth-fab';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StrainSearchbarComponent } from './strain-searchbar/strain-searchbar';
 
+
 @NgModule({
 	declarations: [PortalHeaderComponent,
     PortalFooterComponent,

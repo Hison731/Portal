@@ -2,7 +2,7 @@ import {Component, ViewChild} from '@angular/core';
 import {Nav, Platform, Events} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
-import {HomePage} from '../pages/home/home';
+import {HomePage} from '../pages/home/home'; 
 import {AuthProvider} from '../providers/auth/auth';
 import {jsonpCallbackContext} from '@angular/common/http/src/module';
 
@@ -25,8 +25,7 @@ export class MyApp {
       {title: 'Marijuana Strains', component: "StrainsPage"},
       {title: 'Coupons', component: "CouponsPage"},
       {title: 'Portals', component: "UserportalPage"},
-      {title: 'Profile Settings', component: "ProfilesettingPage"},
-      {title: 'Followers/Following', component: "FollowerModalPage"}
+      {title: 'Profile Settings', component: "ProfilesettingPage"}
     ];
 
     if (localStorage.getItem("userCredentials")) {

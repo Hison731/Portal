@@ -1,11 +1,11 @@
 <ion-header>
-  <ion-navbar no-border-bottom>
-    <ion-title class="modal_title_01" (click)="closeModal()">
-      <ion-icon name="arrow-back" showWhen="android,windows"></ion-icon>
-      <span>420portal</span> 
-    </ion-title>
-  </ion-navbar>
-
+  <portal-header></portal-header>
+  <ion-navbar no-border-bottom class="custom_navbar_02">
+      <ion-title class="modal_title_01" (click)="closeModal()">
+        <ion-icon name="arrow-back"></ion-icon>
+        <span>420portal</span> 
+      </ion-title>
+    </ion-navbar>
   <ion-toolbar no-border-top class="custom_segment_02">
     <ion-segment [(ngModel)]="pet">
       <ion-segment-button value="followers">
@@ -25,6 +25,34 @@
           <img src="../../assets/imgs/main_avatar.png">
         </ion-avatar>
         <p>srtrooper49</p>
+        <button ion-button clear item-end>Follow</button>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/main_avatar.png">
+        </ion-avatar>
+        <p>Slstrole</p>
+        <button ion-button clear item-end>Follow</button>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/main_avatar.png">
+        </ion-avatar>
+        <p>Staidways</p>
+        <button ion-button clear item-end>Follow</button>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/main_avatar.png">
+        </ion-avatar>
+        <p>Savdsoul</p>
+        <button ion-button clear item-end>Follow</button>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/main_avatar.png">
+        </ion-avatar>
+        <p>WeedReady</p>
         <button ion-button clear item-end>Follow</button>
       </ion-item>
       <ion-item>
@@ -96,3 +124,6 @@
     </ion-list>
   </div>
 </ion-content>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>

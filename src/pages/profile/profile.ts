@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ModalController} from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
-import { FollowerModalPage } from '../follower-modal/follower-modal';
-
  
 @IonicPage()  
 @Component({
@@ -11,11 +9,9 @@ import { FollowerModalPage } from '../follower-modal/follower-modal';
 
 })
 export class ProfilePage {
-  constructor(public modalCtrl: ModalController) { }
-
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
   openFollower() {
-    let myModal = this.modalCtrl.create(FollowerModalPage);
-    myModal.present();
+    this.navCtrl.push('FollowerModalPage', {}, {animate: false});
   }
 }
 

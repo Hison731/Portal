@@ -8,12 +8,10 @@ import { IonicPage, NavController, NavParams, ViewController, Platform  } from '
 })
 export class FollowerModalPage {
   pet: string = "followers";
-  isAndroid: boolean = false;
 
-  constructor(public viewCtrl: ViewController, platform: Platform) {
-    this.isAndroid = platform.is('android');
+  constructor(public viewCtrl: ViewController, public navCtrl: NavController) {
   }
   closeModal() {
-    this.viewCtrl.dismiss();
+    this.navCtrl.push('ProfilePage', {}, {animate: false});
   };
 }

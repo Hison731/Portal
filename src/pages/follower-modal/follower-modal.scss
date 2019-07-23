@@ -16,7 +16,7 @@ follower-modal {
                text-transform: unset;
           }
           .scroll-content{
-               margin-top: 101px !important;
+               margin-top: 179px !important;
           }
           .item-md ion-avatar ion-img, 
           .item-md ion-avatar img{
@@ -30,10 +30,12 @@ follower-modal {
 
      .modal_title_01{
           span{
-               margin: -3px 0 0 15px;
+               margin: -1px 0 0 15px;
+               display: block;
           }
           .toolbar-title{
                color: black !important;
+               display: flex;
           }
      }
 
@@ -52,6 +54,12 @@ follower-modal {
                border-bottom: 2px solid black !important;
                width: 50% !important;
                opacity: 1 !important;
+          }
+     }
+     .custom_navbar_02{
+          margin-top: 75px;
+          .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+               display: none !important;
           }
      }
 }

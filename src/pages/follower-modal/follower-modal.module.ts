@@ -3,11 +3,11 @@ import { IonicPageModule } from 'ionic-angular';
 import { FollowerModalPage } from './follower-modal';
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     FollowerModalPage,
   ],
   imports: [
-    IonicPageModule.forChild(FollowerModalPage),
+    IonicPageModule.forChild(FollowerModalPage)
   ],
 })
 export class FollowerModalPageModule {}

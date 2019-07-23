@@ -25,7 +25,8 @@ export class MyApp {
       {title: 'Marijuana Strains', component: "StrainsPage"},
       {title: 'Coupons', component: "CouponsPage"},
       {title: 'Portals', component: "UserportalPage"},
-      {title: 'Profile Settings', component: "ProfilesettingPage"}
+      {title: 'Profile Settings', component: "ProfilesettingPage"},
+      {title: 'Followers/Following', component: "FollowerModalPage"}
     ];
 
     if (localStorage.getItem("userCredentials")) {
@@ -48,7 +49,6 @@ export class MyApp {
 
   openUserProfile(username: any) {
     console.log(username);
-    // this.nav.setRoot("Page1");
     this.nav.push("ProfilePage", {userName: username})
   }
 }

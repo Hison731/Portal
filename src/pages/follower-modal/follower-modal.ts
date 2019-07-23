@@ -1,12 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController  } from 'ionic-angular';
-
-/**
- * Generated class for the SampleModalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Component } from '@angular/core'; 
+import { IonicPage, NavController, NavParams, ViewController, Platform  } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -14,8 +7,13 @@ import { IonicPage, NavController, NavParams, ViewController  } from 'ionic-angu
   templateUrl: 'follower-modal.html',
 })
 export class FollowerModalPage {
-  constructor(public viewCtrl: ViewController) {}
+  pet: string = "followers";
+  isAndroid: boolean = false;
+
+  constructor(public viewCtrl: ViewController, platform: Platform) {
+    this.isAndroid = platform.is('android');
+  }
   closeModal() {
     this.viewCtrl.dismiss();
-  }
+  };
 }

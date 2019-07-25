@@ -1,0 +1,117 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+<ion-content class="menu-items">
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br />
+        Register
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br />
+        Login
+      </div>
+    </button>
+  </ion-fab>
+ <!-- map api -->
+  <div class="testing-map"></div>
+<!-- ------ -->
+  <div class="block1_01">
+    <div class="avatar_div">
+      <img src="../../assets/imgs/hand.jpg" class="avatar_img_01" />
+    </div>
+    <div class="content_01">
+      <div class="follow_01">
+        <h2>1</h2>
+        <p>Posts</p>
+      </div>
+      <div class="follow_01" (click)="openFollower()">
+        <h2>0</h2>
+        <p>Followers</p>
+      </div>
+      <div>
+        <button class="follow_btn_01">Follow</button>
+      </div>
+      <div class="msg_div_01">
+        <img src="../../assets/imgs/bottom_icon2.png" />
+        <p>Message</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h4>Testing Company</h4>
+    <div class="delivery">
+      <img src="../../assets/imgs/dispensary.png" alt="">
+      <img src="../../assets/imgs/delivery.png" alt="">
+      <p>(Storefront + Delivery)</p>
+      <div class="open-select">
+          <p class="">Open</p>
+          <img src="../../assets/imgs/dwarrow-g.png" alt="">
+      </div>
+      
+
+    </div>
+    <p>Hello :)</p>
+    <a href="#">1240 India Street (Suite 420), San Diego, CA 92101</a>
+    <div class="phone">
+      <a href="#"><img src="../../assets/imgs/phone.png" alt="">5555555555</a>
+      <p class="number">18+</p>
+      <p><i class="fa fa-credit-card"></i></p> 
+    </div>
+    <p class="globe"><i class="fa fa-globe"></i></p>
+    <div class="controll_div">
+      <div>
+        <p><i class="fa fa-heart"></i></p>
+        <p>1</p>
+      </div>
+      <div>
+        <p><i class="fa fa-comment-o"></i></p>
+        <p>0</p>
+      </div>
+      <div>
+        <img src="../../assets/imgs/menu.png" />
+        <p>5</p>
+      </div>
+      <div>
+        <img src="../../assets/imgs/coupon.png" />
+        <p>1</p>
+      </div>
+    </div>
+
+    <img src="../../assets/imgs/hand.jpg" alt="" class="main-img">
+
+  </div>
+
+
+  <div class="footer_01">
+    <h2>Follow <span>Us on</span></h2>
+    <div class="social_01">
+      <a href="https://www.instagram.com/420portal" target="blank">
+        <img src="../assets/imgs/instagram.png" width="55px" alt="" />
+      </a>
+      <a href="http://www.youtube.com/user/420portal" target="_blank">
+        <i class="fa fa-youtube-square" style="margin: -2px 3px 0 2px"></i>
+      </a>
+      <a href="https://twitter.com/420Portal" target="_blank">
+        <i class="fa fa-twitter-square"></i>
+      </a>
+    </div>
+    <div class="footer_menu_01">
+      <a href="#">Weedgram</a><span> | </span>
+      <a href="#">Dlspensary/Dellvery/Doctor</a><span> | </span>
+      <a href="#">Stratns</a><span> | </span> <a href="#">Coupons</a><span> | </span> <a href="#">News</a><span> |
+      </span>
+      <a href="#">Contact Us</a>
+    </div>
+    <p class="footer_copyright_01">
+      All Rights Reserved. Copyright 420portal.com
+    </p>
+  </div>
+</ion-content>

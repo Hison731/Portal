@@ -1,0 +1,219 @@
+page-userportals {
+  .avatar_div {
+    background-image: url(../../assets/imgs/profile-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 114px;
+    display: flex;
+    .avatar_img_01 {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      max-width: unset;
+    }
+  }
+  .userportals_content{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 2px;
+    margin-bottom: 25px;
+    div{
+      text-align: center;
+    }
+    img{
+      max-width: 40px;
+    }
+    p{
+      color: white;
+      font-size: 12px;
+      margin: 0;
+    }
+    .menu-img img{
+      width: 34px;
+      height: 50px;
+      margin-top: -10px; 
+    }
+  }
+  .thunder{
+    text-align: center;
+    img{
+      max-width: 60px;
+    }
+    p{
+      color: white;
+      font-size: 12px;
+      margin: 0;
+      margin-top: -10px;
+    }
+
+  }
+
+  .user_companies_list{
+    text-align: center;
+    margin: 20px;
+    select {
+      padding: 10px;
+      font-size: 20px;
+      width: 65%;
+      background: black !important;
+      border: solid 1px #707070;
+      font-family: sans-serif;
+    }
+  }
+
+  .gray_menu{
+    background: url(../../assets/imgs/forum-nav-bg.png) repeat-x;
+    border: solid 1px #696969;
+    width: 100%;
+    height: 32px;
+    margin: 110px 0 50px 0;
+    position: relative;
+    .fab-md{
+      background-color: transparent;
+      box-shadow: none;
+      height: 30px;
+      margin-left: 20px;
+    }
+    .fab-md .button-effect {
+      background-color:unset;
+    }
+    .fab-close-icon{
+      line-height: 31px;
+    }
+    div{
+      background-color: #616161;
+      color: white;
+      height: 28px;
+      width: 100%;
+      font-size: 12px;
+      padding: 8px 10px;
+      font-weight: bold;
+      font-family: sans-serif !important;
+    }
+    ion-fab-list{
+      margin: 30px 0;
+      min-height: unset;
+      width: 90vw;
+      left: 5vw;
+    }
+  }
+
+  .userportal-title{
+    text-align: center;
+    font-size: 16px;
+    color: #D2D1D0;
+    margin-top: 70px;
+    margin-bottom: 12px;
+  }
+
+  .userportal_table{
+    background-color: #242424;
+    border: 1px solid #616161;
+    margin: 0 5px;
+    padding: 2px 30px;
+    p{
+      font-size: 16px;
+      color: #D2D1D0;
+      margin: 0;
+    }
+    ion-note{
+      font-size: 16px;
+      margin: 3px 0 !important;
+    }
+    ion-label{
+      margin: 0 !important;
+    }
+    .header ion-note{
+      align-self: start;
+    }
+
+    .edit_part{
+      text-align: left;
+      width: 34%;
+    }
+    .edit_part p{
+      color: white;
+     
+    }
+
+    .name_part{
+      width: 26%;
+      text-align: left;
+    }
+  }
+  .doctor-title{
+    text-align: center;
+    font-size: 16px;
+    color: #D2D1D0;
+    margin-top: 35px;
+    margin-bottom: 12px;
+  }
+  .doctor_table{
+    background-color: #242424;
+    border: 1px solid #616161;
+    margin: 0 5px 60px;
+    padding: 2px;
+    display: flex;
+    img{
+      object-fit: contain;
+      margin: 0 10px;
+    }
+    p{
+      margin: 0 3px;
+    }
+  }
+
+  .footer_01 {
+    width: 100%;
+    height: 421px;
+    background-image: url("../../assets/imgs/footer_bg.png");
+    background-repeat: repeat-x;
+    text-align: center;
+    h2 {
+      color: #fff;
+      font-size: 30px;
+      padding-top: 60px;
+    }
+    h2 span {
+      color: #333;
+    }
+    .social_01 {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .social_01 img {
+      // margin-top: 10px;
+    }
+    .social_01 i {
+      color: white;
+      text-align: center;
+      font-size: 60px;
+      margin-top: -2px;
+    }
+    .footer_menu_01 {
+      margin-top: 130px;
+    }
+    .footer_menu_01 a {
+      color: #fff;
+      text-decoration: none;
+      padding-right: 5px;
+      font-size: 11px;
+    }
+
+    .footer_menu_01 span {
+      color: black;
+      padding-right: 5px;
+      font-size: 11px;
+    }
+    .footer_copyright_01 {
+      color: #fcd640;
+      font-size: 11px;
+      margin-top: 32px;
+    }
+  }
+}

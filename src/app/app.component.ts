@@ -25,7 +25,10 @@ export class MyApp {
       {title: 'Marijuana Strains', component: "StrainsPage"},
       {title: 'Coupons', component: "CouponsPage"},
       {title: 'Portals', component: "UserportalPage"},
-      {title: 'Profile Settings', component: "ProfilesettingPage"}
+      {title: 'Profile Settings', component: "ProfilesettingPage"},
+      {title: 'Dashboard', component: "DashboardPage"},
+      {title: 'User Portals', component: "UserportalsPage"},
+      {title: 'Testing420', component: "Testing420Page"}
     ];
 
     if (localStorage.getItem("userCredentials")) {

@@ -80,6 +80,7 @@ page-companyprofile {
     }
     .delivery{
       display: flex;
+      flex-wrap: wrap;
       p{
         margin-bottom: 7px;
         font-size: 15px;

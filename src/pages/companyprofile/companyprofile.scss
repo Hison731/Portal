@@ -90,6 +90,10 @@ page-companyprofile {
         width: 30px;
         object-fit: contain;
         margin-right: 5px;
+        max-height: 40px;
+      }
+      .delivery_content{
+        display: flex;
       }
       .open-select{
         display: flex;
@@ -98,7 +102,7 @@ page-companyprofile {
         p{
           font-size: 26px;
           margin: 0;
-          margin-top: 3px;
+          // margin-top: 3px;
         }
       }
     }

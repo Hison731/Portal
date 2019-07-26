@@ -28,7 +28,7 @@ export class MyApp {
       {title: 'Profile Settings', component: "ProfilesettingPage"},
       {title: 'Dashboard', component: "DashboardPage"},
       {title: 'User Portals', component: "UserportalsPage"},
-      {title: 'Testing420', component: "Testing420Page"}
+      {title: 'Companyprofile', component: "CompanyprofilePage"}
     ];
 
     if (localStorage.getItem("userCredentials")) {

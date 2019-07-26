@@ -4,11 +4,11 @@ import { DataProvider } from '../../providers/data/data';
 // import { SampleModalPage } from '../sample-modal/sample-modal'; 
 @IonicPage()  
 @Component({
-  selector: 'page-testing420',
-  templateUrl: 'testing420.html'
+  selector: 'page-companyprofile',
+  templateUrl: 'companyprofile.html'
 
 })
-export class Testing420Page {
+export class CompanyprofilePage {
   constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
   // openModal() {
   //   let myModal = this.modalCtrl.create(SampleModalPage);

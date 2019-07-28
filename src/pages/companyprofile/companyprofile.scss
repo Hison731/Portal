@@ -129,11 +129,8 @@ page-companyprofile {
         font-size: 24px;
       }
     }
-    .globe{
-      color: #ECA731;
-      text-align: center;
-      font-size: 20px;
-      margin: 40px 0 10px 0;
+    .company-profile-details{
+      margin: 40px 0 20px 0;
     }
     .controll_div{
       display: flex;
@@ -153,12 +150,31 @@ page-companyprofile {
       div{
         text-align: center;
         font-size: 24px;
+        width: 25%;
       }
     }
-    .main-img{
-      width: 110px;
-      margin: 10px 0 20px 0;
+  }
+  .main-img{
+    margin: 10px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 2vw;
+    a{
+      width: 31vw;
+      height: 31vw;
+      margin: 5px 0;
     }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .truncate{
+    margin-bottom: 20px;
+  }
+  .truncate-text p{
+    display: inline;
   }
   .footer_01 {
     width: 100%;
@@ -178,6 +194,9 @@ page-companyprofile {
       display: flex;
       justify-content: center;
       margin-top: 30px;
+      a{
+        display: block;
+      }
     }
     .social_01 img {
       // margin-top: 10px;

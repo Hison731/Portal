@@ -1,0 +1,99 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+<ion-content class="menu-items">
+  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Register
+      </div>
+    </button>
+    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+      <div style="color:white;">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+        Login
+      </div>
+    </button>
+  </ion-fab>
+  <div class="title-white uppercase">
+    <strong>Edit Portal</strong>
+  </div>
+  <form action="" class="input_form">
+    <div class="store_type">
+      <label for="PortalStoreTypeId">Company Type</label>
+      <select name="store_type" id="PortalStoreTypeId">
+        <option value="">Select</option>
+        <option value="1">Storefront</option>
+        <option value="2" selected="selected">Storefront + Delivery</option>
+        <option value="3">Delivery</option>
+      </select>
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Company Name</ion-label>
+        <ion-input type="text" value="" name="c_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Company Username</ion-label>
+        <ion-input type="password" value="" name="user_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Company Phone #</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Company Postion</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Suite #</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Facebook Url</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Twitter Url</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Instagram Url</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Youtube Url</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Company Description</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+      <ion-item no-lines>
+          <ion-label>Do you sell Recreational Marijuana?</ion-label>
+          <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+          <ion-label>Are Credit Cards Accepted</ion-label>
+          <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item>
+          <ion-label>18+ Allowed</ion-label>
+          <ion-checkbox></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+
+    <div padding>
+      <button ion-button color="primary" block>Sign In</button>
+    </div>
+  </form>
+</ion-content>

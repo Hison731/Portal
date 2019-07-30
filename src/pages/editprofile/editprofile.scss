@@ -1,0 +1,32 @@
+page-editprofile {
+     .title-white{
+          background: url(../../assets/imgs/title_white.png) repeat-x top #cecece;
+          display: block;
+          padding: 10px 9px;
+          color: #000; 
+     }
+     .input_form{
+          padding: 0 5vw;
+          select {
+               border: solid 1px #707070;
+               padding: 4px;
+               background: #686969;
+               color: #d2d1d0;
+               width: 200px;
+           }
+          .store_type {
+               margin-top: 30px;
+               select{
+                    font-size: 13px;
+                    font-family: sans-serif;
+               }
+           }
+           .item.item-md .checkbox-md{
+                margin-right: 5px;
+           }
+           .checkbox-md + .item-inner ion-label{
+                color: white;
+           }
+     }
+     
+}

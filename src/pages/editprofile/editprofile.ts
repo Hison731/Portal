@@ -4,15 +4,13 @@ import { DataProvider } from '../../providers/data/data';
  
 @IonicPage()  
 @Component({
-  selector: 'page-userportals',
-  templateUrl: 'userportals.html'
+  selector: 'page-editprofile',
+  templateUrl: 'editprofile.html'
 
 })
-export class UserportalsPage {
+export class EditprofilePage {
   constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
-  editprofile() {
-    this.navCtrl.push('EditprofilePage', {}, {animate: false});
-  }
+ 
 }
 
 

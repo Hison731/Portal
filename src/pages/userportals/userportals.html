@@ -1,31 +1,31 @@
 <ion-header>
-  <portal-header></portal-header>
-</ion-header> 
+    <portal-header></portal-header>
+</ion-header>
 <ion-footer>
-  <portal-footer></portal-footer>
+    <portal-footer></portal-footer>
 </ion-footer>
 <ion-content class="menu-items">
-  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
-    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+    <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+        <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
       <div style="color:white;">
         <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
         Register
       </div>
     </button>
-    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+        <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
       <div style="color:white;">
         <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
         Login
       </div>
     </button>
-  </ion-fab>
+    </ion-fab>
 
-  <div class="avatar_div">
-    <img src="../../assets/imgs/hand.jpg" class="avatar_img_01">
-  </div>
+    <div class="avatar_div">
+        <img src="../../assets/imgs/hand.jpg" class="avatar_img_01">
+    </div>
 
-  <div class="user_companies_list">
-    <select id="c_list" class="edit_c_list edit_comp_list">
+    <div class="user_companies_list">
+        <select id="c_list" class="edit_c_list edit_comp_list">
       <option value="2108">Hollyweed</option>
       <option value="2088">Goldn Bloom</option>
       <option value="2089">Harbor Collective</option>
@@ -57,137 +57,137 @@
       <option value="2125">Urban Bud</option>
       <option value="2217">Testing company</option>
     </select>
-  </div>
+    </div>
 
 
-  <div class="userportals_content">
-    <div>
-      <img src="../../assets/imgs/eye.png">
-      <p>View Account</p>
+    <div class="userportals_content">
+        <div>
+            <img src="../../assets/imgs/eye.png">
+            <p>View Account</p>
+        </div>
+        <div (click)="editprofile()">
+            <img src="../../assets/imgs/gear.png">
+            <p>Edit Profile</p>
+        </div>
+        <div class="menu-img" (click)="menu()">
+            <img src="../../assets/imgs/menu.png">
+            <p>Menu</p>
+        </div>
+        <div (click)="coupons()">
+            <img src="../../assets/imgs/coupon.png">
+            <p>Coupons</p>
+        </div>
+        <div (click)="cmedia()">
+            <img src="../../assets/imgs/bt_image.png">
+            <p>Media</p>
+        </div>
     </div>
-    <div (click)="editprofile()">
-      <img src="../../assets/imgs/gear.png">
-      <p>Edit Profile</p>
+    <div class="thunder">
+        <img src="../../assets/imgs/bottom_icon2.png">
+        <p>Messenger</p>
     </div>
-    <div class="menu-img">
-      <img src="../../assets/imgs/menu.png">
-      <p>Menu</p>
-    </div>
-    <div>
-      <img src="../../assets/imgs/coupon.png">
-      <p>Coupons</p>
-    </div>
-    <div>
-      <img src="../../assets/imgs/bt_image.png">
-      <p>Media</p>
-    </div>
-  </div>
-  <div class="thunder">
-    <img src="../../assets/imgs/bottom_icon2.png">
-    <p>Messenger</p>
-  </div>
 
-  <div class="gray_menu">
-    <ion-fab>
-      <button ion-fab>
+    <div class="gray_menu">
+        <ion-fab>
+            <button ion-fab>
         <img src="../../assets/imgs/menu_bar.png">
       </button>
-      <ion-fab-list>
-        <div>
-          PROFILE
+            <ion-fab-list>
+                <div>
+                    PROFILE
+                </div>
+            </ion-fab-list>
+        </ion-fab>
+    </div>
+
+    <p class="userportal-title">Portal Admin</p>
+    <div class="userportal_table">
+        <ion-list no-lines>
+            <ion-item class="header">
+                <ion-note item-start class="name_part">
+                    <p>PORTAL#</p>
+                    <p>1420</p>
+                </ion-note>
+                <ion-note>
+                    <p>NAME</p>
+                    <p>1420</p>
+                </ion-note>
+                <ion-note item-end class="edit_part">ACTIONS</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-note item-start class="name_part">
+                    2088
+                </ion-note>
+                <ion-note>
+                    <p>GOLDN BLOOM</p>
+                </ion-note>
+                <ion-note item-end class="edit_part">
+                    <P>VIEW</P>
+                    <P>PORTAL</P>
+                    <P>EDIT</P>
+                    <P>PORTAL</P>
+                    <P>MENU</P>
+                    <P>IMAGES</P>
+                    <P>MOVE</P>
+                </ion-note>
+            </ion-item>
+
+            <ion-item>
+                <ion-note item-start class="name_part">
+                    2088
+                </ion-note>
+                <ion-note>
+                    <p>HARBOR</p>
+                    <p>COLLECTIVE</p>
+                </ion-note>
+                <ion-note item-end class="edit_part">
+                    <P>VIEW</P>
+                    <P>PORTAL</P>
+                    <P>EDIT</P>
+                    <P>PORTAL</P>
+                    <P>MENU</P>
+                    <P>IMAGES</P>
+                    <P>MOVE</P>
+                </ion-note>
+            </ion-item>
+
+        </ion-list>
+    </div>
+
+
+    <p class="doctor-title">Doctor Admin Portal</p>
+    <div class="doctor_table">
+        <img src="../../assets/imgs/avatar2.png">
+        <p>PORTAL#</p>
+        <p>NAME</p>
+        <p>ACTIONS</p>
+    </div>
+
+
+
+    <div class="footer_01">
+        <h2>Follow <span>Us on</span></h2>
+        <div class="social_01">
+            <a href="https://www.instagram.com/420portal" target="blank">
+                <img src="../assets/imgs/instagram.png" width="55px" alt="">
+            </a>
+            <a href="http://www.youtube.com/user/420portal" target="_blank">
+                <i class="fa fa-youtube-square" style="margin: -2px 3px 0 2px"></i>
+            </a>
+            <a href="https://twitter.com/420Portal" target="_blank">
+                <i class="fa fa-twitter-square"></i>
+            </a>
         </div>
-      </ion-fab-list>
-    </ion-fab>
-  </div>
-
-  <p class="userportal-title">Portal Admin</p>
-  <div class="userportal_table">
-    <ion-list no-lines>
-      <ion-item class="header">
-        <ion-note item-start class="name_part">
-          <p>PORTAL#</p>
-          <p>1420</p>
-        </ion-note>
-        <ion-note>
-          <p>NAME</p>
-          <p>1420</p>
-        </ion-note>
-        <ion-note item-end class="edit_part">ACTIONS</ion-note>
-      </ion-item>
-      <ion-item>
-        <ion-note item-start class="name_part">
-          2088
-        </ion-note>
-        <ion-note>
-          <p>GOLDN BLOOM</p>
-        </ion-note>
-        <ion-note item-end class="edit_part">
-          <P>VIEW</P>
-          <P>PORTAL</P>
-          <P>EDIT</P>
-          <P>PORTAL</P>
-          <P>MENU</P>
-          <P>IMAGES</P>
-          <P>MOVE</P>
-        </ion-note>
-      </ion-item>
-
-      <ion-item>
-        <ion-note item-start class="name_part">
-          2088
-        </ion-note>
-        <ion-note>
-          <p>HARBOR</p>
-          <p>COLLECTIVE</p>
-        </ion-note>
-        <ion-note item-end class="edit_part">
-          <P>VIEW</P>
-          <P>PORTAL</P>
-          <P>EDIT</P>
-          <P>PORTAL</P>
-          <P>MENU</P>
-          <P>IMAGES</P>
-          <P>MOVE</P>
-        </ion-note>
-      </ion-item>
-
-    </ion-list>
-  </div>
-
-
-  <p class="doctor-title">Doctor Admin Portal</p>
-  <div class="doctor_table">
-    <img src="../../assets/imgs/avatar2.png">
-    <p>PORTAL#</p>
-    <p>NAME</p>
-    <p>ACTIONS</p>
-  </div>
-
-
-
-  <div class="footer_01">
-    <h2>Follow <span>Us on</span></h2>
-    <div class="social_01">
-      <a href="https://www.instagram.com/420portal" target="blank">
-        <img src="../assets/imgs/instagram.png" width="55px" alt="">
-      </a>
-      <a href="http://www.youtube.com/user/420portal" target="_blank">
-        <i class="fa fa-youtube-square" style="margin: -2px 3px 0 2px"></i>
-      </a>
-      <a href="https://twitter.com/420Portal" target="_blank">
-        <i class="fa fa-twitter-square"></i>
-      </a>
+        <div class="footer_menu_01">
+            <a href="#">Weedgram</a><span> | </span>
+            <a href="#">Dlspensary/Dellvery/Doctor</a><span> | </span>
+            <a href="#">Stratns</a><span> | </span>
+            <a href="#">Coupons</a><span> | </span>
+            <a href="#">News</a><span> | </span>
+            <a href="#">Contact Us</a>
+        </div>
+        <p class="footer_copyright_01">All Rights Reserved. Copyright 420portal.com</p>
     </div>
-    <div class="footer_menu_01">
-      <a href="#">Weedgram</a><span> | </span>
-      <a href="#">Dlspensary/Dellvery/Doctor</a><span> | </span>
-      <a href="#">Stratns</a><span> | </span>
-      <a href="#">Coupons</a><span> | </span>
-      <a href="#">News</a><span> | </span>
-      <a href="#">Contact Us</a>
-    </div>
-    <p class="footer_copyright_01">All Rights Reserved. Copyright 420portal.com</p>
-  </div>
 
 
 </ion-content>

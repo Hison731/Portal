@@ -1,0 +1,113 @@
+<ion-header>
+    <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+    <portal-footer></portal-footer>
+</ion-footer>
+<ion-content class="menu-items">
+    <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
+        <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+            <div style="color:white;">
+                <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+                Register
+            </div>
+        </button>
+        <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
+            <div style="color:white;">
+                <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
+                Login
+            </div>
+        </button>
+    </ion-fab>
+    <div class="title-white" ion-fixed>
+        <div>
+            <ion-icon name="md-close" (click)="back()"></ion-icon>
+            <strong>Add/Edit Menu</strong>
+        </div>
+        <div>
+            <ion-icon name="checkmark" style="color: #E09827"></ion-icon>
+        </div>
+    </div>
+    <div class="category_type">
+        <label for="PortalCategoryTypeId">Category Name</label>
+        <select name="category_type" id="PortalCategoryTypeId">
+            <option value="0">Please select category</option>
+            <option value="1">Flowers - Indica</option>
+            <option value="2">Flowers - Sativa</option>
+            <option value="3">Flowers - Hybrid</option>
+            <option value="7">Concentrates</option>
+            <option value="9">Edibles</option>
+            <option value="10">Drinks</option>
+            <option value="11">Topical</option>
+            <option value="12">Tinctures</option>
+            <option value="13">Clones</option>
+            <option value="14">Seeds</option>
+            <option value="15">Merchandise</option>
+        </select>
+    </div>
+
+    <div class="search_options">
+        <img src="../../assets/imgs/search_options.png" alt="" style="width : 20px; cursor: pointer;">
+    </div>
+
+    <div class="data_contain">
+        <div class="each_data">
+            <h6>FLOWERS - INDICA</h6>
+            <p class="uname">goshawkyo</p>
+            <div class="datavalue">
+            </div>
+            <span><i class="fa fa-edit"></i></span>
+            <span><i class="fa fa-trash"></i></span>
+            <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+        <div class="each_data">
+            <h6>FLOWERS - SATIVA</h6>
+            <p class="uname">Blue Dream</p>
+            <div class="datavalue">
+                <p>10<sup>g</sup></p>
+                <p>20<sup>1/8</sup></p>
+                <p>30<sup>1/4</sup></p>
+                <p>40<sup>1/2</sup></p>
+                <p>50<sup>oz</sup></p>
+            </div>
+            <span><i class="fa fa-edit"></i></span>
+            <span><i class="fa fa-trash"></i></span>
+            <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+        <div class="each_data">
+            <h6>FLOWERS - HYBRID</h6>
+            <p class="uname">Blue Dream</p>
+            <div class="datavalue">
+                <p>10<sup>g</sup></p>
+                <p>20<sup>1/8</sup></p>
+                <p>30<sup>1/4</sup></p>
+                <p>40<sup>1/2</sup></p>
+                <p>50<sup>oz</sup></p>
+            </div>
+            <span><i class="fa fa-edit"></i></span>
+            <span><i class="fa fa-trash"></i></span>
+            <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+        <div class="each_data">
+            <h6>EDIBLES</h6>
+            <p class="uname">goshawkyo</p>
+            <div class="datavalue">
+                <p>10<sup>each</sup></p>
+            </div>
+            <span><i class="fa fa-edit"></i></span>
+            <span><i class="fa fa-trash"></i></span>
+            <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+        <div class="each_data">
+            <p class="uname">test <img src="./../assets/imgs/image.png"></p>
+            <div class="datavalue">
+                <p>1<sup>each</sup></p>
+            </div>
+            <span><i class="fa fa-edit"></i></span>
+            <span><i class="fa fa-trash"></i></span>
+            <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+
+
+    </div>
+</ion-content>

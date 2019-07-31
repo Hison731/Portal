@@ -1,0 +1,35 @@
+page-marijuana {
+    .title-white {
+        background: url(../../assets/imgs/title_white.png) repeat-x top #cecece;
+        display: block;
+        padding: 10px 9px;
+        color: #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        div{
+            display: flex;
+            align-items: center;
+        }
+        ion-icon{
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    }
+    .search_options {
+        padding: 5px 10px !important;
+        color: #EFA720;
+        border-radius: 5px;
+        border: 1px solid white;
+        margin: 100px 7px 10px;
+        text-align: center;
+        height: 32px;
+        .img {
+            width : 20px; 
+            height: 20px;
+            cursor: pointer;
+        }
+    }
+}

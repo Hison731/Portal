@@ -13,6 +13,15 @@ export class UserportalsPage {
   editprofile() {
     this.navCtrl.push('EditprofilePage', {}, {animate: false});
   }
+  menu() {
+    this.navCtrl.push('MenuPage', {}, {animate: false});
+  }
+  cmedia() {
+    this.navCtrl.push('CmediaPage', {}, {animate: false});
+  }
+  coupons() {
+    this.navCtrl.push('CompanycouponsPage', {}, {animate: false});
+  }
 }
 
 

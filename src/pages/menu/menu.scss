@@ -1,0 +1,112 @@
+page-menu {
+    .title-white {
+        background: url(../../assets/imgs/title_white.png) repeat-x top #cecece;
+        display: block;
+        padding: 10px 9px;
+        color: #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        div{
+            display: flex;
+            align-items: center;
+        }
+        ion-icon{
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    }
+    .category_type {
+        margin-top: 68px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        label{
+            font-size: 16px;
+            margin-right: 10px;
+            width:35%;
+        }
+        select {
+            border: solid 1px #707070; 
+            padding: 7px;
+            background: #686969;
+            color: #d2d1d0;
+            width: 180px;
+            font-size: 13px;
+            font-family: sans-serif;
+        }
+    }
+    .text-center {
+        text-align: center;
+    }
+    .search_options {
+        padding: 5px 10px !important;
+        color: #EFA720;
+        border-radius: 5px;
+        border: 1px solid white;
+        margin: 100px 7px 10px;
+        text-align: center;
+        height: 32px;
+        .img {
+            width : 20px; 
+            height: 20px;
+            cursor: pointer;
+        }
+    }
+    .data_contain{
+        padding:10px;
+        color: #EFA720;
+        border-radius: 5px;
+        border: 1px solid white;
+        margin: 0 7px 7px 7px;
+        h6{
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 5px;
+        }
+        .each_data{
+            border-bottom: solid 1px #727272;
+            font-size: 14px;
+            position: relative;
+            padding: 5px 0;
+            .uname{
+                margin: 0;
+                display: flex;
+                align-items: center;
+                img{
+                    margin-left: 5px;
+                    width: 15px;
+                }
+            }
+            .datavalue{
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 57px 0 33px;
+                sup{
+                    color: #D2D1D0;
+                }
+            }
+            .fa-edit{
+                position: absolute;
+                bottom: 4px;
+                right: 32px;
+                font-size: 15px;
+            }
+            .fa-trash{
+                position: absolute;
+                bottom: 5px;
+                right: 17px; 
+                font-size: 15px;   
+            }
+            .acitve_img{
+                position: absolute;
+                bottom: 6px;
+                right: 1px; 
+                width:12px;  
+            }
+        }
+    }
+}

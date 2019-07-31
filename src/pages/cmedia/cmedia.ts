@@ -3,13 +3,13 @@ import { IonicPage, NavController, NavParams, LoadingController, ModalController
 import { DataProvider } from '../../providers/data/data';
 import * as $ from 'jquery'
 
-@IonicPage() 
-@Component({
-  selector: 'page-editprofile',
-  templateUrl: 'editprofile.html'
+@IonicPage()
+@Component({ 
+  selector: 'page-cmedia',
+  templateUrl: 'cmedia.html'
 
 })
-export class EditprofilePage {
+export class CmediaPage {
   constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
   back() {
     this.navCtrl.push('UserportalsPage', {}, {animate: false});

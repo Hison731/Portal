@@ -74,6 +74,10 @@ page-userportals {
     height: 32px;
     margin: 110px 0 50px 0;
     position: relative;
+    .fab-ios{
+      background-color: transparent;
+      height: 30px;
+    }
     .fab-md{
       background-color: transparent;
       box-shadow: none;

@@ -28,7 +28,8 @@ export class MyApp {
       {title: 'Profile Settings', component: "ProfilesettingPage"},
       {title: 'Dashboard', component: "DashboardPage"},
       {title: 'User Portals', component: "UserportalsPage"},
-      {title: 'Companyprofile', component: "CompanyprofilePage"}
+      {title: 'Companyprofile', component: "CompanyprofilePage"},
+      {title: 'Marijuana', component: "MarijuanaPage"}
     ];
 
     if (localStorage.getItem("userCredentials")) {

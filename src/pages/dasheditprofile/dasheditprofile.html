@@ -1,0 +1,59 @@
+<ion-header>
+    <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+    <portal-footer></portal-footer>
+</ion-footer>
+<ion-content class="menu-items">
+    <div class="title-white" ion-fixed>
+        <div>
+            <ion-icon name="md-close" (click)="back()"></ion-icon>
+            <strong>Edit Profile</strong>
+        </div>
+        <div>
+            <ion-icon name="checkmark" style="color: #E09827; font-size: 25px;"></ion-icon>
+        </div>
+    </div>
+    <form action="" class="input_form">
+        <!-- upload image -->
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload"></label>
+            </div>
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(../../assets/imgs/main_avatar.png);">
+                </div>
+            </div>
+        </div>
+        <!-- ------- -->
+        <p class="photo_title">Change Profile Photo</p>
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Username</ion-label>
+                <ion-input type="password" value="" name="user_name"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Signature</ion-label>
+                <ion-textarea></ion-textarea>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Favorite Strain</ion-label>
+                <ion-input type="text" value=""></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Favourite Dispensary</ion-label>
+                <ion-input type="text" value=""></ion-input>
+            </ion-item>
+            
+           
+            <ion-item no-lines>
+                <ion-label>Receive 420Portal Newsletter</ion-label>
+                <ion-checkbox></ion-checkbox>
+            </ion-item>
+        </ion-list>
+        <div padding>
+            <button ion-button block class="save_btn">Save</button>
+        </div>
+    </form>
+</ion-content>

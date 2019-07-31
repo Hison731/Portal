@@ -4,14 +4,14 @@ import { DataProvider } from '../../providers/data/data';
  
 @IonicPage()  
 @Component({
-  selector: 'page-dashboard',
-  templateUrl: 'dashboard.html'
+  selector: 'page-menu',
+  templateUrl: 'Menu.html'
 
 })
-export class DashboardPage {
+export class MenuPage {
   constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
-  editprofile() {
-    this.navCtrl.push('DasheditprofilePage', {}, {animate: false});
+  back() {
+    this.navCtrl.push('UserportalsPage', {}, {animate: false});
   }
 }
 

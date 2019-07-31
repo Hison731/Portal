@@ -5,14 +5,14 @@ import * as $ from 'jquery'
 
 @IonicPage() 
 @Component({
-  selector: 'page-editprofile',
-  templateUrl: 'editprofile.html'
+  selector: 'page-dasheditprofile',
+  templateUrl: 'dasheditprofile.html'
 
 })
-export class EditprofilePage {
+export class DasheditprofilePage {
   constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
   back() {
-    this.navCtrl.push('UserportalsPage', {}, {animate: false});
+    this.navCtrl.push('DashboardPage', {}, {animate: false});
   }
 
   ionViewDidLoad() {

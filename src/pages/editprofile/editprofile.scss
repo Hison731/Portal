@@ -8,14 +8,15 @@ page-editprofile {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        font-size: 23px;
+        font-size: 21px;
         border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
         div{
             display: flex;
             align-items: center;
         }
         ion-icon{
-            font-size: 20px;
+            font-size: 26px;
             font-weight: bold;
             margin-right: 15px;
         }
@@ -139,7 +140,7 @@ page-editprofile {
                 text-align: center;
                 margin-bottom: 10px;
             }
-            ion-label {
+            label {
                 margin: 0;
                 margin-left: 5px;
             }
@@ -172,5 +173,8 @@ page-editprofile {
             margin: 0 auto;
             margin-bottom: 30px;
         }
+    }
+    .input-cover{
+        display: none;
     }
 }

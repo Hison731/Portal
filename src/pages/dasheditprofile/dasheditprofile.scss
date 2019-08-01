@@ -8,14 +8,15 @@ page-dasheditprofile {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        font-size: 23px;
-       
+        font-size: 21px;
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
         div{
             display: flex;
             align-items: center;
         }
         ion-icon{
-            font-size: 20px;
+            font-size: 26px;
             font-weight: bold;
             margin-right: 15px;
         }
@@ -101,5 +102,8 @@ page-dasheditprofile {
             font-size: 18px;
             color: #E09827;
         }
+    }
+    .input-cover{
+        display: none;
     }
 }

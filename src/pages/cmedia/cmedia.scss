@@ -12,6 +12,7 @@ page-cmedia {
         width: 100%;
         font-size: 23px;
         border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
         div{
             display: flex;
             align-items: center;
@@ -104,5 +105,8 @@ page-cmedia {
             margin: 0 auto;
             margin-bottom: 30px;
         }
+    }
+    .input-cover{
+        display: none;
     }
 }

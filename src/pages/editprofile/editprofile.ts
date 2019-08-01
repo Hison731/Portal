@@ -18,7 +18,7 @@ export class EditprofilePage {
   ionViewDidLoad() {
     $(".radio_checkbox").click( function(){
       if( $(this).is(':checked') ) {
-        $('.'+ $(this).attr('data-id')).prop('checked', false);
+        $('.'+ $(this).attr('id')).prop('checked', false);
         // debugger;
         $(this).parent().siblings('.time_div').hide();
       }

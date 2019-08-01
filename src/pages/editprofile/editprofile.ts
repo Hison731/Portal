@@ -16,6 +16,18 @@ export class EditprofilePage {
   }
 
   ionViewDidLoad() {
+    $(".radio_checkbox").click( function(){
+      if( $(this).is(':checked') ) {
+        $('.'+ $(this).attr('data-id')).prop('checked', false);
+        // debugger;
+        $(this).parent().siblings('.time_div').hide();
+      }
+      else{
+        $(this).parent().siblings('.time_div').show();
+      }
+
+   });
+    
     // function readURL(input) {
     //   if (input.files && input.files[0]) {
     //       var reader = new FileReader();

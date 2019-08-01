@@ -1,6 +1,6 @@
 page-dasheditprofile {
     .title-white {
-        background: url(../../assets/imgs/title_white.png) repeat-x top #cecece;
+        background-color: white;
         display: block;
         padding: 10px 9px;
         color: #000;
@@ -8,14 +8,16 @@ page-dasheditprofile {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        font-size: 23px;
+       
         div{
             display: flex;
             align-items: center;
         }
         ion-icon{
-            font-size: 16px;
+            font-size: 20px;
             font-weight: bold;
-            margin-right: 10px;
+            margin-right: 15px;
         }
     }
     .input_form {
@@ -98,13 +100,6 @@ page-dasheditprofile {
             text-align: center;
             font-size: 18px;
             color: #E09827;
-        }
-        .save_btn {
-            color: #000;
-            width: 30%;
-            max-width: 80px;
-            margin: 0 auto;
-            margin-bottom: 30px;
         }
     }
 }

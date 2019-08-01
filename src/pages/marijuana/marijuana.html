@@ -19,16 +19,20 @@
             </div>
         </button>
     </ion-fab>
-    <div class="title-white" ion-fixed>
-        <div>
-            <ion-icon name="md-close" (click)="back()"></ion-icon>
-            <strong>Add/Edit Menu</strong>
-        </div>
-        <div>
-            <ion-icon name="checkmark" style="color: #E09827"></ion-icon>
-        </div>
+
+    <div class="search_options" (click)="showAlert()">
+        Marijuana Coupons
     </div>
-    <div class="search_options">
-        <img src="../../assets/imgs/search_options.png" alt="" style="width : 20px; cursor: pointer;">
+    <div class="coupons">
+        <div class="coupon">
+            <div class="coupon-title">
+                <h6>Testing company</h6>
+                <span style="color:white">Expires: 07/31/2019</span>
+            </div>
+            <img src="../../assets/imgs/hand.jpg">
+            <div class="coupon-desc">Hello. Testing coupon :)dfdsfsdfsfsfs<br>
+                <span style="color:white">6145.8 Miles</span>
+            </div>
+        </div>
     </div>
 </ion-content>

@@ -244,3 +244,27 @@ ion-fab {
 .col {
   padding: 0 !important;
 }
+
+// custom alert css
+.alertCustomCss {
+  .alert-title{
+    font-size: 26px;
+    text-align: center;
+    width: 163px;
+    margin: 0 auto;
+    line-height: 1;
+  }
+  .alert-sub-title {
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 1.4;
+    h4{
+      display: inline;
+      line-height: 1;
+    }
+  }
+  .alert-head{
+    padding:15px 15px 0;
+  }
+
+}

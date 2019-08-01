@@ -50,7 +50,7 @@
                 <ion-input type="text" value=""></ion-input>
             </ion-item>
             <ion-item>
-                <ion-label floating>Company Postion</ion-label>
+                <ion-label floating>Company Address</ion-label>
                 <ion-input type="text" value=""></ion-input>
             </ion-item>
             <ion-item>
@@ -78,8 +78,8 @@
                 <ion-input type="text" value=""></ion-input>
             </ion-item>
             <ion-item>
-                <ion-label position="floating">Company Description</ion-label>
-                <ion-textarea></ion-textarea>
+                <ion-label floating>Company Description</ion-label>
+                <ion-textarea rows="3"></ion-textarea>
             </ion-item>
             <ion-item no-lines>
                 <ion-label>Do you sell Recreational Marijuana?</ion-label>
@@ -101,14 +101,14 @@
             <div>
                 <p class="title">Monday</p>
                 <div class="checkbox_item ion-no-padding">
-                    <ion-checkbox></ion-checkbox>
+                    <input type="checkbox" class="radio_checkbox ch1" data-id="ch-1">
                     <ion-label>Open 24 Hours</ion-label>
                 </div>
-                <div class="checkbox_item">
-                    <ion-checkbox></ion-checkbox>
+                <div class="checkbox_item radio_checkbox">
+                    <input type="checkbox" class="radio_checkbox ch-1" data-id="ch1">
                     <ion-label>Closed</ion-label>
                 </div>
-                <div class="time_div">
+                <div class="time_div" id="">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
                         <select name="data[Portal][mon_opening_time][hour]" id="PortalMonOpeningTimeHour">
@@ -283,19 +283,25 @@
                         </select>
                     </div>
                 </div>
-
-
             </div>
             <div>
                 <p class="title">Tuesday</p>
                 <div class="checkbox_item ion-no-padding">
-                    <ion-checkbox></ion-checkbox>
+                    <input type="checkbox" class="radio_checkbox ch2" data-id="ch-2">
                     <ion-label>Open 24 Hours</ion-label>
                 </div>
-                <div class="checkbox_item">
-                    <ion-checkbox></ion-checkbox>
+                <div class="checkbox_item radio_checkbox">
+                    <input type="checkbox" class="radio_checkbox ch-2" data-id="ch2">
                     <ion-label>Closed</ion-label>
                 </div>
+                <!-- <div class="checkbox_item ion-no-padding">
+                    <ion-checkbox class="radio_checkbox"></ion-checkbox>
+                    <ion-label>Open 24 Hours</ion-label>
+                </div>
+                <div class="checkbox_item radio_checkbox">
+                    <ion-checkbox class="radio_checkbox"></ion-checkbox>
+                    <ion-label>Closed</ion-label>
+                </div> -->
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -471,19 +477,17 @@
                         </select>
                     </div>
                 </div>
-
-
             </div>
             <div>
                 <p class="title">Wednsday</p>
                 <div class="checkbox_item ion-no-padding">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Open 24 Hours</ion-label>
-                </div>
-                <div class="checkbox_item">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Closed</ion-label>
-                </div>
+                        <input type="checkbox" class="radio_checkbox ch3" data-id="ch-3">
+                        <ion-label>Open 24 Hours</ion-label>
+                    </div>
+                    <div class="checkbox_item radio_checkbox">
+                        <input type="checkbox" class="radio_checkbox ch-3" data-id="ch3">
+                        <ion-label>Closed</ion-label>
+                    </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -659,19 +663,17 @@
                         </select>
                     </div>
                 </div>
-
-
             </div>
             <div>
                 <p class="title">Thursday</p>
                 <div class="checkbox_item ion-no-padding">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Open 24 Hours</ion-label>
-                </div>
-                <div class="checkbox_item">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Closed</ion-label>
-                </div>
+                        <input type="checkbox" class="radio_checkbox ch4" data-id="ch-4">
+                        <ion-label>Open 24 Hours</ion-label>
+                    </div>
+                    <div class="checkbox_item radio_checkbox">
+                        <input type="checkbox" class="radio_checkbox ch-4" data-id="ch4">
+                        <ion-label>Closed</ion-label>
+                    </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -847,19 +849,17 @@
                         </select>
                     </div>
                 </div>
-
-
             </div>
             <div>
                 <p class="title">Friday</p>
                 <div class="checkbox_item ion-no-padding">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Open 24 Hours</ion-label>
-                </div>
-                <div class="checkbox_item">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Closed</ion-label>
-                </div>
+                        <input type="checkbox" class="radio_checkbox ch5" data-id="ch-5">
+                        <ion-label>Open 24 Hours</ion-label>
+                    </div>
+                    <div class="checkbox_item radio_checkbox">
+                        <input type="checkbox" class="radio_checkbox ch-5" data-id="ch5">
+                        <ion-label>Closed</ion-label>
+                    </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -1035,19 +1035,17 @@
                         </select>
                     </div>
                 </div>
-
-
             </div>
             <div>
                 <p class="title">Saturday</p>
                 <div class="checkbox_item ion-no-padding">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Open 24 Hours</ion-label>
-                </div>
-                <div class="checkbox_item">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Closed</ion-label>
-                </div>
+                        <input type="checkbox" class="radio_checkbox ch6" data-id="ch-6">
+                        <ion-label>Open 24 Hours</ion-label>
+                    </div>
+                    <div class="checkbox_item radio_checkbox">
+                        <input type="checkbox" class="radio_checkbox ch-6" data-id="ch6">
+                        <ion-label>Closed</ion-label>
+                    </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -1223,19 +1221,17 @@
                         </select>
                     </div>
                 </div>
-
-
             </div>
             <div>
                 <p class="title">Sunday</p>
                 <div class="checkbox_item ion-no-padding">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Open 24 Hours</ion-label>
-                </div>
-                <div class="checkbox_item">
-                    <ion-checkbox></ion-checkbox>
-                    <ion-label>Closed</ion-label>
-                </div>
+                        <input type="checkbox" class="radio_checkbox ch7" data-id="ch-7">
+                        <ion-label>Open 24 Hours</ion-label>
+                    </div>
+                    <div class="checkbox_item radio_checkbox">
+                        <input type="checkbox" class="radio_checkbox ch-7" data-id="ch7">
+                        <ion-label>Closed</ion-label>
+                    </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>

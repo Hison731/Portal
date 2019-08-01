@@ -1,6 +1,6 @@
 page-editprofile {
     .title-white {
-        background: url(../../assets/imgs/title_white.png) repeat-x top #cecece;
+        background-color: white;
         display: block;
         padding: 10px 9px;
         color: #000;
@@ -8,14 +8,16 @@ page-editprofile {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        font-size: 23px;
+        border-bottom: 1px solid gray;
         div{
             display: flex;
             align-items: center;
         }
         ion-icon{
-            font-size: 16px;
+            font-size: 20px;
             font-weight: bold;
-            margin-right: 10px;
+            margin-right: 15px;
         }
     }
     .input_form {
@@ -129,7 +131,7 @@ page-editprofile {
         .company_title {
             text-align: center;
             margin: 40px 0;
-            font-size: 16px;
+            font-size: 18px;
         }
         .company_hours {
             font-size: 16px;

@@ -1,4 +1,7 @@
 page-editprofile {
+    .scroll-content{
+        margin-top: 125px !important;
+    }
     .title-white {
         background-color: white;
         display: block;
@@ -35,7 +38,7 @@ page-editprofile {
             position: relative;
             max-width: 205px;
             margin: 0px auto;
-            margin-top: 90px;
+            margin-top: 42px;
             .avatar-edit {
                 position: absolute;
                 right: 17px;
@@ -173,8 +176,5 @@ page-editprofile {
             margin: 0 auto;
             margin-bottom: 30px;
         }
-    }
-    .input-cover{
-        display: none;
     }
 }

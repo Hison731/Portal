@@ -1,4 +1,7 @@
 page-companycoupons {
+    .scroll-content{
+        margin-top: 125px !important;
+    }
     .title-white {
         background-color: white;
         display: block;
@@ -23,9 +26,6 @@ page-companycoupons {
     }
     .input_form {
         padding: 0 5vw;
-        margin-top: 100px;
-    }
-    .input-cover{
-        display: none;
+        margin-top: 55px;
     }
 }

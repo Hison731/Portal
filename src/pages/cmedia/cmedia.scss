@@ -1,5 +1,7 @@
 page-cmedia {
-    
+    .scroll-content{
+        margin-top: 125px !important;
+    }
     .title-white {
         //background: url(../../assets/imgs/title_white.png) repeat-x top #cecece;
         background-color: white;
@@ -31,7 +33,7 @@ page-cmedia {
             position: relative;
             max-width: 205px;
             margin: 0px auto;
-            margin-top: 90px;
+            margin-top: 42px;
             .avatar-edit {
                 position: absolute;
                 right: 17px;
@@ -105,8 +107,5 @@ page-cmedia {
             margin: 0 auto;
             margin-bottom: 30px;
         }
-    }
-    .input-cover{
-        display: none;
     }
 }

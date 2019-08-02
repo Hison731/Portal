@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular/navigation/nav-controller';
-// import { Keyboard } from '@ionic-native/keyboard/ngx';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 /**
  * Generated class for the PortalFooterComponent component.
@@ -19,9 +19,12 @@ export class PortalFooterComponent{
   show_footer = true;
 
   constructor(
-    public navCtrl: NavController
+    public navCtrl: NavController, public keyboard: Keyboard
   ) { }
 
+  // keyboardCheck() {
+  //   console.log('The keyboard is open:', this.keyboard.isOpen());
+  // }
   onSelectPage(index) {
 
     switch (index) {

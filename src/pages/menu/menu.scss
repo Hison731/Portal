@@ -15,6 +15,9 @@ page-menu {
             display: flex;
             align-items: center;
         }
+        strong{
+            padding-top: 2px;
+        }
         ion-icon{
             font-size: 20px;
             font-weight: bold;

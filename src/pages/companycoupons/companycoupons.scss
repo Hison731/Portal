@@ -18,6 +18,9 @@ page-companycoupons {
             display: flex;
             align-items: center;
         }
+        strong{
+            padding-top: 2px;
+        }
         ion-icon{
             font-size: 26px;
             font-weight: bold;

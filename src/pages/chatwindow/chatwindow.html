@@ -5,21 +5,19 @@
   <portal-footer></portal-footer>
 </ion-footer>
 <ion-content class="menu-items">
-  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
-    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
-      <div style="color:white;">
-        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
-        Login
+  <div class="title-white" ion-fixed>
+      <div>
+          <ion-icon name="md-close" (click)="back()"></ion-icon>
+          <strong>Goshawk</strong>
       </div>
-    </button>
-    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
-      <div style="color:white;">
-        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
-        Register
-      </div>
-    </button>
-  </ion-fab>
+  </div>
+  <div class="user_bar">
+      <img src="../../assets/imgs/off.png" alt="" class="offimg">
+      <p>goshawk</p>
+      <span><i class="fa fa-trash"></i></span>
+      <span><i class="fa fa-times"></i></span>
 
+  </div>
   <div class="chat-body">
     <div class="chat-message-container">
       <span class="chat-div textLeft">

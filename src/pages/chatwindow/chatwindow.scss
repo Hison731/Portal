@@ -12,7 +12,7 @@ page-chatwindow {
 		ion-icon {
 			padding: 10px;
 			font-size: 30px;
-			color: green;
+			color: #ECA731;
 		}
 	}
 	ion-input {
@@ -98,5 +98,62 @@ page-chatwindow {
 			// border-bottom: 1px $userBackgroundColor;
 			border-style: solid;
 		}
+	}
+	.title-white {
+		background-color: white;
+		display: block;
+		padding: 10px 9px;
+		color: #000;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		font-size: 21px;
+		border-bottom: 1px solid gray;
+		border-top: 1px solid gray;
+		div{
+			display: flex;
+			align-items: center;
+		}
+		strong{
+			padding-top: 2px;
+		}
+		ion-icon{
+			font-size: 26px;
+			font-weight: bold;
+			margin-right: 15px;
+		}
+	}
+	.user_bar{
+		position: relative;
+		color:#ECA731;
+		border-bottom: 2px solid #fff;
+		padding: 10px 48px 12px; 
+		.offimg{
+			position: absolute;
+			left: 20px;
+			top: 15px;
+			width: 19px;
+			height: 18px;
+		}
+		p{
+			font-size: 20px;
+			margin: 0;
+		}
+		.fa-trash{
+			position: absolute;
+			right: 50px;
+			top: 14px;
+			font-size: 19px
+		}
+		.fa-times{
+			position: absolute;
+			right: 20px;
+			top: 14px;
+			font-size: 19px
+		}
+	}
+	.scroll-content{
+		margin-top: 127px !important;
 	}
 }

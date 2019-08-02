@@ -51,5 +51,8 @@ export class ChatwindowPage {
     this.content.resize();
     this.scrollToBottom();
   }
+  back() {
+    this.navCtrl.push('ChatPage', {}, {animate: false});
+  }
 
 }

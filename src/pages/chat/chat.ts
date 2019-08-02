@@ -29,6 +29,9 @@ export class ChatPage {
     this.navCtrl.push("ChatwindowPage", {}, {animate:false})
 
   }
+  back() {
+    this.navCtrl.push('UserportalsPage', {}, {animate: false});
+  }
 
   onInput(event) {
     console.log(event.target.value);

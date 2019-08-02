@@ -7,7 +7,7 @@
 <ion-content class="menu-items">
     <div class="title-white" ion-fixed>
         <div>
-            <ion-icon name="md-close" (click)="back()"></ion-icon>
+            <ion-icon name="md-close" (click)="back()" class="back_icon"></ion-icon>
             <strong>Edit Profile</strong>
         </div>
         <div>
@@ -111,85 +111,16 @@
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
                         <select name="data[Portal][mon_opening_time][hour]" id="PortalMonOpeningTimeHour">
-                            <option value="">Select</option>
                             <option value="01" selected="selected">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
+
                         </select> :
                         <select name="data[Portal][mon_opening_time][min]" id="PortalMonOpeningTimeMin">
-                            <option value="">Select</option>
                             <option value="00" selected="selected">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59">59</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
+
                         </select>
                         <select name="data[Portal][mon_opening_time][meridian]" id="PortalMonOpeningTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am" selected="selected">am</option>
                             <option value="pm">pm</option>
                         </select>
@@ -198,85 +129,14 @@
                     <div class="input time">
                         <label for="PortalMonClosingTimeHour">Closed &nbsp;</label>
                         <select name="data[Portal][mon_closing_time][hour]" id="PortalMonClosingTimeHour">
-                            <option value="">Select</option>
-                            <option value="01">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11" selected="selected">11</option>
-                            <option value="12">12</option>
+                            <option value="01" selected="selected">1</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
                         </select> :
                         <select name="data[Portal][mon_closing_time][min]" id="PortalMonClosingTimeMin">
-                            <option value="">Select</option>
-                            <option value="00">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59" selected="selected">59</option>
+                            <option value="00" selected="selected">00</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
                         </select>
                         <select name="data[Portal][mon_closing_time][meridian]" id="PortalMonClosingTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am">am</option>
                             <option value="pm" selected="selected">pm</option>
                         </select>
@@ -305,85 +165,16 @@
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
                         <select name="data[Portal][mon_opening_time][hour]" id="PortalMonOpeningTimeHour">
-                            <option value="">Select</option>
                             <option value="01" selected="selected">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
+
                         </select> :
                         <select name="data[Portal][mon_opening_time][min]" id="PortalMonOpeningTimeMin">
-                            <option value="">Select</option>
                             <option value="00" selected="selected">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59">59</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
+
                         </select>
                         <select name="data[Portal][mon_opening_time][meridian]" id="PortalMonOpeningTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am" selected="selected">am</option>
                             <option value="pm">pm</option>
                         </select>
@@ -392,85 +183,14 @@
                     <div class="input time">
                         <label for="PortalMonClosingTimeHour">Closed &nbsp;</label>
                         <select name="data[Portal][mon_closing_time][hour]" id="PortalMonClosingTimeHour">
-                            <option value="">Select</option>
-                            <option value="01">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11" selected="selected">11</option>
-                            <option value="12">12</option>
+                            <option value="01" selected="selected">1</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
                         </select> :
                         <select name="data[Portal][mon_closing_time][min]" id="PortalMonClosingTimeMin">
-                            <option value="">Select</option>
-                            <option value="00">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59" selected="selected">59</option>
+                            <option value="00" selected="selected">00</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
                         </select>
                         <select name="data[Portal][mon_closing_time][meridian]" id="PortalMonClosingTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am">am</option>
                             <option value="pm" selected="selected">pm</option>
                         </select>
@@ -480,96 +200,27 @@
             <div>
                 <p class="title">Wednsday</p>
                 <div class="checkbox_item ion-no-padding">
-                        <input type="checkbox" class="radio_checkbox ch3" id="ch-3">
-                        <label for="ch-3">Open 24 Hours</label>
-                    </div>
-                    <div class="checkbox_item radio_checkbox">
-                        <input type="checkbox" class="radio_checkbox ch-3" id="ch3">
-                        <label for="ch3">Closed</label>
-                    </div>
+                    <input type="checkbox" class="radio_checkbox ch3" id="ch-3">
+                    <label for="ch-3">Open 24 Hours</label>
+                </div>
+                <div class="checkbox_item radio_checkbox">
+                    <input type="checkbox" class="radio_checkbox ch-3" id="ch3">
+                    <label for="ch3">Closed</label>
+                </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
                         <select name="data[Portal][mon_opening_time][hour]" id="PortalMonOpeningTimeHour">
-                            <option value="">Select</option>
                             <option value="01" selected="selected">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
+
                         </select> :
                         <select name="data[Portal][mon_opening_time][min]" id="PortalMonOpeningTimeMin">
-                            <option value="">Select</option>
                             <option value="00" selected="selected">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59">59</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
+
                         </select>
                         <select name="data[Portal][mon_opening_time][meridian]" id="PortalMonOpeningTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am" selected="selected">am</option>
                             <option value="pm">pm</option>
                         </select>
@@ -578,85 +229,14 @@
                     <div class="input time">
                         <label for="PortalMonClosingTimeHour">Closed &nbsp;</label>
                         <select name="data[Portal][mon_closing_time][hour]" id="PortalMonClosingTimeHour">
-                            <option value="">Select</option>
-                            <option value="01">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11" selected="selected">11</option>
-                            <option value="12">12</option>
+                            <option value="01" selected="selected">1</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
                         </select> :
                         <select name="data[Portal][mon_closing_time][min]" id="PortalMonClosingTimeMin">
-                            <option value="">Select</option>
-                            <option value="00">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59" selected="selected">59</option>
+                            <option value="00" selected="selected">00</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
                         </select>
                         <select name="data[Portal][mon_closing_time][meridian]" id="PortalMonClosingTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am">am</option>
                             <option value="pm" selected="selected">pm</option>
                         </select>
@@ -666,96 +246,27 @@
             <div>
                 <p class="title">Thursday</p>
                 <div class="checkbox_item ion-no-padding">
-                        <input type="checkbox" class="radio_checkbox ch4" id="ch-4">
-                        <label for="ch-4">Open 24 Hours</label>
-                    </div>
-                    <div class="checkbox_item radio_checkbox">
-                        <input type="checkbox" class="radio_checkbox ch-4" id="ch4">
-                        <label for="ch4">Closed</label>
-                    </div>
+                    <input type="checkbox" class="radio_checkbox ch4" id="ch-4">
+                    <label for="ch-4">Open 24 Hours</label>
+                </div>
+                <div class="checkbox_item radio_checkbox">
+                    <input type="checkbox" class="radio_checkbox ch-4" id="ch4">
+                    <label for="ch4">Closed</label>
+                </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
                         <select name="data[Portal][mon_opening_time][hour]" id="PortalMonOpeningTimeHour">
-                            <option value="">Select</option>
                             <option value="01" selected="selected">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
+
                         </select> :
                         <select name="data[Portal][mon_opening_time][min]" id="PortalMonOpeningTimeMin">
-                            <option value="">Select</option>
                             <option value="00" selected="selected">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59">59</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
+
                         </select>
                         <select name="data[Portal][mon_opening_time][meridian]" id="PortalMonOpeningTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am" selected="selected">am</option>
                             <option value="pm">pm</option>
                         </select>
@@ -764,85 +275,14 @@
                     <div class="input time">
                         <label for="PortalMonClosingTimeHour">Closed &nbsp;</label>
                         <select name="data[Portal][mon_closing_time][hour]" id="PortalMonClosingTimeHour">
-                            <option value="">Select</option>
-                            <option value="01">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11" selected="selected">11</option>
-                            <option value="12">12</option>
+                            <option value="01" selected="selected">1</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
                         </select> :
                         <select name="data[Portal][mon_closing_time][min]" id="PortalMonClosingTimeMin">
-                            <option value="">Select</option>
-                            <option value="00">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59" selected="selected">59</option>
+                            <option value="00" selected="selected">00</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
                         </select>
                         <select name="data[Portal][mon_closing_time][meridian]" id="PortalMonClosingTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am">am</option>
                             <option value="pm" selected="selected">pm</option>
                         </select>
@@ -852,96 +292,27 @@
             <div>
                 <p class="title">Friday</p>
                 <div class="checkbox_item ion-no-padding">
-                        <input type="checkbox" class="radio_checkbox ch5" id="ch-5">
-                        <label for="ch-5">Open 24 Hours</label>
-                    </div>
-                    <div class="checkbox_item radio_checkbox">
-                        <input type="checkbox" class="radio_checkbox ch-5" id="ch5">
-                        <label for="ch5">Closed</label>
-                    </div>
+                    <input type="checkbox" class="radio_checkbox ch5" id="ch-5">
+                    <label for="ch-5">Open 24 Hours</label>
+                </div>
+                <div class="checkbox_item radio_checkbox">
+                    <input type="checkbox" class="radio_checkbox ch-5" id="ch5">
+                    <label for="ch5">Closed</label>
+                </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
                         <select name="data[Portal][mon_opening_time][hour]" id="PortalMonOpeningTimeHour">
-                            <option value="">Select</option>
                             <option value="01" selected="selected">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
+
                         </select> :
                         <select name="data[Portal][mon_opening_time][min]" id="PortalMonOpeningTimeMin">
-                            <option value="">Select</option>
                             <option value="00" selected="selected">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59">59</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
+
                         </select>
                         <select name="data[Portal][mon_opening_time][meridian]" id="PortalMonOpeningTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am" selected="selected">am</option>
                             <option value="pm">pm</option>
                         </select>
@@ -950,85 +321,14 @@
                     <div class="input time">
                         <label for="PortalMonClosingTimeHour">Closed &nbsp;</label>
                         <select name="data[Portal][mon_closing_time][hour]" id="PortalMonClosingTimeHour">
-                            <option value="">Select</option>
-                            <option value="01">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11" selected="selected">11</option>
-                            <option value="12">12</option>
+                            <option value="01" selected="selected">1</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
                         </select> :
                         <select name="data[Portal][mon_closing_time][min]" id="PortalMonClosingTimeMin">
-                            <option value="">Select</option>
-                            <option value="00">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59" selected="selected">59</option>
+                            <option value="00" selected="selected">00</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
                         </select>
                         <select name="data[Portal][mon_closing_time][meridian]" id="PortalMonClosingTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am">am</option>
                             <option value="pm" selected="selected">pm</option>
                         </select>
@@ -1038,96 +338,27 @@
             <div>
                 <p class="title">Saturday</p>
                 <div class="checkbox_item ion-no-padding">
-                        <input type="checkbox" class="radio_checkbox ch6" id="ch-6">
-                        <label for="ch-6">Open 24 Hours</label>
-                    </div>
-                    <div class="checkbox_item radio_checkbox">
-                        <input type="checkbox" class="radio_checkbox ch-6" id="ch6">
-                        <label for="ch6">Closed</label>
-                    </div>
+                    <input type="checkbox" class="radio_checkbox ch6" id="ch-6">
+                    <label for="ch-6">Open 24 Hours</label>
+                </div>
+                <div class="checkbox_item radio_checkbox">
+                    <input type="checkbox" class="radio_checkbox ch-6" id="ch6">
+                    <label for="ch6">Closed</label>
+                </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
                         <select name="data[Portal][mon_opening_time][hour]" id="PortalMonOpeningTimeHour">
-                            <option value="">Select</option>
                             <option value="01" selected="selected">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
+
                         </select> :
                         <select name="data[Portal][mon_opening_time][min]" id="PortalMonOpeningTimeMin">
-                            <option value="">Select</option>
                             <option value="00" selected="selected">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59">59</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
+
                         </select>
                         <select name="data[Portal][mon_opening_time][meridian]" id="PortalMonOpeningTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am" selected="selected">am</option>
                             <option value="pm">pm</option>
                         </select>
@@ -1136,85 +367,14 @@
                     <div class="input time">
                         <label for="PortalMonClosingTimeHour">Closed &nbsp;</label>
                         <select name="data[Portal][mon_closing_time][hour]" id="PortalMonClosingTimeHour">
-                            <option value="">Select</option>
-                            <option value="01">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11" selected="selected">11</option>
-                            <option value="12">12</option>
+                            <option value="01" selected="selected">1</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
                         </select> :
                         <select name="data[Portal][mon_closing_time][min]" id="PortalMonClosingTimeMin">
-                            <option value="">Select</option>
-                            <option value="00">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59" selected="selected">59</option>
+                            <option value="00" selected="selected">00</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
                         </select>
                         <select name="data[Portal][mon_closing_time][meridian]" id="PortalMonClosingTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am">am</option>
                             <option value="pm" selected="selected">pm</option>
                         </select>
@@ -1224,96 +384,27 @@
             <div>
                 <p class="title">Sunday</p>
                 <div class="checkbox_item ion-no-padding">
-                        <input type="checkbox" class="radio_checkbox ch7" id="ch-7">
-                        <label for="ch-7">Open 24 Hours</label>
-                    </div>
-                    <div class="checkbox_item radio_checkbox">
-                        <input type="checkbox" class="radio_checkbox ch-7" id="ch7">
-                        <label for="ch7">Closed</label>
-                    </div>
+                    <input type="checkbox" class="radio_checkbox ch7" id="ch-7">
+                    <label for="ch-7">Open 24 Hours</label>
+                </div>
+                <div class="checkbox_item radio_checkbox">
+                    <input type="checkbox" class="radio_checkbox ch-7" id="ch7">
+                    <label for="ch7">Closed</label>
+                </div>
                 <div class="time_div">
                     <div class="input time">
                         <label for="PortalMonOpeningTimeHour">Open &nbsp;&nbsp;&nbsp;&nbsp;</label>
                         <select name="data[Portal][mon_opening_time][hour]" id="PortalMonOpeningTimeHour">
-                            <option value="">Select</option>
                             <option value="01" selected="selected">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
+
                         </select> :
                         <select name="data[Portal][mon_opening_time][min]" id="PortalMonOpeningTimeMin">
-                            <option value="">Select</option>
                             <option value="00" selected="selected">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59">59</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
+
                         </select>
                         <select name="data[Portal][mon_opening_time][meridian]" id="PortalMonOpeningTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am" selected="selected">am</option>
                             <option value="pm">pm</option>
                         </select>
@@ -1322,85 +413,14 @@
                     <div class="input time">
                         <label for="PortalMonClosingTimeHour">Closed &nbsp;</label>
                         <select name="data[Portal][mon_closing_time][hour]" id="PortalMonClosingTimeHour">
-                            <option value="">Select</option>
-                            <option value="01">1</option>
-                            <option value="02">2</option>
-                            <option value="03">3</option>
-                            <option value="04">4</option>
-                            <option value="05">5</option>
-                            <option value="06">6</option>
-                            <option value="07">7</option>
-                            <option value="08">8</option>
-                            <option value="09">9</option>
-                            <option value="10">10</option>
-                            <option value="11" selected="selected">11</option>
-                            <option value="12">12</option>
+                            <option value="01" selected="selected">1</option>
+                            <option value="{{h.hour}}" *ngFor="let h of hours">{{h.hour}}</option>
                         </select> :
                         <select name="data[Portal][mon_closing_time][min]" id="PortalMonClosingTimeMin">
-                            <option value="">Select</option>
-                            <option value="00">00</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                            <option value="46">46</option>
-                            <option value="47">47</option>
-                            <option value="48">48</option>
-                            <option value="49">49</option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                            <option value="52">52</option>
-                            <option value="53">53</option>
-                            <option value="54">54</option>
-                            <option value="55">55</option>
-                            <option value="56">56</option>
-                            <option value="57">57</option>
-                            <option value="58">58</option>
-                            <option value="59" selected="selected">59</option>
+                            <option value="00" selected="selected">00</option>
+                            <option value="{{ms}}" *ngFor="let ms of mins">{{ms}}</option>
                         </select>
                         <select name="data[Portal][mon_closing_time][meridian]" id="PortalMonClosingTimeMeridian">
-                            <option value="">Select</option>
                             <option value="am">am</option>
                             <option value="pm" selected="selected">pm</option>
                         </select>

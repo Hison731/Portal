@@ -35,7 +35,7 @@ export class PortalFooterComponent{
         this.navCtrl.push('ChatPage', {}, { animate: false });
         break;
       case 2:
-        //this.navCtrl.push('ChatPage',{},{animate:false});
+        this.navCtrl.push('CmediaPage', {}, {animate: false});
         break;
       case 3:
         //this.navCtrl.push('CouponsPage',{},{animate:false});

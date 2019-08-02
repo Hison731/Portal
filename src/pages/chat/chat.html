@@ -6,20 +6,17 @@
 </ion-footer>
 
 <ion-content class="menu-items" padding>
-  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
-    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
-      <div style="color:white;">
-        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
-        Login
+  <div class="title-white" ion-fixed>
+      <div>
+          <ion-icon name="md-close" (click)="back()"></ion-icon>
+          <strong>Messages</strong>
       </div>
-    </button>
-    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
-      <div style="color:white;">
-        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
-        Register
-      </div>
-    </button>
-  </ion-fab>
+  </div>
+  <div class="search_bar">
+      <img src="../../assets/imgs/on.png" alt="" class="onimg">
+      <input type="text" placeholder="Search User" name="companyChatUsersSearchInput">
+      <img src="../../assets/imgs/off.png" alt="" class="offimg">
+  </div>
   <ion-list>
     <ion-item>
       <ion-avatar item-start #myImage (click)="presentImage(myImage)">

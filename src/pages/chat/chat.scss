@@ -9,4 +9,67 @@ page-chat {
     ion-item{
         margin: 20px 0 !important;
     }
+
+    .search_bar{
+      position: relative;
+      background-color: white;
+      border-radius: 5px;
+      margin: 0 10px;
+      text-align: center;
+      padding: 5px;
+      .onimg{
+        width: 20px;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+      }
+      .offimg{
+        width: 20px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+      input {
+        margin: 0 auto;
+        width: 220px;
+        height: 35px;
+        text-align: center;
+        padding: 5px 30px;
+        border: none;
+        border-radius: 4px;
+        color: black;
+        font-size: 16px;
+    }
+    }
+    .title-white {
+      background-color: white;
+      display: block;
+      padding: 10px 9px;
+      color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      font-size: 21px;
+      border-bottom: 1px solid gray;
+      border-top: 1px solid gray;
+      div{
+          display: flex;
+          align-items: center;
+      }
+      strong{
+          padding-top: 2px;
+      }
+      ion-icon{
+          font-size: 26px;
+          font-weight: bold;
+          margin-right: 15px;
+      }
+    }
+    .scroll-content{
+      margin-top: 125px !important;
+    }
+    .list-ios > .item-block:first-child {
+      border-top: none;
+  }
 }

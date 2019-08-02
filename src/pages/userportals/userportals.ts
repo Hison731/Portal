@@ -22,6 +22,9 @@ export class UserportalsPage {
   coupons() {
     this.navCtrl.push('CompanycouponsPage', {}, {animate: false});
   }
+  chatpage(){
+    this.navCtrl.push('ChatPage', {}, { animate: false });
+  }
 }
 
 

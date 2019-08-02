@@ -6,13 +6,9 @@
 </ion-footer>
 <ion-content class="menu-items">
     <div class="title-white" ion-fixed>
-        <div>
-            <ion-icon name="md-close" (click)="back()" class="back_icon"></ion-icon>
-            <strong>Add/Edit Menu</strong>
-        </div>
-        <div>
-            <ion-icon name="checkmark" style="color: #E09827"></ion-icon>
-        </div>
+        <span><ion-icon name="close" (click)="back()" class="back_icon"></ion-icon></span>
+        <p>Add/Edit Menu</p>
+        <span><ion-icon name="checkmark" class="check_icon"></ion-icon></span>
     </div>
     <div class="category_type">
         <label for="PortalCategoryTypeId">Category Name</label>

@@ -1,0 +1,102 @@
+page-marijuananews {
+    .dropdown_menu{
+        background: black;
+        border-bottom: solid 2px #696969;
+        width: 100%;
+        height: 62px;
+        margin: 0;
+        position: relative;
+        .fab-ios{
+            background-color: transparent;
+            height: 30px;
+        }
+        .fab-md{
+            background-color: transparent;
+            box-shadow: none;
+            height: 30px;
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+        .fab-md .button-effect {
+            background-color:unset;
+        }
+        .fab-close-icon{
+            line-height: 31px;
+        }
+        div{
+            background-color: black;
+            color: white;
+            height: 230px;
+            overflow-y: scroll;
+            z-index: 999;
+            width: 100%;
+            font-size: 13px;
+            padding: 10px;
+            max-width: 220px;
+            border: 1px solid white;
+            // font-weight: bold;
+            // font-family: sans-serif !important;
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li{
+                    padding: 5px;
+                    font-weight: normal;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+        ion-fab-list{
+            margin: 0;
+            margin-top: 50px;
+            min-height: unset;
+            width: 178px;
+            left: 2vw;
+        }
+        p{
+            position: absolute;
+            margin: 0;
+            font-size: 32px;
+            color: #EFA720;
+            min-width: 240px;
+            left: 90px;
+            top: 9px;
+        }
+        ion-icon{
+            color: #EFA720;
+            font-weight: bold;
+        }
+    }
+    .coupons{
+        display: flex;
+        padding: 7px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 68px;
+        .coupon {
+            width: 49%;
+            height: 51vw;
+            position: relative;
+            border: 3px solid #fff;
+            font-weight: bold;
+            margin-bottom: 7px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .coupon-desc {
+                text-align: center;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0px;
+                color: #EFA720;
+                background: rgba(0,0,0,0.6);
+                padding: 2px 0;
+                font-size: 16px;
+            }
+        }
+    }
+}

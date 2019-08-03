@@ -13,25 +13,24 @@ page-companycoupons {
         height: 55px;
         p{
             margin: 0;
-            margin-left: 37px;
+            margin-left: 42px;
             margin-top: 16px;
         }
         ion-icon{
-            font-size: 25px;
-            // font-weight: bold;
+            font-size: 27px;
+            font-weight: bold;
             // margin-right: 15px;
         }
         .back_icon{
             position: absolute;
             left: 10px;
-            top: 13px;
-            font-size: 25px;
+            top: 12px;
         }
         .check_icon{
             color: #E09827;
             position: absolute;
             right: 11px;
-            top: 13px;
+            top: 12px;
         }
     }
     .input_form {

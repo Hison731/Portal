@@ -102,10 +102,16 @@ page-cmedia {
         .list-ios > .item-block:first-child{
             border-top: none;
         }
+        .list-md .item-block .item-inner {
+            border-bottom: 1px solid #dedede !important;
+        }
         .photo_title {
             text-align: center;
             font-size: 18px;
             color: #E09827;
+        }
+        .list-md .item-input:last-child {
+            border-bottom: none;
         }
         .save_btn {
             color: #000;

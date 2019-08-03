@@ -23,7 +23,7 @@ page-marijuananews {
         .fab-close-icon{
             line-height: 31px;
         }
-        div{
+        .drop_content{
             background-color: black;
             color: white;
             height: 230px;
@@ -34,8 +34,6 @@ page-marijuananews {
             padding: 10px;
             max-width: 220px;
             border: 1px solid white;
-            // font-weight: bold;
-            // font-family: sans-serif !important;
             ul{
                 list-style: none;
                 padding: 0;
@@ -61,7 +59,7 @@ page-marijuananews {
             color: #EFA720;
             min-width: 240px;
             left: 90px;
-            top: 9px;
+            top: 16px;
         }
         ion-icon{
             color: #EFA720;

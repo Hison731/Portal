@@ -23,6 +23,23 @@ page-chat {
       font-size: 20px;
       color: #E09827 !important;
     }
+    .chatlist_end{
+      color: white;
+      text-align: center;
+      // display: flex;
+      font-size: 12px;
+
+    }
+    .chat_num{
+      color: white;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: green;
+      text-align: center;
+      padding-top: 2px;
+      margin: 0 auto;
+    }
 
     .search_bar{
       position: relative;

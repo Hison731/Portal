@@ -16,6 +16,9 @@ page-chat {
     .list-md .item-block .item-inner {
      border-bottom: none !important; 
     }
+    .item-ios.item-block .item-inner{
+      border-bottom: none !important; 
+    }
     .item-md h2 {
       font-size: 20px;
       color: #E09827 !important;
@@ -25,7 +28,7 @@ page-chat {
       position: relative;
       background-color: white;
       border-radius: 5px;
-      margin: 0 10px;
+      margin: 10px;
       text-align: center;
       padding: 5px;
       .onimg{
@@ -84,7 +87,7 @@ page-chat {
       }
   }
   .scroll-content{
-    margin-top: 132px !important;
+    margin-top: 172px !important;
   }
     .list-ios > .item-block:first-child {
       border-top: none;

@@ -22,7 +22,7 @@ page-chatwindow {
 		width: 100%;
 		height: auto;
 		// background: #3a3a3ab8;
-		padding: 10px 20px;
+		padding: 10px 0px;
 	}
 	.chat-div {
 		max-width: 70%;
@@ -40,20 +40,44 @@ page-chatwindow {
 		width: 100%;
 		height: auto;
 		padding: 5px 5px;
-		margin-bottom: 10px;
+		// margin-bottom: 10px;
 		overflow: hidden;
+		position: relative;
+		.left_avatar{
+			position: absolute;
+			left: 4px;
+			top: 2px;
+			img{
+				width: 30px;
+				height: 30px;
+			}
+		}
+		.right_avatar{
+			position: absolute;
+			right: 4px;
+			top: 2px;
+			img{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+			}
+		}
+		
+
 	}
 	.textLeft {
 		float: left;
 		text-align: left;
-		margin-left: 3%;
-		background: #fff
+		margin-left: 50px;
+		background: #fff;
+		margin-top:10px;
 	}
 	.textRight {
 		float: right;
 		text-align: right;
-		margin-right: 4%;
+		margin-right: 18px;
 		background: #dcf8c6;
+		margin-top:20px;
 	}
 	.chat-message-time {
 		font-size: 12px;
@@ -75,7 +99,7 @@ page-chatwindow {
 		border-left-color: #dcf8c6;
 		border-right: 0;
 		border-top: 0;
-		margin-top: -0.5px;
+		// margin-top: -0.5px;
 		margin-right: -17px;
 	}
 	.textLeft:after {
@@ -89,7 +113,7 @@ page-chatwindow {
 		border-right-color: #fff;
 		border-left: 0;
 		border-top: 0;
-		margin-top: -0.5px;
+		// margin-top: -0.5px;
 		margin-left: -17px;
 	}
 	.input-wrap {
@@ -175,6 +199,6 @@ page-chatwindow {
 		}
 	}
 	.scroll-content{
-		margin-top: 132px !important;
+		margin-top: 180px !important;
 	}
 }

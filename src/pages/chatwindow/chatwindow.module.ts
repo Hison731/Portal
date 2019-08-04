@@ -6,7 +6,7 @@ import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [
-    ChatwindowPage,
+    ChatwindowPage, 
   ],
   imports: [
     EmojiPickerComponentModule,

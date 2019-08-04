@@ -14,7 +14,7 @@ page-mnews {
             background-color: transparent;
             box-shadow: none;
             height: 30px;
-            margin-left: 25px;
+            margin-left: 15px;
             margin-top: 15px;
         }
         .fab-md .button-effect {
@@ -23,7 +23,7 @@ page-mnews {
         .fab-close-icon{
             line-height: 31px;
         }
-        div{
+        .drop_content{
             background-color: black;
             color: white;
             height: 230px;
@@ -34,8 +34,6 @@ page-mnews {
             padding: 10px;
             max-width: 220px;
             border: 1px solid white;
-            // font-weight: bold;
-            // font-family: sans-serif !important;
             ul{
                 list-style: none;
                 padding: 0;
@@ -57,15 +55,36 @@ page-mnews {
         p{
             position: absolute;
             margin: 0;
-            font-size: 32px;
+            font-size: 29px;
             color: #EFA720;
-            min-width: 240px;
-            left: 90px;
-            top: 9px;
+            white-space: nowrap;
+            left: 70px;
+            top: 11px;
         }
         ion-icon{
             color: #EFA720;
             font-weight: bold;
+        }
+    }
+    .card_content{
+        margin-top: 70px;
+        h4{
+            text-align: center;
+            color: #EFA720;
+        }
+        p{
+            line-height: 1;
+            font-size: 15px;
+            margin: 0 7px 10px 4px;
+        }
+        img{
+            width: 70vw;
+            margin: 0 auto;
+            margin-top: 30px;
+            object-fit: contain;
+        }
+        ion-card-content{
+            margin-top: 10px;
         }
     }
    

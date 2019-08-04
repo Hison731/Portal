@@ -18,16 +18,16 @@ export class ChatwindowPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatwindowPage');
   }
-  switchEmojiPicker() {
-    this.showEmojiPicker = !this.showEmojiPicker;
-    if (!this.showEmojiPicker) {
-      this.focus();
-    } else {
-      this.setTextareaScroll();
-    }
-    this.content.resize();
-    this.scrollToBottom();
-  }
+  // switchEmojiPicker() {
+  //   this.showEmojiPicker = !this.showEmojiPicker;
+  //   if (!this.showEmojiPicker) {
+  //     this.focus();
+  //   } else {
+  //     this.setTextareaScroll();
+  //   }
+  //   this.content.resize();
+  //   this.scrollToBottom();
+  // }
   private focus() {
     if (this.messageInput && this.messageInput.nativeElement) {
       this.messageInput.nativeElement.focus();

@@ -1,13 +1,24 @@
 page-chat {
-
     ion-avatar {
+      margin-top: 2px !important;
       img{
-        height: 60px !important;
-        width: 60px !important;
+        height: 50px !important;
+        width: 50px !important;
       }
     }
     ion-item{
-        margin: 20px 0 !important;
+        margin: 15px 0 !important;
+        border-bottom: 1px solid #dedede !important;
+    }
+    ion-list{
+      padding: 0 10px !important;
+    }
+    .list-md .item-block .item-inner {
+     border-bottom: none !important; 
+    }
+    .item-md h2 {
+      font-size: 20px;
+      color: #E09827 !important;
     }
 
     .search_bar{

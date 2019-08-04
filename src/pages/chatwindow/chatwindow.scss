@@ -32,6 +32,9 @@ page-chatwindow {
 		display: inline-grid;
 		position: relative;
 		border-radius: 6px;
+		span{
+			display: block;
+		}
 	}
 	.chat-message-container {
 		width: 100%;
@@ -97,7 +100,20 @@ page-chatwindow {
 			border: 0;
 			// border-bottom: 1px $userBackgroundColor;
 			border-style: solid;
+			padding-top: 15px;
+			resize: none ;
 		}
+		textarea::placeholder {
+			color: gray !important;
+			font-size: 17px;
+		}
+	}
+	.chat_box{	
+		height: 65px;
+		border: 1px solid white;
+		// display: flex;
+		// align-items: center;
+	
 	}
 	.title-white {
 		background-color: white;
@@ -133,7 +149,7 @@ page-chatwindow {
 		position: relative;
 		color:#ECA731;
 		border-bottom: 2px solid #fff;
-		padding: 10px 48px 12px; 
+		padding: 13px 48px 10px; 
 		.offimg{
 			position: absolute;
 			left: 20px;

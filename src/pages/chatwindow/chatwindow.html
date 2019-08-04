@@ -6,7 +6,7 @@
 </ion-footer>
 <ion-content class="menu-items">
   <div class="title-white" ion-fixed>
-      <span><ion-icon name="close" (click)="back()" class="back_icon"></ion-icon></span>
+      <span><ion-icon name="arrow-back" (click)="back()" class="back_icon"></ion-icon></span>
     <p>Goshawk</p>
   </div>
   <div class="user_bar">
@@ -19,14 +19,14 @@
   <div class="chat-body">
     <div class="chat-message-container">
       <span class="chat-div textLeft">
-        <span class="chat-message-time">10:31 pm</span>
+        <span class="chat-message-time">8-3-2019 10:31 pm</span>
         <span class="chat-message">Hi there.</span>
       </span>
     </div>
 
     <div class="chat-message-container">
       <span class="chat-div textRight">
-        <span class="chat-message-time">Yesterday, 10:31 pm</span>
+        <span class="chat-message-time">7-3-2019 10:31 pm</span>
         <span class="chat-message">Hi there. Hi there. Hi there. Hi there. Hi there. Hi there. Hi there. Hi there. Hi
           there. Hi there. Hi there. Hi there.</span>
       </span>
@@ -34,20 +34,19 @@
 
     <div class="chat-message-container">
       <span class="chat-div textLeft">
-        <span class="chat-message-time">10:31 pm</span>
+        <span class="chat-message-time">8-3-2019 10:31 pm</span>
         <span class="chat-message">Hi there.</span>
       </span>
     </div>
 
     <div class="chat-message-container">
       <span class="chat-div textLeft">
-        <span class="chat-message-time">10:31 pm</span>
+        <span class="chat-message-time">8-3-2019 10:31 pm</span>
         <span class="chat-message">Hi there.</span>
       </span>
     </div>
   </div>
 </ion-content>
-<ion-footer>
   <!-- <ion-grid>
     <ion-row>
       <ion-col col-1>
@@ -64,21 +63,21 @@
   <emoji-picker [(ngModel)]="editorMsg"></emoji-picker> -->
 
 
-  <ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">
+  <!-- <ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'"> -->
+  <ion-footer class="chat_box">
     <div class="input-wrap">
-      <button ion-button clear icon-only item-right (click)="switchEmojiPicker()">
+      <!-- <button ion-button clear icon-only item-right (click)="switchEmojiPicker()">
         <ion-icon name="happy"></ion-icon>
-      </button>
+      </button> -->
       <textarea #chat_input
-                placeholder="Text Input"
+                placeholder="Write a message..."
                 [(ngModel)]="editorMsg"
-                (focusin)="onFocus()">
+                (focusin)="onFocus()"
+                rows="1">
       </textarea>
-      <button ion-button clear icon-only item-right (click)="sendMsg()">
+      <button ion-button clear icon-only item-right (click)="sendMsg()" style="margin-bottom: 5px;">
         <ion-icon name="paper-plane" ios="ios-send" md="md-send"></ion-icon>
       </button>
     </div>
-    <emoji-picker [(ngModel)]="editorMsg"></emoji-picker>
+    <!-- <emoji-picker [(ngModel)]="editorMsg"></emoji-picker> -->
   </ion-footer>
-
-</ion-footer>

@@ -28,17 +28,20 @@ page-chat {
       text-align: center;
       // display: flex;
       font-size: 12px; 
+      margin-top: 0 !important;
 
     }
     .chat_num{
       color: white;
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       background-color: green;
       text-align: center;
-      padding-top: 3px;
+      padding-top: 5px;
       margin: 0 auto;
+      font-size: 14px;
+      margin-bottom:2px;
     }
 
     .search_bar{

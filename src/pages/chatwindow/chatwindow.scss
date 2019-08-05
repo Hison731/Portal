@@ -135,8 +135,9 @@ page-chatwindow {
 	.chat_box{	
 		height: 65px;
 		border: 1px solid white;
-		// display: flex;
-		// align-items: center;
+		width: 100%;
+		background-color: white;
+		bottom: 0;
 	
 	}
 	.title-white {

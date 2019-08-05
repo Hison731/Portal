@@ -75,39 +75,36 @@ page-chat {
         font-size: 16px;
     }
     }
-    .title-white {
-      background-color: white;
-      color: #000;
+    .dropdown_menu{
+      background: black;
+      border-bottom: solid 2px #696969;
       width: 100%;
-      font-size: 21px;
-      border-bottom: 1px solid gray;
-      border-top: 1px solid gray;
+      height: 62px;
+      margin: 0;
       position: relative;
-      height: 55px;
+      .back_icon{
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        color: #EFA720;
+        font-size: 32px;
+      }
       p{
+          position: absolute;
           margin: 0;
-          margin-left: 42px;
-          margin-top: 16px;
+          font-size: 29px;
+          color: #EFA720;
+          white-space: nowrap;
+          left: 50px;
+          top: 15px;
       }
       ion-icon{
-          font-size: 27px;
+          color: #EFA720;
           font-weight: bold;
-          // margin-right: 15px;
-      }
-      .back_icon{
-          position: absolute;
-          left: 10px;
-          top: 12px;
-      }
-      .check_icon{
-          color: #E09827;
-          position: absolute;
-          right: 15px;
-          top: 12px;
       }
   }
   .scroll-content{
-    margin-top: 172px !important;
+    margin-top: 180px !important;
   }
     .list-ios > .item-block:first-child {
       border-top: none;

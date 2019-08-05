@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
+import { DataProvider } from '../../providers/data/data';
 import * as $ from 'jquery'
 
 @IonicPage() 
 @Component({
-  selector: 'page-editprofile',
-  templateUrl: 'editprofile.html'
+  selector: 'page-dispensary',
+  templateUrl: 'dispensary.html'
 
 })
-export class EditprofilePage {
+export class DispensaryPage {
   hours: Array<{hour: number}>;
   // mins: Array<{min: number}>;
   mins: string[];

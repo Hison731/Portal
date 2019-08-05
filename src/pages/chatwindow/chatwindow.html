@@ -52,38 +52,21 @@
       </span>
     </div>
   </div>
-</ion-content>
-  <!-- <ion-grid>
-    <ion-row>
-      <ion-col col-1>
-        <ion-icon name="happy" (click)="switchEmojiPicker()"></ion-icon>
-      </ion-col>
-      <ion-col col-9>
-        <ion-input type="text" placeholder="Type a message" name="message"></ion-input>
-      </ion-col>
-      <ion-col col-2>
-        <ion-icon name="paper-plane"></ion-icon>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <emoji-picker [(ngModel)]="editorMsg"></emoji-picker> -->
-
-
-  <!-- <ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'"> -->
-  <ion-footer class="chat_box">
-    <div class="input-wrap">
-      <!-- <button ion-button clear icon-only item-right (click)="switchEmojiPicker()">
-        <ion-icon name="happy"></ion-icon>
-      </button> -->
-      <textarea #chat_input
-                placeholder="Write a message..."
-                [(ngModel)]="editorMsg"
-                (focusin)="onFocus()"
-                rows="1">
-      </textarea>
-      <button ion-button clear icon-only item-right (click)="sendMsg()" style="margin-bottom: 5px;">
-        <ion-icon name="paper-plane" ios="ios-send" md="md-send"></ion-icon>
-      </button>
+  <div class="chat_box" ion-fixed>
+      <div class="input-wrap">
+        <textarea #chat_input
+                  placeholder="Write a message..."
+                  [(ngModel)]="editorMsg"
+                  (focusin)="onFocus()"
+                  rows="1">
+        </textarea>
+        <button ion-button clear icon-only item-right (click)="sendMsg()" style="margin-bottom: 5px;">
+          <ion-icon name="paper-plane" ios="ios-send" md="md-send"></ion-icon>
+        </button>
+      </div>
     </div>
-    <!-- <emoji-picker [(ngModel)]="editorMsg"></emoji-picker> -->
-  </ion-footer>
+</ion-content>
+
+
+
+

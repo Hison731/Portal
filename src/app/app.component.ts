@@ -20,7 +20,7 @@ export class MyApp {
     this.pages = [
       {title: 'Home', component: "HomePage"},
       // { title: 'Map', component: LocationPage },
-      {title: 'Dispensary Delivery Doctor', component: "HomePage"},
+      {title: 'Dispensary Delivery Doctor', component: "DispensaryPage"},
       {title: 'Chat', component: "ChatPage"},
       {title: 'Marijuana Strains', component: "StrainsPage"},
       {title: 'Coupons', component: "CouponsPage"},

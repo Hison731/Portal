@@ -9,13 +9,15 @@ page-mnews {
         .fab-ios{
             background-color: transparent;
             height: 30px;
+            margin-left: 16px;
+            margin-top: 16px;
         }
         .fab-md{
             background-color: transparent;
             box-shadow: none;
             height: 30px;
-            margin-left: 15px;
-            margin-top: 15px;
+            margin-left: 16px;
+            margin-top: 16px;
         }
         .fab-md .button-effect {
             background-color:unset;
@@ -59,7 +61,7 @@ page-mnews {
             color: #EFA720;
             white-space: nowrap;
             left: 70px;
-            top: 13px;
+            top: 16px;
         }
         ion-icon{
             color: #EFA720;

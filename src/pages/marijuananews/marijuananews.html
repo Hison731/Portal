@@ -1,7 +1,7 @@
-<ion-header>
+<ion-header (click)="closeFab(fab)">
     <portal-header></portal-header>
 </ion-header>
-<ion-footer>
+<ion-footer (click)="closeFab(fab)">
     <portal-footer></portal-footer>
 </ion-footer>
 <ion-content class="menu-items">
@@ -19,12 +19,12 @@
             </div>
         </button>
     </ion-fab> -->
-    <div class="dropdown_menu" ion-fixed>
-        <ion-fab>
+    <div class="dropdown_menu" ion-fixed >
+        <ion-fab #fab>
             <button ion-fab>
                 <img src="../../assets/imgs/menu_bar3.png">
             </button>
-            <p>Marijuana News</p>
+            <p (click)="closeFab(fab)">Marijuana News</p>
             <ion-fab-list>
                 <div class="drop_content">
                     <ul>
@@ -41,7 +41,7 @@
         </ion-fab>
     </div>
 
-    <div class="coupons">
+    <div class="coupons"  (click)="closeFab(fab)">
         <div class="coupon" (click)=news1() >
             <img src="../../assets/imgs/m-news/1.jpg">
             <div class="coupon-desc">

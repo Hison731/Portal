@@ -1,3 +1,33 @@
 page-main {
-	
+	.search_bar{
+		position: relative;
+		background-color: white;
+		border-radius: 5px;
+		margin: 10px;
+		text-align: center;
+		padding: 5px;
+		.onimg{
+		  width: 20px;
+		  position: absolute;
+		  top: 10px;
+		  left: 20px;
+		}
+		.offimg{
+		  width: 20px;
+		  position: absolute;
+		  top: 10px;
+		  right: 20px;
+		}
+		input {
+		  margin: 0 auto;
+		  width: 220px;
+		  height: 35px;
+		  text-align: center;
+		  padding: 5px 30px;
+		  border: none;
+		  border-radius: 4px;
+		  color: black;
+		  font-size: 16px;
+		}
+	}
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController, AlertController, FabContainer } from 'ionic-angular';
  
 @IonicPage()  
 @Component({
@@ -12,6 +12,9 @@ export class MarijuananewsPage {
   news1(){
     this.navCtrl.push('MnewsPage', {}, {animate: false});
   }
+  closeFab(fab: FabContainer){
+    fab.close();
+}
 }
 
 

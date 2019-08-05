@@ -96,7 +96,9 @@ page-chat {
           font-size: 29px;
           color: #EFA720;
           white-space: nowrap;
-          left: 30px;
+          // left: 30px;
+          left: 50%;
+          transform: translateX(-50%);
           top: 15px;
       }
       ion-icon{

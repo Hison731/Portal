@@ -5,44 +5,9 @@
   <portal-footer></portal-footer>
 </ion-footer>
 <ion-content class="menu-items">
-  <ion-fab right top style="right:0px;top:0px;background-color: rgba(0,0,0,0.5);">
-    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
-      <div style="color:white;">
-        <i class="fa fa-user" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
-        Register
-      </div>
-    </button>
-    <button style="background-color: transparent;font-size: 1.2rem;padding:10px;padding-bottom: 5px;">
-      <div style="color:white;">
-        <i class="fa fa-sign-in" aria-hidden="true" style="color: rgb(239, 167, 32);"></i><br>
-        Login
-      </div>
-    </button>
-  </ion-fab>
-  <ion-card no-padding no-margin style="width: 100%" *ngFor="let post of posts">
-    <ion-item>
-      <ion-avatar item-start>
-        <img [src]="post.profile_image_url">
-      </ion-avatar>
-      <h2 color="light">{{post.username}}</h2>
-      <p class="date">{{post.created}}</p>
-      <p item-end>
-        <ion-icon class="heart" name="eye"> <span class="count">{{post.views}}</span></ion-icon>
-        <ion-icon class="view" name="heart"></ion-icon><span class="count">{{post.likes}}</span>
-      </p>
-    </ion-item>
-    <div *ngIf="post.type == 'image'" class="post_image">
-      <img [src]="post.file_url" (click) = "openImageDetails(post.id)" />
-    </div>
-    <div *ngIf="post.type == 'video'" [ngStyle]="{'background-image': 'url('+post.thumbnail+')'}" class="post_image">
-      <ion-icon name="play" class="play-btn"></ion-icon>
-    </div>
-    <ion-card-content>
-      <p></p>
-    </ion-card-content>
-  </ion-card>
-  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-    <ion-infinite-scroll-content>
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
+  <div class="search_bar" ion-fixed>
+      <img src="../../assets/imgs/on.png" alt="" class="onimg">
+      <input type="text" placeholder="Search User" name="companyChatUsersSearchInput">
+      <img src="../../assets/imgs/off.png" alt="" class="offimg">
+  </div>
 </ion-content>

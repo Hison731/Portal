@@ -14,7 +14,7 @@ export class MarijuananewsPage {
   }
   closeFab(fab: FabContainer){
     fab.close();
-}
+  }
 }
 
 

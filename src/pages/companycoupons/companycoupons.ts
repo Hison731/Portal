@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
-import { DataProvider } from '../../providers/data/data';
-import * as $ from 'jquery'
 
 @IonicPage() 
 @Component({

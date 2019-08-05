@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, ModalController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, FabContainer, ModalController, AlertController } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
  
 @IonicPage()  
@@ -10,6 +10,9 @@ import { DataProvider } from '../../providers/data/data';
 })
 export class MnewsPage {
   constructor(public modalCtrl: ModalController, public navCtrl: NavController, public alertCtrl: AlertController) { }
+  closeFab(fab: FabContainer){
+    fab.close();
+  }
 }
 
 

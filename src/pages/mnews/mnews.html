@@ -1,7 +1,7 @@
-<ion-header>
+<ion-header (click)="closeFab(fab)">
     <portal-header></portal-header>
 </ion-header>
-<ion-footer>
+<ion-footer (click)="closeFab(fab)">
     <portal-footer></portal-footer>
 </ion-footer>
 <ion-content class="menu-items">
@@ -19,14 +19,14 @@
             </div>
         </button>
     </ion-fab>
-    <div class="dropdown_menu" ion-fixed>
-        <ion-fab>
+    <div class="dropdown_menu" ion-fixed >
+        <ion-fab #fab>
             <button ion-fab>
                 <img src="../../assets/imgs/menu_bar3.png">
             </button>
-            <p>Marijuana News</p>
+            <p (click)="closeFab(fab)">Marijuana News</p>
             <ion-fab-list>
-                <div>
+                <div class="drop_content">
                     <ul>
                         <li>Celebrities (3)</li>
                         <li>Concentrates (1)</li>
@@ -40,7 +40,7 @@
             </ion-fab-list>
         </ion-fab>
     </div>
-    <div class="card_content">
+    <div class="card_content" (click)="closeFab(fab)">
         <h4>High-end Paraphernalia for your High</h4>
         <ion-card>
             <img src="../../assets/imgs/m-news/1.jpg" alt="">

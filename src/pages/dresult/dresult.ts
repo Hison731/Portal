@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
+import * as $ from 'jquery'
 
 @IonicPage() 
 @Component({
-  selector: 'page-dispensary',
-  templateUrl: 'dispensary.html'
+  selector: 'page-dresult',
+  templateUrl: 'dresult.html'
 
 })
-export class DispensaryPage {
+export class DresultPage {
   constructor(public modalCtrl: ModalController, public navCtrl: NavController) {}
-  dresult() {
-    this.navCtrl.push('DresultPage', {}, {animate: false});
+  dispensary() {
+    this.navCtrl.push('DispensaryPage', {}, {animate: false});
   }
 }
-
 

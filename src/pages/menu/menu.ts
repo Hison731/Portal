@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, ModalController} from 'ionic-angular';
-import { DataProvider } from '../../providers/data/data';
+import { IonicPage, NavController, ModalController, AlertController} from 'ionic-angular';
  
 @IonicPage()  
 @Component({
@@ -9,9 +8,17 @@ import { DataProvider } from '../../providers/data/data';
 
 })
 export class MenuPage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController,public alertCtrl: AlertController) { }
   back() {
     this.navCtrl.push('UserportalsPage', {}, {animate: false});
+  }
+  showImg() {
+    const alert = this.alertCtrl.create({
+      subTitle: '<img src="./../assets/imgs/logo1.png">',
+      message: 'test',
+      cssClass: 'showImgCss'
+    });
+    alert.present();
   }
 }
 

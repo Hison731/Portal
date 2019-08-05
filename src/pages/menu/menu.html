@@ -6,9 +6,13 @@
 </ion-footer>
 <ion-content class="menu-items">
     <div class="title-white" ion-fixed>
-        <span><ion-icon name="close" (click)="back()" class="back_icon"></ion-icon></span>
+        <span>
+            <ion-icon name="close" (click)="back()" class="back_icon"></ion-icon>
+        </span>
         <p>Add/Edit Menu</p>
-        <span><ion-icon name="checkmark" class="check_icon"></ion-icon></span>
+        <span>
+            <ion-icon name="checkmark" class="check_icon"></ion-icon>
+        </span>
     </div>
     <div class="category_type">
         <label for="PortalCategoryTypeId">Category Name</label>
@@ -27,9 +31,99 @@
             <option value="15">Merchandise</option>
         </select>
     </div>
+    <div class="category_type">
+        <label for="PortalCategoryTypeId">Select Strain</label>
+        <select name="category_type" id="PortalCategoryTypeId">
+            <option value="0" selected="selected">Please Select a Strain</option>
+            <option value="1">NOT LISTED BELOW</option>
+            <option value="179">$100 OG</option>
+            <option value="182">A-10</option>
+            <option value="183">A-Train</option>
+            <option value="738">Abusive OG Kush</option>
+            <option value="184">Acapulco Gold</option>
+            <option value="185">Ace of Spades</option>
+        </select>
+    </div>
+    <div class="note">
+        <p>
+            Note: If you did not see your strain in the drop down menu above, please request a strain to be included in
+            the Strain Wiki Database.
+        </p>
+        <p>
+            <input type="checkbox">
+            Request This Strain to be Added to Strain Wiki Database
+        </p>
+    </div>
+    <form action="" class="input_form">
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload"></label>
+            </div>
+            <div class="avatar-preview">
+                <!-- <div id="imagePreview" style="background-image: url(../../assets/imgs/main_avatar.png);"> -->
+                <div id="imagePreview">
+                </div>
+            </div>
+        </div>
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Description</ion-label>
+                <ion-textarea rows="3"></ion-textarea>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Name</ion-label>
+                <ion-input type="text" value="" name="c_name"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Price Gram</ion-label>
+                <ion-input type="text" value=""></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Price Eighth</ion-label>
+                <ion-input type="text" value=""></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Price Quarter</ion-label>
+                <ion-input type="text" value=""></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Price Half Oz</ion-label>
+                <ion-input type="text" value=""></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Price Oz</ion-label>
+                <ion-input type="text" value=""></ion-input>
+            </ion-item>
+        </ion-list>
+        <div padding>
+            <button ion-button block class="save_btn">Submit</button>
+        </div>
+    </form>
 
-    <div class="search_options">
-        <img src="../../assets/imgs/search_options.png" alt="" style="width : 20px; cursor: pointer;">
+    <div class="dropdown_menu">
+        <ion-fab>
+            <button ion-fab>
+                <img src="../../assets/imgs/search_options.png">
+            </button>
+            <ion-fab-list>
+                <div class="drop_content">
+                    <ul>
+                        <li>Flowers-Indica</li>
+                        <li>Flowers-Sativa</li>
+                        <li>Flowers-Hybrid</li>
+                        <li>Concentrates</li>
+                        <li>Edibles</li>
+                        <li>Drinks</li>
+                        <li>Topical</li>
+                        <li>Tinctures</li>
+                        <li>Clones</li>
+                        <li>Seeds</li>
+                        <li>Merchandise</li>
+                    </ul>
+                </div>
+            </ion-fab-list>
+        </ion-fab>
     </div>
 
     <div class="data_contain">
@@ -81,7 +175,7 @@
             <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
         </div>
         <div class="each_data">
-            <p class="uname">test <img src="./../assets/imgs/image.png"></p>
+            <p class="uname">test <img src="./../assets/imgs/image.png" (click)="showImg()"></p>
             <div class="datavalue">
                 <p>1<sup>each</sup></p>
             </div>

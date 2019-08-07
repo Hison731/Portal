@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, ModalController, AlertController } from 'ionic-angular';
-import { DataProvider } from '../../providers/data/data';
+import { IonicPage, NavController, ModalController, AlertController } from 'ionic-angular';
+// import { DataProvider } from '../../providers/data/data';
  
 @IonicPage()  
 @Component({

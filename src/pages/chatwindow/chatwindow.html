@@ -6,15 +6,16 @@
 </ion-footer>
 <ion-content class="menu-items">
   <div class="title-white" ion-fixed>
-      <span><ion-icon name="arrow-back" (click)="back()" class="back_icon"></ion-icon></span>
+    <span>
+      <ion-icon name="arrow-back" (click)="back()" class="back_icon"></ion-icon>
+    </span>
     <p>Goshawk</p>
   </div>
   <div class="user_bar" ion-fixed>
-      <img src="../../assets/imgs/off.png" alt="" class="offimg">
-      <p>goshawk</p>
-      <span><i class="fa fa-trash"></i></span>
-      <span><i class="fa fa-times"></i></span>
-
+    <img src="../../assets/imgs/off.png" alt="" class="offimg">
+    <p>goshawk</p>
+    <span><i class="fa fa-trash"></i></span>
+    <span><i class="fa fa-times"></i></span>
   </div>
   <div class="chat-body">
     <div class="chat-message-container">
@@ -53,20 +54,12 @@
     </div>
   </div>
   <div class="chat_box" ion-fixed>
-      <div class="input-wrap">
-        <textarea #chat_input
-                  placeholder="Write a message..."
-                  [(ngModel)]="editorMsg"
-                  (focusin)="onFocus()"
-                  rows="1">
+    <div class="input-wrap">
+      <textarea #chat_input placeholder="Write a message..." [(ngModel)]="editorMsg" (focusin)="onFocus()" rows="1">
         </textarea>
-        <button ion-button clear icon-only item-right (click)="sendMsg()" style="margin-bottom: 5px;">
-          <ion-icon name="paper-plane" ios="ios-send" md="md-send"></ion-icon>
-        </button>
-      </div>
+      <button ion-button clear icon-only item-right (click)="sendMsg()" style="margin-bottom: 5px;">
+        <ion-icon name="paper-plane" ios="ios-send" md="md-send"></ion-icon>
+      </button>
     </div>
+  </div>
 </ion-content>
-
-
-
-

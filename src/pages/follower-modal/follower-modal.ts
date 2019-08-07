@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'; 
-import { IonicPage, NavController, NavParams, ViewController, Platform  } from 'ionic-angular';
+import { IonicPage, NavController, ViewController} from 'ionic-angular';
 
 @IonicPage()
 @Component({

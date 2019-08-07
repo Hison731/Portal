@@ -3,12 +3,12 @@ import { NavController, IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-main',
-  templateUrl: 'main.html'
+  selector: 'page-comment',
+  templateUrl: 'comment.html'
 })
-export class MainPage {
+export class CommentPage {
   constructor(public navCtrl: NavController) { }
-  weedgram() {
+  back() {
     this.navCtrl.push('WeedgramPage', {}, {animate: false});
   }
 }

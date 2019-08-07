@@ -1,7 +1,7 @@
-<ion-header>
+<ion-header (click)="closeFab(fab)">
     <portal-header></portal-header>
 </ion-header>
-<ion-footer>
+<ion-footer (click)="closeFab(fab)">
     <portal-footer></portal-footer>
 </ion-footer>
 <ion-content class="menu-items">
@@ -14,7 +14,7 @@
             <ion-icon name="checkmark" class="check_icon"></ion-icon>
         </span>
     </div>
-    <div class="category_type">
+    <div class="category_type" (click)="closeFab(fab)">
         <label for="PortalCategoryTypeId">Category Name</label>
         <select name="category_type" id="PortalCategoryTypeId">
             <option value="0">Please select category</option>
@@ -31,7 +31,7 @@
             <option value="15">Merchandise</option>
         </select>
     </div>
-    <div class="category_type">
+    <div class="category_type select_strain" (click)="closeFab(fab)">
         <label for="PortalCategoryTypeId">Select Strain</label>
         <select name="category_type" id="PortalCategoryTypeId">
             <option value="0" selected="selected">Please Select a Strain</option>
@@ -44,21 +44,21 @@
             <option value="185">Ace of Spades</option>
         </select>
     </div>
-    <div class="note">
-        <p>
+    <div class="note" (click)="closeFab(fab)">
+        <!-- <p>
             Note: If you did not see your strain in the drop down menu above, please request a strain to be included in
             the Strain Wiki Database.
-        </p>
+        </p> -->
         <p>
-            <input type="checkbox">
-            Request This Strain to be Added to Strain Wiki Database
+            <input type="checkbox" id="request_ch">
+            <label for="request_ch">Request this Strain to be Added to 420Portal's Strain database.</label>
         </p>
     </div>
-    <form action="" class="input_form">
+    <form action="" class="input_form" (click)="closeFab(fab)">
         <div class="avatar-upload">
             <div class="avatar-edit">
                 <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                <label for="imageUpload"></label>
+                <!-- <label for="imageUpload"></label> -->
             </div>
             <div class="avatar-preview">
                 <!-- <div id="imagePreview" style="background-image: url(../../assets/imgs/main_avatar.png);"> -->
@@ -66,14 +66,15 @@
                 </div>
             </div>
         </div>
+        <p class="photo_title">Add Media</p>
         <ion-list>
-            <ion-item>
-                <ion-label floating>Description</ion-label>
-                <ion-textarea rows="3"></ion-textarea>
-            </ion-item>
             <ion-item>
                 <ion-label floating>Name</ion-label>
                 <ion-input type="text" value="" name="c_name"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Description</ion-label>
+                <ion-textarea rows="3"></ion-textarea>
             </ion-item>
             <ion-item>
                 <ion-label floating>Price Gram</ion-label>
@@ -102,7 +103,7 @@
     </form>
 
     <div class="dropdown_menu">
-        <ion-fab>
+        <ion-fab #fab>
             <button ion-fab>
                 <img src="../../assets/imgs/search_options.png">
             </button>
@@ -126,7 +127,7 @@
         </ion-fab>
     </div>
 
-    <div class="data_contain">
+    <div class="data_contain" (click)="closeFab(fab)">
         <div class="each_data">
             <h6>FLOWERS - INDICA</h6>
             <p class="uname">goshawkyo</p>

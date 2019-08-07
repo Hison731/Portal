@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
-import { DataProvider } from '../../providers/data/data';
-import * as $ from 'jquery'
+import { IonicPage, NavController, MenuController} from 'ionic-angular';
+// import { DataProvider } from '../../providers/data/data';
 
 @IonicPage() 
 @Component({
@@ -10,9 +9,14 @@ import * as $ from 'jquery'
 
 })
 export class DresultPage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public menu: MenuController) {}
   dispensary() {
     this.navCtrl.push('DispensaryPage', {}, {animate: false});
+  }
+  openMenu() {
+    this.menu.enable(true, 'menu2');
+    this.menu.enable(false, 'menu1');
+    this.menu.toggle();
   }
 }
 

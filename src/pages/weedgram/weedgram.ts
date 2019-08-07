@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController} from 'ionic-angular';
-import * as $ from 'jquery'
- @IonicPage()  
-@Component({
-  selector: 'page-companyprofile',
-  templateUrl: 'companyprofile.html'
+import { NavController, IonicPage } from 'ionic-angular';
 
+@IonicPage()
+@Component({
+  selector: 'page-weedgram',
+  templateUrl: 'weedgram.html'
 })
-export class CompanyprofilePage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController) { 
+export class WeedgramPage {
+  constructor(public navCtrl: NavController) { }
+  allcomment() {
+    this.navCtrl.push('CommentPage', {}, {animate: false});
   }
   ionViewDidLoad() {
     var showChar = 120;
@@ -24,9 +25,9 @@ export class CompanyprofilePage {
           c +
           '<span class="moreellipses">' +
           ellipsestext +
-          '&nbsp;&nbsp;<a href="" class="moreless more">Read More..</a></span></span></div><div class="truncate-text" style="display:none">' +
+          '&nbsp;&nbsp;<a href="" class="moreless more">More</a></span></span></div><div class="truncate-text" style="display:none">' +
           h +
-          '<a href="" class="moreless less">Read Less..</a></span></div>';
+          '<a href="" class="moreless less">Less..</a></span></div>';
 
         $(this).html(html);
       }
@@ -48,9 +49,4 @@ export class CompanyprofilePage {
       return false;
     });
   }
-  // openModal() {
-  //   let myModal = this.modalCtrl.create(SampleModalPage);
-  //   myModal.present();
-  // }
 }
-

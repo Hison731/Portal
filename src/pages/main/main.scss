@@ -2,32 +2,53 @@ page-main {
 	.search_bar{
 		position: relative;
 		background-color: white;
-		border-radius: 5px;
-		margin: 10px;
+		border-top: 2px solid gray;
+		border-bottom: 2px solid gray;
+		margin: 35px 0;
 		text-align: center;
-		padding: 5px;
+		padding: 6px 80px;
 		.onimg{
-		  width: 20px;
+		  width: 33px;
 		  position: absolute;
-		  top: 10px;
-		  left: 20px;
+		  top: 5px;
+		  left: 10px;
 		}
 		.offimg{
-		  width: 20px;
+		  width: 38px;
 		  position: absolute;
-		  top: 10px;
-		  right: 20px;
+		  top: 5px;
+		  right: 7px;
 		}
 		input {
 		  margin: 0 auto;
-		  width: 220px;
-		  height: 35px;
+		  width: 210px;
+		//   height: 35px;
 		  text-align: center;
-		  padding: 5px 30px;
+		  color: #5a4b4b;
 		  border: none;
-		  border-radius: 4px;
-		  color: black;
-		  font-size: 16px;
+		  font-size: 20px;
+		  line-height: 20px;
+		}
+	}
+	.weedgram{
+		width: 100%;
+		text-align: center;
+		margin-top: 120px;
+		img{
+			width: 110px;
+			height: 110px;
+		}
+	}
+	.weedgram_content{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 0 2vw;
+		margin-top: 10px;
+		img{
+			width: 32%;
+			height: 32vw;
+			margin-bottom: 1.5vw;
 		}
 	}
 }

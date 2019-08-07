@@ -1,4 +1,4 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" side="left" id="menu1">
   <ion-header>
   </ion-header>
   <ion-content class="menu-items">
@@ -18,7 +18,123 @@
       <button ion-button menuClose color = "lowercolor" class="menu-lists login-button" (click)="nav.push('LoginPage')" *ngIf="!authProvider.isUserLogin">Login</button>
     </ion-list>
   </ion-content>
-
+</ion-menu>
+<ion-menu [content]="content" side="right" id="menu2">
+    <ion-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-list>
+                <ion-item>
+                  <input type="checkbox" id="ch1" checked>
+                  <label for="ch1">Storefront</label>
+                </ion-item>
+                <ion-item>
+                  <input type="checkbox" id="ch2" checked>
+                  <label for="ch2">Delivery</label>
+                </ion-item>
+                <ion-item>
+                  <input type="checkbox" id="ch3" checked>
+                  <label for="ch3">Doctor</label>
+                </ion-item>
+                <ion-item>
+                  <input type="checkbox" id="ch4">
+                  <label for="ch4">Recreational</label>
+                </ion-item>
+                <ion-item>
+                  <input type="checkbox" id="ch5">
+                  <label for="ch5">Credit Cards</label>
+                </ion-item>
+                <ion-item>
+                  <input type="checkbox" id="ch6">
+                  <label for="ch6">18+</label>
+                </ion-item>
+                <ion-item>
+                  <input type="checkbox" id="ch7">
+                  <label for="ch7">Open Now</label>
+                </ion-item>
+               
+              </ion-list>
+            </ion-col>
+            <ion-col class="tright">
+              <p>1 Results</p>
+              <ion-item>
+                  <ion-label floating>Search company</ion-label>
+                  <ion-input type="text" value=""></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row> 
+        </ion-grid>
+        <div class="hr_div"></div>
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-list>
+                  <ion-item>
+                    <input type="radio" id="ra1" name="search_radio" checked>
+                    <label for="ra1">Flowers - Indica</label>
+                  </ion-item>
+                  <ion-item>
+                    <input type="radio" id="ra2" name="search_radio">
+                    <label for="ra2">Flowers - Sativa</label>
+                  </ion-item>
+                  <ion-item>
+                    <input type="radio" id="ra3" name="search_radio">
+                    <label for="ra3">Flowers - Hybrid</label>
+                  </ion-item>
+                  <ion-item>
+                    <input type="radio" id="ra4" name="search_radio">
+                    <label for="ra4">Concentrates</label>
+                  </ion-item>
+                  <ion-item>
+                    <input type="radio" id="ra5" name="search_radio">
+                    <label for="ra5">Edibles</label>
+                  </ion-item>
+                  <ion-item>
+                    <input type="radio" id="ra6" name="search_radio">
+                    <label for="ra6">Drinks</label>
+                  </ion-item>
+                  <ion-item>
+                    <input type="radio" id="ra7" name="search_radio">
+                    <label for="ra7">Topical</label>
+                  </ion-item>
+                  <ion-item>
+                    <input type="radio" id="ra8" name="search_radio">
+                    <label for="ra8">Clones</label>
+                  </ion-item>
+                  <ion-item>
+                    <input type="radio" id="ra9" name="search_radio">
+                    <label for="ra9">Seeds</label>
+                  </ion-item>
+                  <ion-item>
+                    <input type="radio" id="ra10" name="search_radio">
+                    <label for="ra10">Merchandise</label>
+                  </ion-item>
+                </ion-list>
+              </ion-col>
+              <ion-col class="dright">
+                  <ion-item style="margin-top:67px;">
+                      <ion-label floating>Search Products</ion-label>
+                      <ion-input type="text" value=""></ion-input>
+                  </ion-item>
+                  <select name="weightAmount" class="weight_sel">
+                      <option value="all">Weight Amount</option>
+                      <option name="price_half_gram" value="price_half_gram">0.5g</option>
+                      <option name="price_gram" value="price_gram">g</option>
+                      <option name="price_eighth" value="price_eighth">1/8</option>
+                      <option name="price_quarter" value="price_quarter">1/4</option>
+                      <option name="price_half_oz" value="price_half_oz">1/2</option>
+                      <option name="price_oz" value="price_oz">oz</option>
+                      <option name="price_each" value="price_each">each</option>
+                  </select>
+                  <ion-item>
+                      <ion-label floating>Max $</ion-label>
+                      <ion-input type="text" value=""></ion-input>
+                  </ion-item>
+              </ion-col>
+            </ion-row> 
+          </ion-grid>
+    </ion-content>
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

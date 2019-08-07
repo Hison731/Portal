@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, FabContainer, ModalController, AlertController } from 'ionic-angular';
-import { DataProvider } from '../../providers/data/data';
+// import { DataProvider } from '../../providers/data/data';
  
 @IonicPage()  
 @Component({

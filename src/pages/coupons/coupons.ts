@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-import { CouponDetailPage } from '../coupon-detail/coupon-detail';
+// import { CouponDetailPage } from '../coupon-detail/coupon-detail';
 
 /**
  * Generated class for the CouponsPage page.

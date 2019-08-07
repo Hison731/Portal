@@ -244,8 +244,80 @@ ion-fab {
 .col {
   padding: 0 !important;
 }
+// menu 2 css_________________________________________________________________________
+#menu2{
+  .scroll-content{
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    font-size: 12px;
+    input[type="checkbox"], input[type="radio"]{
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+    }
+    ion-item{
+      min-height: 30px;
+    }
+    ion-label{
+      color: #dedcdc;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      label{
+        font-size: 12px;
+      }
+    }
+    .list-md{
+      margin-bottom: 5px;
+    }
+    .list-md .item-block .item-inner {
+      border-bottom: 1px solid #585858;
+    }
+  }
+  .hr_div{
+    margin: 0 21px; 
+    clear: both;
+    height: 4px;
+    background: #EFA720;
+    position: relative;
+  }
+  .tright{
+    color: #d2d1d0;
+    
+    p{
+      font-size: 16px;
+      color: #e39912 !important;
+      text-align: center;
+    }
+    ion-item{
+      margin-top: 115px;
+      font-size: 13px;
+    }
+  }
+  .dright{
+    color: #d2d1d0;
+    ion-item{
+      font-size: 13px;
+    }
+    .weight_sel{
+      border: 1px solid white !important;
+      height: 35px !important;
+      color: #d2d1d0;
+      padding: 4px;
+      background: black !important;
+      font-size: 13px;
+      margin: 10px 0 5px 16px;
+      width:123px;
 
-// custom alert css
+    }
+  }
+  
+  
+}
+//_______________________________________________________________________________
+
+// ______________________________custom alert css
 .alertCustomCss {
   .alert-title{
     font-size: 26px;

@@ -1,0 +1,47 @@
+<ion-header>
+  <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+  <portal-footer></portal-footer>
+</ion-footer>
+<ion-content class="menu-items">
+  <div class="title_bar">
+    <img src="../../assets/imgs/main_avatar.png" alt="">
+    <p>420Portal . <span>Follow</span></p>
+    <ion-icon name="more"></ion-icon>
+  </div>
+  <img src="../../assets/imgs/weedgram/1.jpg" alt="" style="width: 100%;">
+  <div class="extra_icons">
+    <div>
+      <a href="#" class="imageLike">
+        <span class="fa fa-heart-o"></span>
+      </a>
+      <a href="#nextCommentScript" class="post_comment_icon">
+        <span class="fa fa-comment-o"></span>
+      </a>
+    </div>
+    <a href="javascript:void(0);" class="saveMedia">
+      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div class="comment_content">
+    <p class="likes_num">1,239 likes</p>
+    <div class="truncate">
+      <p>
+        <a href="#">420Portal</a> This is my comment. It should be 2 lines worth.
+        please have it look like this.asfasdfasfdas s dfsd fs sd fsd sad sad sd fsa dsad sd fsda sad fsda sdaf sdaf sad f
+      </p>
+    </div>
+    <p class="all_comment" (click)="allcomment()">View all comments</p>
+  </div>
+  <div class="chat_box" ion-fixed>
+    <div class="input-wrap">
+      <img src="../../assets/imgs/main_avatar.png" alt="">
+      <textarea #chat_input placeholder="Add a comment" [(ngModel)]="editorMsg" rows="1">
+            </textarea>
+      <button ion-button clear icon-only item-right (click)="sendMsg()" class="post_btn">
+        Post
+      </button>
+    </div>
+  </div>
+</ion-content>

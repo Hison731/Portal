@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController, AlertController} from 'ionic-angular';
+import { IonicPage, NavController, ModalController, AlertController, FabContainer} from 'ionic-angular';
  
 @IonicPage()  
 @Component({
@@ -19,6 +19,9 @@ export class MenuPage {
       cssClass: 'showImgCss'
     });
     alert.present();
+  }
+  closeFab(fab: FabContainer){
+    fab.close();
   }
 }
 

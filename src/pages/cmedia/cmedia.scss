@@ -113,6 +113,9 @@ page-cmedia {
         .list-md .item-input:last-child {
             border-bottom: none;
         }
+        .item-input.item-input-has-focus:last-child, .item-input.input-has-focus:last-child{
+            box-shadow: unset;
+          }
         .save_btn {
             color: #000;
             width: 50%;

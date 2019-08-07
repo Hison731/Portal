@@ -284,21 +284,41 @@ ion-fab {
   }
   .tright{
     color: #d2d1d0;
+    height: 100%;
+    ion-item{
+      min-height: 44px;
+    }
     
-    p{
+    p:first-child{
       font-size: 16px;
       color: #e39912 !important;
       text-align: center;
+      margin-bottom: 0;
+    }
+    .wait_for{
+      text-align: center;
+      p{
+        font-size:12px;
+        color: white !important;
+        margin-top: 30px;
+      }
+      img{
+        width: 50px;
+        height: 50px;
+        // margin-top: 30px;
+      }
     }
     ion-item{
-      margin-top: 115px;
+      margin-top: 5px;
       font-size: 13px;
     }
   }
   .dright{
     color: #d2d1d0;
+    height: 100%;
     ion-item{
       font-size: 13px;
+      min-height: 44px;
     }
     .weight_sel{
       border: 1px solid white !important;
@@ -307,9 +327,18 @@ ion-fab {
       padding: 4px;
       background: black !important;
       font-size: 13px;
-      margin: 10px 0 5px 16px;
-      width:123px;
+      margin: 10px 0 5px;
+      width:100%;
 
+    }
+    .no-lines .item-inner{
+      border-bottom: none !important;
+    }
+    .item-input:last-child {
+      border-bottom:none;
+    }
+    .item-input.item-input-has-focus:last-child, .item-input.input-has-focus:last-child{
+      box-shadow: unset;
     }
   }
   

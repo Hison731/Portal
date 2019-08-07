@@ -8,7 +8,7 @@ import { IonicPage, NavController, ModalController, AlertController, FabContaine
 
 })
 export class MenuPage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController,public alertCtrl: AlertController) { }
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public alertCtrl: AlertController) { }
   back() {
     this.navCtrl.push('UserportalsPage', {}, {animate: false});
   }

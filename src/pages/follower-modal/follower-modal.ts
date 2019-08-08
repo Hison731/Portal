@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'; 
 import { IonicPage, NavController, ViewController} from 'ionic-angular';
 
-@IonicPage()
+@IonicPage() 
 @Component({
   selector: 'follower-modal',
   templateUrl: 'follower-modal.html',

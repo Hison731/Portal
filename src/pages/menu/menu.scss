@@ -1,13 +1,14 @@
 page-menu {
     .scroll-content{
-        margin-top: 132px !important;
+        margin-top: 169px !important;
     }
+    // header nav__________
     .title-white {
         background-color: white;
         color: #000;
         width: 100%;
         font-size: 21px;
-        border-bottom: 1px solid gray;
+        // border-bottom: 1px solid gray;
         border-top: 1px solid gray;
         position: relative;
         height: 55px;
@@ -32,27 +33,58 @@ page-menu {
             top: 12px;
         }
     }
-    .category_type {
-        margin-top: 68px;
-        padding: 0 15px;
-        display: flex;
-        align-items: center;
-        // text-align: right;
-        label{
-            font-size: 16px;
-            margin-right: 10px;
-            width:35%;
-        }
-        select {
-            border: solid 1px #707070; 
-            padding: 7px;
-            background: #686969;
+    //select css______________
+    // .category_type {
+    //     margin-top: 68px;
+    //     padding: 0 15px;
+    //     display: flex;
+    //     align-items: center;
+    //     // text-align: right;
+    //     label{
+    //         font-size: 16px;
+    //         margin-right: 10px;
+    //         width:35%;
+    //     }
+    //     select {
+    //         border: solid 1px #707070; 
+    //         padding: 7px;
+    //         background: black;
+    //         color: #d2d1d0;
+    //         width: 180px;
+    //         font-size: 13px;
+    //         font-family: sans-serif;
+    //     }
+    // }
+
+    //modal select__
+    .ion_select{
+         .select-text{
             color: #d2d1d0;
-            width: 180px;
-            font-size: 13px;
-            font-family: sans-serif;
+        }
+        .label-md{
+            max-width: 100px;
+        }
+        ion-select{
+            max-width: 66%;
+            width: 66%;
+        }
+        .alert-wrapper{
+            background-color: #000;
+            border: 2px solid white;
+            color: white;
         }
     }
+    .category_type{
+        margin-top: 40px;
+        padding: 0 15px;
+       
+    }
+    .strain_type{
+        padding: 0 15px;
+        margin-top: 40px;
+    }
+    //_________
+
     .select_strain{
         margin-top: 10px;
     }
@@ -73,11 +105,12 @@ page-menu {
             cursor: pointer;
         }
     }
+    // select drop down_______________
     .dropdown_menu{
         background: black;
         border-radius: 5px;
         border: 1px solid white;
-        margin: 0px 7px 10px 7px;
+        margin: 20px 7px 10px 7px;
         height: 32px;
         position: relative;
         display: flex;
@@ -188,11 +221,14 @@ page-menu {
     }
 
     .note{
-        margin-top: 30px;
+        margin-top: 5px;
         color: rgb(247, 190, 9);
         padding-left: 25%;
         padding-right: 10px;
         font-size: 16px;
+        p{
+            margin: 0;
+        }
     }
     .input_form {
         padding: 0 5vw;
@@ -286,4 +322,27 @@ page-menu {
             margin-bottom: 30px;
         }
     }
+
+    // tab css_______________________
+    .custom_segment_02.toolbar-md{
+        min-height: unset !important;
+    }
+   .custom_segment_02{
+        .toolbar-background-md{
+            background-color: white;
+        }
+        .segment-md .segment-button{
+             width: 50% !important;
+             padding: 5px !important;
+             color: #000 !important;
+             opacity: 0.6 !important;
+             font-size: 17px !important;
+        }
+        .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated{
+             background: unset !important;
+             border-bottom: 2px solid black !important;
+             width: 50% !important;
+             opacity: 1 !important;
+        }
+   }
 }

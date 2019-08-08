@@ -12,7 +12,8 @@ page-weedgram {
 			border-style: solid;
 			// padding-top: 15px;
 			resize: none ;
-			color: black;
+			color: white;
+			background-color: black;
 		}
 		textarea::placeholder {
 			color: gray !important;
@@ -31,8 +32,9 @@ page-weedgram {
 	.chat_box{	
 		// height: 65px;
 		border: 1px solid #dad7d7;
-		width: 100%;
-		background-color: white;
+		width: 94%;
+		margin: 0 auto;
+		background-color: black;
 		bottom: 0;
 	}
 	//_________________________________________
@@ -91,13 +93,12 @@ page-weedgram {
 			margin-bottom: 5px;
 		}
 		.all_comment{
-			margin: 10px 0 20px;
+			margin: 10px 0 15px;
 			color: #D2D1D0;
 		}
 	}
 	.scroll-content{
 		margin-top: 78px !important;
-		margin-bottom: 108px !important;
 	}
 
 }

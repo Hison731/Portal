@@ -407,7 +407,7 @@ ion-fab {
   .alert-head{
     display: none;
   }
- 
+  
   // /content css______________________________
   h5{
     font-size: 17px;
@@ -475,5 +475,30 @@ ion-fab {
   }
   .alert-button-group{
     padding: 0;
+  }
+}
+//strain alert css
+.strainAlertCss{
+  .alert-wrapper{
+    background-color: black;
+    border: 2px solid white;
+  }
+  .alert-title{
+    color: white;
+  }
+  .alert-radio-label{
+    color: white;
+  }
+}
+.categoryAlertCss{
+  .alert-wrapper{
+    background-color: black;
+    border: 2px solid white;
+  }
+  .alert-title{
+    color: white;
+  }
+  .alert-radio-label{
+    color: white;
   }
 }

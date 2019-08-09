@@ -479,26 +479,26 @@ ion-fab {
 }
 //strain alert css
 .strainAlertCss{
-  .alert-wrapper{
-    background-color: black;
+  .popover-content{
+    color: #fff;
+    background: black;
     border: 2px solid white;
+    max-height: 45%;
+    top: 342px !important;
   }
-  .alert-title{
-    color: white;
-  }
-  .alert-radio-label{
+  ion-label{
     color: white;
   }
 }
 .categoryAlertCss{
-  .alert-wrapper{
-    background-color: black;
+  .popover-content{
+    color: #fff;
+    background: black;
     border: 2px solid white;
+    max-height: 45%;
+    top: 255px !important;
   }
-  .alert-title{
-    color: white;
-  }
-  .alert-radio-label{
+  ion-label{
     color: white;
   }
 }

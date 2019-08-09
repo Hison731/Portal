@@ -26,41 +26,10 @@
     </ion-toolbar>
     <div [ngSwitch]="pet">
         <div *ngSwitchCase="'addmenu'">
-            <!-- <div class="category_type">
-                <label for="PortalCategoryTypeId">Category</label>
-                <select name="category_type" id="PortalCategoryTypeId">
-                    <option value="0">Please Select a Category</option>
-                    <option value="1">Flowers - Indica</option>
-                    <option value="2">Flowers - Sativa</option>
-                    <option value="3">Flowers - Hybrid</option>
-                    <option value="7">Concentrates</option>
-                    <option value="9">Edibles</option>
-                    <option value="10">Drinks</option>
-                    <option value="11">Topical</option>
-                    <option value="12">Tinctures</option>
-                    <option value="13">Clones</option>
-                    <option value="14">Seeds</option>
-                    <option value="15">Merchandise</option>
-                </select>
-            </div> -->
-            <!-- <div class="category_type select_strain">
-                <label for="PortalCategoryTypeId">Strain</label>
-                <select name="category_type" id="PortalCategoryTypeId">
-                    <option value="0" selected="selected">Please Select a Strain</option>
-                    <option value="1" style="color: #f39c4e;">NOT LISTED BELOW</option>
-                    <option value="179">$100 OG</option>
-                    <option value="182">A-10</option>
-                    <option value="183">A-Train</option>
-                    <option value="738">Abusive OG Kush</option>
-                    <option value="184">Acapulco Gold</option>
-                    <option value="185">Ace of Spades</option>
-                </select>
-            </div> -->
             <ion-item class="ion_select category_type">
-                
-                <ion-label>Category</ion-label>
-                <ion-select [(ngModel)]="category" [selectOptions]="categoryAlertOpts">
-                    <ion-option value="0" selected>Please Select a Category</ion-option>
+                <ion-label>Category:</ion-label>
+                <ion-select [(ngModel)]="category" interface="popover" placeholder="Please Select a Category"
+                    [selectOptions]="categoryAlertOpts">
                     <ion-option value="1">Flowers - Indica</ion-option>
                     <ion-option value="2">Flowers - Sativa</ion-option>
                     <ion-option value="3">Flowers - Hybrid</ion-option>
@@ -75,10 +44,9 @@
                 </ion-select>
             </ion-item>
             <ion-item class="ion_select strain_type">
-                <ion-label>Strain</ion-label>
-                <ion-select [(ngModel)]="strain" [selectOptions]="musicAlertOpts">
-                    <ion-option value="0" selected>Please Select a Strain</ion-option>
-                    <ion-option value="2" style="color: #f39c4e;">NOT LISTED BELOW</ion-option>
+                <ion-label>Strain:</ion-label>
+                <ion-select [(ngModel)]="strain" [selectOptions]="strainAlertOpts" interface="popover" placeholder="Please Select a Strain">
+                    <ion-option value="2" style="color: #f39c4e !important">NOT LISTED BELOW</ion-option>
                     <ion-option value="3">$100 OG</ion-option>
                     <ion-option value="4">A-10</ion-option>
                     <ion-option value="5">A-Train</ion-option>
@@ -87,7 +55,12 @@
                     <ion-option value="8">Ace of Spades</ion-option>
                 </ion-select>
             </ion-item>
-            
+            <!-- <ion-item>
+                <ion-label>Port</ion-label>
+                <ionic-selectable [(ngModel)]="port" itemValueField="id" itemTextField="name"
+                  [items]="ports" [canSearch]="true" (onChange)="portChange($event)">
+                </ionic-selectable>
+              </ion-item> -->
             <form action="" class="input_form">
                 <div class="avatar-upload">
                     <div class="avatar-edit">

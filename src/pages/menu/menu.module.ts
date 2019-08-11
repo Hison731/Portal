@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-
+import { IonicSelectableModule } from 'ionic-selectable';
 
 
 // import { CommonModule } from '@angular/common';
@@ -11,10 +11,10 @@ import { IonicPageModule } from 'ionic-angular';
 
 
 import { MenuPage } from './menu';
-import { ComponentsModule } from '../../components/components.module'; 
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
-  declarations: [  
+  declarations: [
     MenuPage,
   ],
   imports: [
@@ -25,8 +25,8 @@ import { ComponentsModule } from '../../components/components.module';
 
 
     IonicPageModule.forChild(MenuPage),
-    ComponentsModule
-    // IonicSelectableModule
+    ComponentsModule,
+    IonicSelectableModule
   ],
 })
 export class MenuPageModule {}

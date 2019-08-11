@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-// import { IonicSelectableModule } from 'ionic-selectable';
+import { IonicSelectableModule } from 'ionic-selectable';
 import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -27,7 +27,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
     IonicImageViewerModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    // IonicSelectableModule
+    IonicSelectableModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

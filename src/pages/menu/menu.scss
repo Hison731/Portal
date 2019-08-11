@@ -56,31 +56,23 @@ page-menu {
     .category_type{
         margin-top: 40px;
         padding: 0 15px;
+        .select-text{
+            color: #EFA720;
+        }
+        .select-placeholder.select-text{
+            color: #d2d1d0;
+        }
        
     }
     .strain_type{
         padding: 0 15px;
         margin-top: 40px;
-    }
-    .strain_type1{
-        padding: 0 15px;
-        margin-top: 40px;
-        .strain_item{
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid white;
-            ion-label{
-                font-size: 16px;
-                color: white;
-            }
-            .item-inner{
-                border-bottom: none !important;
-            }
-            p{
-                
-            }
+        .select-text{
+            color: #EFA720;
         }
-        
+        .select-placeholder.select-text{
+            color: #d2d1d0;
+        }
     }
     //_________
 
@@ -222,8 +214,8 @@ page-menu {
     .note{
         margin-top: 5px;
         color: rgb(247, 190, 9);
-        padding-left: 25%;
-        padding-right: 10px;
+        padding-left: 15%;
+        padding-right: 0px;
         font-size: 16px;
         p{
             margin: 0;

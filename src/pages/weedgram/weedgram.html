@@ -39,13 +39,18 @@
     <div class="chat_box">
       <div class="input-wrap">
         <img src="../../assets/imgs/main_avatar.png" alt="">
-        <textarea #chat_input placeholder="Add a comment..." [(ngModel)]="editorMsg" rows="1">
+        <textarea #chat_input placeholder="Add a comment..." [(ngModel)]="editorMsg" rows="2">
                 </textarea>
         <button ion-button clear icon-only item-right (click)="sendMsg()" class="post_btn">
           Post
         </button>
       </div>
     </div>
+  </div>
+  <div class="title_bar">
+    <img src="../../assets/imgs/main_avatar.png" alt="">
+    <p>420Portal . <span>Follow</span></p>
+    <ion-icon name="more"></ion-icon>
   </div>
   <div class="each_content">
     <img src="../../assets/imgs/weedgram/2.jpg" alt="" style="width: 100%;">
@@ -83,6 +88,11 @@
         </button>
       </div>
     </div>
+  </div>
+  <div class="title_bar">
+    <img src="../../assets/imgs/main_avatar.png" alt="">
+    <p>420Portal . <span>Follow</span></p>
+    <ion-icon name="more"></ion-icon>
   </div>
   <div class="each_content">
     <img src="../../assets/imgs/weedgram/3.jpg" alt="" style="width: 100%;">

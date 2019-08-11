@@ -65,7 +65,7 @@
             <img src="../../assets/imgs/main_avatar.png" alt="">
           </div>
           <ion-item>
-            <ion-label floating>Search company</ion-label>
+            <ion-label floating>Search Company</ion-label>
             <ion-input type="text" value="" name="company"></ion-input>
           </ion-item>
         </ion-col>
@@ -124,17 +124,17 @@
               <ion-label floating>Search Products</ion-label>
               <ion-input type="text" value=""></ion-input>
             </ion-item>
-            <ion-item class="no-lines">
-              <select name="weightAmount" class="weight_sel">
-                <option value="all">Weight Amount</option>
-                <option name="price_half_gram" value="price_half_gram">0.5g</option>
-                <option name="price_gram" value="price_gram">g</option>
-                <option name="price_eighth" value="price_eighth">1/8</option>
-                <option name="price_quarter" value="price_quarter">1/4</option>
-                <option name="price_half_oz" value="price_half_oz">1/2</option>
-                <option name="price_oz" value="price_oz">oz</option>
-                <option name="price_each" value="price_each">each</option>
-              </select>
+            <ion-item class="weight_sel">
+              <ion-select [(ngModel)]="weight" interface="popover" placeholder="Weight Amount"
+                  [selectOptions]="weightAlertOpts">
+                <ion-option name="price_half_gram" value="price_half_gram">0.5g</ion-option>
+                <ion-option name="price_gram" value="price_gram">g</ion-option>
+                <ion-option name="price_eighth" value="price_eighth">1/8</ion-option>
+                <ion-option name="price_quarter" value="price_quarter">1/4</ion-option>
+                <ion-option name="price_half_oz" value="price_half_oz">1/2</ion-option>
+                <ion-option name="price_oz" value="price_oz">oz</ion-option>
+                <ion-option name="price_each" value="price_each">each</ion-option>
+              </ion-select>
             </ion-item>
             <ion-item>
               <ion-label floating>Max $</ion-label>

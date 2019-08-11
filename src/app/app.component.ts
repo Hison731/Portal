@@ -56,4 +56,8 @@ export class MyApp {
     console.log(username);
     this.nav.push("ProfilePage", {userName: username})
   }
+
+  weightAlertOpts: any = {
+    cssClass: 'weightAlertCss'
+  }
 }

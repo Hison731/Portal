@@ -1,51 +1,52 @@
 <ion-header (click)="closeFab(fab)">
-    <portal-header></portal-header>
+  <portal-header></portal-header>
 </ion-header>
 <ion-footer (click)="closeFab(fab)">
-    <portal-footer></portal-footer>
+  <portal-footer></portal-footer>
 </ion-footer>
 <ion-content class="menu-items">
-    <div class="title-white" ion-fixed>
-        <span>
-            <ion-icon name="close" (click)="back()" class="back_icon"></ion-icon>
-        </span>
-        <p>Add/Edit Menu</p>
-        <span>
-            <ion-icon name="checkmark" class="check_icon"></ion-icon>
-        </span>
-    </div>
-    <ion-toolbar no-border-top class="custom_segment_02" ion-fixed>
-        <ion-segment [(ngModel)]="pet">
-            <ion-segment-button value="addmenu">
-                Add Menu
-            </ion-segment-button> 
-            <ion-segment-button value="editmenu">
-                Edit Menu
-            </ion-segment-button>
-        </ion-segment>
-    </ion-toolbar>
-    <div [ngSwitch]="pet">
-        <div *ngSwitchCase="'addmenu'">
-            <ion-item class="ion_select category_type">
-                <ion-label>Category:</ion-label>
-                <ion-select [(ngModel)]="category" interface="popover" placeholder="Please Select a Category"
-                    [selectOptions]="categoryAlertOpts">
-                    <ion-option value="1">Flowers - Indica</ion-option>
-                    <ion-option value="2">Flowers - Sativa</ion-option>
-                    <ion-option value="3">Flowers - Hybrid</ion-option>
-                    <ion-option value="7">Concentrates</ion-option>
-                    <ion-option value="9">Edibles</ion-option>
-                    <ion-option value="10">Drinks</ion-option>
-                    <ion-option value="11">Topical</ion-option>
-                    <ion-option value="12">Tinctures</ion-option>
-                    <ion-option value="13">Clones</ion-option>
-                    <ion-option value="14">Seeds</ion-option>
-                    <ion-option value="15">Merchandise</ion-option>
-                </ion-select>
-            </ion-item>
-            <ion-item class="ion_select strain_type">
-                <ion-label>Strain:</ion-label>
-                <ion-select [(ngModel)]="strain" [selectOptions]="strainAlertOpts" interface="popover" placeholder="Please Select a Strain">
+  <div class="title-white" ion-fixed>
+    <span>
+      <ion-icon name="close" (click)="back()" class="back_icon"></ion-icon>
+    </span>
+    <p>Add/Edit Menu</p>
+    <span>
+      <ion-icon name="checkmark" class="check_icon"></ion-icon>
+    </span>
+  </div>
+  <ion-toolbar no-border-top class="custom_segment_02" ion-fixed>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="addmenu">
+        Add Menu
+      </ion-segment-button>
+      <ion-segment-button value="editmenu">
+        Edit Menu
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <div [ngSwitch]="pet">
+    <div *ngSwitchCase="'addmenu'">
+      <ion-item class="ion_select category_type">
+        <ion-label>Category:</ion-label>
+        <ion-select [(ngModel)]="category" interface="popover" placeholder="Please Select a Category" [selectOptions]="categoryAlertOpts">
+          <ion-option value="1">Flowers - Indica</ion-option>
+          <ion-option value="2">Flowers - Sativa</ion-option>
+          <ion-option value="3">Flowers - Hybrid</ion-option>
+          <ion-option value="7">Concentrates</ion-option>
+          <ion-option value="9">Edibles</ion-option>
+          <ion-option value="10">Drinks</ion-option>
+          <ion-option value="11">Topical</ion-option>
+          <ion-option value="12">Tinctures</ion-option>
+          <ion-option value="13">Clones</ion-option>
+          <ion-option value="14">Seeds</ion-option>
+          <ion-option value="15">Merchandise</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="ion_select strain_type">
+        <ion-label>Strain:</ion-label>
+        <ionic-selectable item-content [(ngModel)]="port" [items]="ports" itemValueField="id" itemTextField="name" [canSearch]="true">
+        </ionic-selectable>
+        <!-- <ion-select [(ngModel)]="strain" [selectOptions]="strainAlertOpts" interface="popover" placeholder="Please Select a Strain">
                     <ion-option value="2" style="color: #f39c4e !important">NOT LISTED BELOW</ion-option>
                     <ion-option value="3">$100 OG</ion-option>
                     <ion-option value="4">A-10</ion-option>
@@ -53,155 +54,155 @@
                     <ion-option value="6">Abusive OG Kush</ion-option>
                     <ion-option value="7">Acapulco Gold</ion-option>
                     <ion-option value="8">Ace of Spades</ion-option>
-                </ion-select>
-            </ion-item>
-            <!-- <ion-item>
+                </ion-select> -->
+      </ion-item>
+      <!-- <ion-item>
                 <ion-label>Port</ion-label>
                 <ionic-selectable [(ngModel)]="port" itemValueField="id" itemTextField="name"
                   [items]="ports" [canSearch]="true" (onChange)="portChange($event)">
                 </ionic-selectable>
               </ion-item> -->
-            <form action="" class="input_form">
-                <div class="avatar-upload">
-                    <div class="avatar-edit">
-                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                        <!-- <label for="imageUpload"></label> -->
-                    </div>
-                    <div class="avatar-preview">
-                        <!-- <div id="imagePreview" style="background-image: url(../../assets/imgs/main_avatar.png);"> -->
-                        <div id="imagePreview">
-                        </div>
-                    </div>
-                </div>
-                <p class="photo_title">Add Media</p>
-                <ion-list>
-                    <ion-item>
-                        <ion-label floating> Strain Name</ion-label>
-                        <ion-input type="text" value="" name="c_name"></ion-input>
-                    </ion-item>
-                    <div class="note">
-                        <p>
-                            <input type="checkbox" id="request_ch">
-                            <label for="request_ch">Request this Strain to be Added to 420Portal's Strain
-                                database.</label>
-                        </p>
-                    </div>
-                    <ion-item>
-                        <ion-label floating>Description</ion-label>
-                        <ion-textarea rows="3"></ion-textarea>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label floating>Price Gram</ion-label>
-                        <ion-input type="text" value=""></ion-input>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label floating>Price Eighth</ion-label>
-                        <ion-input type="text" value=""></ion-input>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label floating>Price Quarter</ion-label>
-                        <ion-input type="text" value=""></ion-input>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label floating>Price Half Oz</ion-label>
-                        <ion-input type="text" value=""></ion-input>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label floating>Price Oz</ion-label>
-                        <ion-input type="text" value=""></ion-input>
-                    </ion-item>
-                </ion-list>
-                <div padding>
-                    <button ion-button block class="save_btn">Submit</button>
-                </div>
-            </form>
-        </div>
-        <div *ngSwitchCase="'editmenu'">
-            <div class="dropdown_menu">
-                <ion-fab #fab>
-                    <button ion-fab>
-                        <img src="../../assets/imgs/search_options.png">
-                    </button>
-                    <ion-fab-list>
-                        <div class="drop_content">
-                            <ul>
-                                <li>Flowers-Indica</li>
-                                <li>Flowers-Sativa</li>
-                                <li>Flowers-Hybrid</li>
-                                <li>Concentrates</li>
-                                <li>Edibles</li>
-                                <li>Drinks</li>
-                                <li>Topical</li>
-                                <li>Tinctures</li>
-                                <li>Clones</li>
-                                <li>Seeds</li>
-                                <li>Merchandise</li>
-                            </ul>
-                        </div>
-                    </ion-fab-list>
-                </ion-fab>
+      <form action="" class="input_form">
+        <div class="avatar-upload">
+          <div class="avatar-edit">
+            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+            <!-- <label for="imageUpload"></label> -->
+          </div>
+          <div class="avatar-preview">
+            <!-- <div id="imagePreview" style="background-image: url(../../assets/imgs/main_avatar.png);"> -->
+            <div id="imagePreview">
             </div>
-
-            <div class="data_contain" (click)="closeFab(fab)">
-                <div class="each_data">
-                    <h6>FLOWERS - INDICA</h6>
-                    <p class="uname">goshawkyo</p>
-                    <div class="datavalue">
-                    </div>
-                    <span><i class="fa fa-edit"></i></span>
-                    <span><i class="fa fa-trash"></i></span>
-                    <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
-                </div>
-                <div class="each_data">
-                    <h6>FLOWERS - SATIVA</h6>
-                    <p class="uname">Blue Dream</p>
-                    <div class="datavalue">
-                        <p>10<sup>g</sup></p>
-                        <p>20<sup>1/8</sup></p>
-                        <p>30<sup>1/4</sup></p>
-                        <p>40<sup>1/2</sup></p>
-                        <p>50<sup>oz</sup></p>
-                    </div>
-                    <span><i class="fa fa-edit"></i></span>
-                    <span><i class="fa fa-trash"></i></span>
-                    <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
-                </div>
-                <div class="each_data">
-                    <h6>FLOWERS - HYBRID</h6>
-                    <p class="uname">Blue Dream</p>
-                    <div class="datavalue">
-                        <p>10<sup>g</sup></p>
-                        <p>20<sup>1/8</sup></p>
-                        <p>30<sup>1/4</sup></p>
-                        <p>40<sup>1/2</sup></p>
-                        <p>50<sup>oz</sup></p>
-                    </div>
-                    <span><i class="fa fa-edit"></i></span>
-                    <span><i class="fa fa-trash"></i></span>
-                    <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
-                </div>
-                <div class="each_data">
-                    <h6>EDIBLES</h6>
-                    <p class="uname">goshawkyo</p>
-                    <div class="datavalue">
-                        <p>10<sup>each</sup></p>
-                    </div>
-                    <span><i class="fa fa-edit"></i></span>
-                    <span><i class="fa fa-trash"></i></span>
-                    <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
-                </div>
-                <div class="each_data">
-                    <p class="uname">test <img src="./../assets/imgs/image.png" (click)="showImg()"></p>
-                    <div class="datavalue">
-                        <p>1<sup>each</sup></p>
-                    </div>
-                    <span><i class="fa fa-edit"></i></span>
-                    <span><i class="fa fa-trash"></i></span>
-                    <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
-                </div>
-
-
-            </div>
+          </div>
         </div>
+        <p class="photo_title">Add Media</p>
+        <ion-list>
+          <ion-item>
+            <ion-label floating> Strain Name</ion-label>
+            <ion-input type="text" value="" name="c_name"></ion-input>
+          </ion-item>
+          <div class="note">
+            <p>
+              <input type="checkbox" id="request_ch">
+              <label for="request_ch">Request this Strain to be Added to 420Portal's Strain
+                database.</label>
+            </p>
+          </div>
+          <ion-item>
+            <ion-label floating>Description</ion-label>
+            <ion-textarea rows="3"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Price Gram</ion-label>
+            <ion-input type="text" value=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Price Eighth</ion-label>
+            <ion-input type="text" value=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Price Quarter</ion-label>
+            <ion-input type="text" value=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Price Half Oz</ion-label>
+            <ion-input type="text" value=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Price Oz</ion-label>
+            <ion-input type="text" value=""></ion-input>
+          </ion-item>
+        </ion-list>
+        <div padding>
+          <button ion-button block class="save_btn">Submit</button>
+        </div>
+      </form>
     </div>
+    <div *ngSwitchCase="'editmenu'">
+      <div class="dropdown_menu">
+        <ion-fab #fab>
+          <button ion-fab>
+            <img src="../../assets/imgs/search_options.png">
+          </button>
+          <ion-fab-list>
+            <div class="drop_content">
+              <ul>
+                <li>Flowers-Indica</li>
+                <li>Flowers-Sativa</li>
+                <li>Flowers-Hybrid</li>
+                <li>Concentrates</li>
+                <li>Edibles</li>
+                <li>Drinks</li>
+                <li>Topical</li>
+                <li>Tinctures</li>
+                <li>Clones</li>
+                <li>Seeds</li>
+                <li>Merchandise</li>
+              </ul>
+            </div>
+          </ion-fab-list>
+        </ion-fab>
+      </div>
+
+      <div class="data_contain" (click)="closeFab(fab)">
+        <div class="each_data">
+          <h6>FLOWERS - INDICA</h6>
+          <p class="uname">goshawkyo</p>
+          <div class="datavalue">
+          </div>
+          <span><i class="fa fa-edit"></i></span>
+          <span><i class="fa fa-trash"></i></span>
+          <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+        <div class="each_data">
+          <h6>FLOWERS - SATIVA</h6>
+          <p class="uname">Blue Dream</p>
+          <div class="datavalue">
+            <p>10<sup>g</sup></p>
+            <p>20<sup>1/8</sup></p>
+            <p>30<sup>1/4</sup></p>
+            <p>40<sup>1/2</sup></p>
+            <p>50<sup>oz</sup></p>
+          </div>
+          <span><i class="fa fa-edit"></i></span>
+          <span><i class="fa fa-trash"></i></span>
+          <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+        <div class="each_data">
+          <h6>FLOWERS - HYBRID</h6>
+          <p class="uname">Blue Dream</p>
+          <div class="datavalue">
+            <p>10<sup>g</sup></p>
+            <p>20<sup>1/8</sup></p>
+            <p>30<sup>1/4</sup></p>
+            <p>40<sup>1/2</sup></p>
+            <p>50<sup>oz</sup></p>
+          </div>
+          <span><i class="fa fa-edit"></i></span>
+          <span><i class="fa fa-trash"></i></span>
+          <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+        <div class="each_data">
+          <h6>EDIBLES</h6>
+          <p class="uname">goshawkyo</p>
+          <div class="datavalue">
+            <p>10<sup>each</sup></p>
+          </div>
+          <span><i class="fa fa-edit"></i></span>
+          <span><i class="fa fa-trash"></i></span>
+          <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+        <div class="each_data">
+          <p class="uname">test <img src="./../assets/imgs/image.png" (click)="showImg()"></p>
+          <div class="datavalue">
+            <p>1<sup>each</sup></p>
+          </div>
+          <span><i class="fa fa-edit"></i></span>
+          <span><i class="fa fa-trash"></i></span>
+          <img src="./../assets/imgs/menu-activate.png" class="acitve_img">
+        </div>
+
+
+      </div>
+    </div>
+  </div>
 </ion-content>

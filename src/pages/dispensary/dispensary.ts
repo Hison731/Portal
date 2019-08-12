@@ -32,7 +32,7 @@ export class DispensaryPage {
           <h5>The Herbal Care Cent...</h5>
           <p>1301 S Western Ave,</p>
           <p>Chicago, IL 60608 60608</p>
-          <h3>Closed<span>5259.9miles</span></h3>
+          <h3>Closed<span>5259.9 Miles</span></h3>
         </div>
       </div>`,
       buttons: ['OK'],

@@ -43,7 +43,9 @@
         </ion-select>
       </ion-item>
       <ion-item class="ion_select strain_type">
-        <ion-label>Strain:</ion-label>
+        <ion-label>
+            Strain:
+        </ion-label>
         <ionic-selectable item-content [(ngModel)]="port" [items]="ports" itemValueField="id" itemTextField="name" [canSearch]="true" placeholder="Please Select a Strain" modalCssClass="search_strain-modal">
         </ionic-selectable>
       </ion-item>

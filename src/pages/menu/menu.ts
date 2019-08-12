@@ -29,12 +29,9 @@ export class MenuPage{
       { id: 7, name: 'Ace of Spades' }
     ];
   }
-  // portChange(event: {
-  //   component: IonicSelectableComponent,
-  //   value: any
-  // }) {
-  //   console.log('port:', event.value);
-  // }
+  back_menu() {
+    this.navCtrl.push('WeedgramPage', {}, {animate: false});
+  }
 
 
   categoryAlertOpts: any = {

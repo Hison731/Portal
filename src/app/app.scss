@@ -331,14 +331,17 @@ ion-fab {
         max-width: 100%;
       }
       .select-md{
-        padding-left: 0;
-        padding-bottom: 0px;
-        width: 31vw;
-        margin-bottom: -9px;
+        // padding-left: 0;
+        padding-bottom: 3px;
+        width: 100%;
+        // margin-bottom: -9px;
 
       }
       .select-placeholder{
         color: #d2d1d0;
+      }
+      .select-icon .select-icon-inner{
+        left: 11px;
       }
 
     }
@@ -519,8 +522,8 @@ ion-fab {
     color: #fff;
     background: black;
     border: 2px solid white;
-    max-height: 30%;
-    top: 30% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     width: 200px;
     left: unset !important;
     right: 50px;
@@ -530,8 +533,13 @@ ion-fab {
   }
 }
  
+
+// select strain modal css______________________________________________
 .search_strain-modal{
   background-color: black;
+  ion-navbar.toolbar{
+    border-bottom: 1px solid gray;
+  }
   .scroll-content{
       margin-top: 112px !important;
       background-color: black !important;
@@ -550,5 +558,18 @@ ion-fab {
     ion-icon.ion-md-radio-button-off {
       color: white;
     }
+  }
+  .searchbar-md .searchbar-input{
+    font-size: 17px !important;
+    padding-top: 10px;
+  }
+  .bar-button-md{
+    font-size: 20px;
+  }
+  .toolbar-title{
+    padding-top: 4px;
+  }
+  .searchbar-search-icon{
+    margin-top: 4px;
   }
 }

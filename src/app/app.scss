@@ -251,6 +251,7 @@ ion-fab {
     color: white;
     padding-top: 30px;
     font-size: 12px;
+    max-height: 150%;
     input[type="checkbox"], input[type="radio"]{
       width: 15px;
       height: 15px;
@@ -335,7 +336,7 @@ ion-fab {
       .select-md{
         padding-left: 0;
         padding-bottom: 0px;
-        width: 118px;
+        width: 31vw;
         margin-bottom: -9px;
 
       }
@@ -521,13 +522,36 @@ ion-fab {
     color: #fff;
     background: black;
     border: 2px solid white;
-    max-height: 25%;
-    top: 476px !important;
+    max-height: 30%;
+    top: 30% !important;
     width: 200px;
-    left: unset;
-    right: 30px;
+    left: unset !important;
+    right: 50px;
   }
   ion-label{
     color: white;
+  }
+}
+ 
+.search_strain-modal{
+  background-color: black;
+  .scroll-content{
+      margin-top: 112px !important;
+      background-color: black !important;
+  }
+  .toolbar-title{
+    color: black !important;
+  }
+  ion-label{
+    span{
+      color: white !important;
+    }
+   
+  }
+  
+  .ionic-selectable-item{
+    ion-icon.ion-md-radio-button-off {
+      color: white;
+    }
   }
 }

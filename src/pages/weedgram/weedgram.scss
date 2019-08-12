@@ -66,6 +66,9 @@ page-weedgram {
 	}
 	.each_content{
 		margin-bottom: 40px;
+		.post_comment_icon{
+			margin-top: -2px;
+		}
 	}
 	.extra_icons{
 		display: flex;

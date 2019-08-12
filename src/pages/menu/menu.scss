@@ -67,11 +67,18 @@ page-menu {
     .strain_type{
         padding: 0 15px;
         margin-top: 40px;
-        .select-text{
-            color: #EFA720;
+        .ionic-selectable{
+            max-width: 66%;
+            width: 66%;
         }
-        .select-placeholder.select-text{
-            color: #d2d1d0;
+        
+        .ionic-selectable-value{
+            .ionic-selectable-value-item{
+                color: #d2d1d0;
+            }
+            span .ionic-selectable-value-item{
+                color: #EFA720;
+            }
         }
     }
     //_________
@@ -214,7 +221,7 @@ page-menu {
     .note{
         margin-top: 5px;
         color: rgb(247, 190, 9);
-        padding-left: 15%;
+        padding-left: 8%;
         padding-right: 0px;
         font-size: 16px;
         p{
@@ -337,4 +344,16 @@ page-menu {
              opacity: 1 !important;
         }
    }
+   .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+    border-bottom-color:#dedede !important;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+   }
+
+
+   .search_strain-modal{
+        .scroll-content{
+            margin-top: 120px !important;
+        }
+    }
 }

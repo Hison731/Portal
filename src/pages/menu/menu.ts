@@ -20,9 +20,13 @@ export class MenuPage{
 
   constructor(public viewCtrl: ViewController, public navCtrl: NavController, public alertCtrl: AlertController) {
     this.ports = [
-      { id: 1, name: 'Tokai' },
-      { id: 2, name: 'Vladivostok' },
-      { id: 3, name: 'Navlakhi' }
+      { id: 1, name: 'NOT LISTED BELOW' },
+      { id: 2, name: '$100 OG' },
+      { id: 3, name: 'A-10' },
+      { id: 4, name: 'A-Train' },
+      { id: 5, name: 'Abusive OG Kush' },
+      { id: 6, name: 'Acapulco Gold' },
+      { id: 7, name: 'Ace of Spades' }
     ];
   }
   // portChange(event: {

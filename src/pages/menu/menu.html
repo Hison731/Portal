@@ -44,24 +44,9 @@
       </ion-item>
       <ion-item class="ion_select strain_type">
         <ion-label>Strain:</ion-label>
-        <ionic-selectable item-content [(ngModel)]="port" [items]="ports" itemValueField="id" itemTextField="name" [canSearch]="true">
+        <ionic-selectable item-content [(ngModel)]="port" [items]="ports" itemValueField="id" itemTextField="name" [canSearch]="true" placeholder="Please Select a Strain" modalCssClass="search_strain-modal">
         </ionic-selectable>
-        <!-- <ion-select [(ngModel)]="strain" [selectOptions]="strainAlertOpts" interface="popover" placeholder="Please Select a Strain">
-                    <ion-option value="2" style="color: #f39c4e !important">NOT LISTED BELOW</ion-option>
-                    <ion-option value="3">$100 OG</ion-option>
-                    <ion-option value="4">A-10</ion-option>
-                    <ion-option value="5">A-Train</ion-option>
-                    <ion-option value="6">Abusive OG Kush</ion-option>
-                    <ion-option value="7">Acapulco Gold</ion-option>
-                    <ion-option value="8">Ace of Spades</ion-option>
-                </ion-select> -->
       </ion-item>
-      <!-- <ion-item>
-                <ion-label>Port</ion-label>
-                <ionic-selectable [(ngModel)]="port" itemValueField="id" itemTextField="name"
-                  [items]="ports" [canSearch]="true" (onChange)="portChange($event)">
-                </ionic-selectable>
-              </ion-item> -->
       <form action="" class="input_form">
         <div class="avatar-upload">
           <div class="avatar-edit">

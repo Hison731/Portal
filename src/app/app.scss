@@ -510,8 +510,11 @@ ion-fab {
     color: #fff;
     background: black;
     border: 2px solid white;
-    max-height: 45%;
-    top: 255px !important;
+    max-height: 514px;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    top: 30px !important;
   }
   ion-label{
     color: white;

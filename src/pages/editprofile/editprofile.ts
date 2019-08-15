@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController, MenuController } from 'ionic-angular';
 import * as $ from 'jquery'
 
 @IonicPage() 
@@ -13,7 +13,7 @@ export class EditprofilePage {
   // mins: Array<{min: number}>;
   mins: string[];
 
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController) { 
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, private menuCtrl: MenuController) { 
     this.hours = [];
     for (let i = 2; i <= 12; i++) {
 
@@ -54,6 +54,11 @@ export class EditprofilePage {
     // $("#imageUpload").change(function() {
     //     readURL(this);
     // });
+  }
+
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 }
 

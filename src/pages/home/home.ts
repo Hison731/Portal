@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController, IonicPage } from 'ionic-angular';
+import { NavController, LoadingController, IonicPage, MenuController } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 
 @IonicPage()
@@ -12,7 +12,7 @@ export class HomePage {
   posts = [];
   totalPosts = [];
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController,
-    public dataProvider: DataProvider) {
+    public dataProvider: DataProvider, private menuCtrl: MenuController) {
 
     let loading = this.loadingCtrl.create({
       content: 'Loading...'
@@ -45,5 +45,10 @@ export class HomePage {
 
   openImageDetails(imageId){
     this.navCtrl.setRoot('ImagedetailsPage', {image_id: imageId});
+  }
+
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 }

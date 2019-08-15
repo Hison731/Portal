@@ -9,9 +9,13 @@ import { IonicPage, NavController, MenuController, ModalController, AlertControl
 
 })
 export class DispensaryPage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public menu: MenuController, public alertCtrl: AlertController) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public menu: MenuController, public alertCtrl: AlertController, private menuCtrl: MenuController) {
     menu.enable(true);
   }
+  ionViewDidEnter() {
+    this.menuCtrl.enable(true, 'menu2');
+  }
+
   dresult() {
     this.navCtrl.push('DresultPage', {}, {animate: false});
   }
@@ -40,7 +44,6 @@ export class DispensaryPage {
     });
     alert.present();
   }
-
 }
 
 

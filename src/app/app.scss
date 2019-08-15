@@ -492,6 +492,132 @@ ion-fab {
     display: none;
   }
 }
+.showCouponCss{
+  .alert-wrapper{
+    background-color: black;
+    border: 2px solid white;
+    max-width: 90%;
+    width: 75%;
+  }
+  .alert-message{
+    // min-height: 100%;
+    max-height: unset;
+  }
+  .alert-message, .alert-input-group{
+    padding: 15px;
+    // padding-bottom: 0;
+  }
+  .alert-head{
+    display: none;
+  }
+  
+  // /content css______________________________
+  .avatar_img{
+    width: 60px;
+    height: 60px;
+  }
+
+  h5{
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 30px; 
+    color: #efa720; 
+  }
+  .desc{
+    margin-bottom: 60px;
+  }
+  p{
+      font-size: 15px;
+      margin: 0; 
+      color: #fff;
+      line-height: 1;
+      padding-left: 5px;
+  }
+  .label-md{
+      margin: 0;
+  }
+  .content{
+      position: relative;
+      padding: 5px;
+      text-align: center;
+      height: 100%;
+  }
+  
+  .alert-button-group{
+    padding: 0;
+    display: none;
+  }
+  .bottom_logo{
+    width: 120px;
+    height: auto;
+  }
+}
+.showWeedgramCss{
+  .alert-wrapper{
+    background-color: black;
+    border: 2px solid white;
+    max-width: 90%;
+    width: 75%;
+  }
+  .alert-message{
+    max-height: unset;
+  }
+  .alert-message, .alert-input-group{
+    padding: 0;
+  }
+  .alert-head{
+    display: none;
+  }
+  
+  .alert-button-group{
+    padding: 0;
+    display: none;
+  }
+  .label-md{
+    margin: 0;
+  }
+  
+  // /content css________________
+  .title_bar{
+		display: flex;
+		align-items: center;
+		padding: 6px 20px 3px;
+		font-size: 20px;
+		position: relative;
+		img{
+			width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 5px;
+		}
+		p{
+			margin: 0;
+			padding-top: 3px;
+      font-size: 15px;
+      color: #efa720;
+		}
+	}
+  
+  .content{
+      position: relative;
+      text-align: center;
+      height: 100%;
+      padding-bottom: 3px;
+      .bottome_bar{
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        padding-left: 13px;
+        img{
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+  }
+
+  
+}
 //strain alert css
 .strainAlertCss{
   .popover-content{

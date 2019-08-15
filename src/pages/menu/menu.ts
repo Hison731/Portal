@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { IonicPage, NavController, ViewController, AlertController, FabContainer } from 'ionic-angular';
+import { IonicPage, NavController, ViewController, AlertController, FabContainer, MenuController } from 'ionic-angular';
 import { IonicSelectableComponent } from 'ionic-selectable';
 import { text } from '@angular/core/src/render3/instructions';
 
@@ -18,7 +18,7 @@ export class MenuPage{
   port: Port;
   pet: string = "addmenu";
 
-  constructor(public viewCtrl: ViewController, public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public viewCtrl: ViewController, public navCtrl: NavController, public alertCtrl: AlertController, private menuCtrl: MenuController) {
     this.ports = [
       { id: 1, name: 'NOT LISTED BELOW' },
       { id: 2, name: '$100 OG' },
@@ -56,5 +56,9 @@ export class MenuPage{
   }
   closeFab(fab: FabContainer) {
     fab.close();
+  }
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 }

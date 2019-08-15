@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, MenuController } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 
 /**
@@ -21,7 +21,7 @@ export class UserportalPage {
   selectedPortal:any = '';
   // specificPortalData:any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public dataProvider: DataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public dataProvider: DataProvider, private menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
@@ -61,6 +61,11 @@ export class UserportalPage {
 
   openPortalMenu(portalId:any){
     this.navCtrl.push("PortalprofilemenuPage",{portalId: portalId}, {animate:false})
+  }
+
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 
 }

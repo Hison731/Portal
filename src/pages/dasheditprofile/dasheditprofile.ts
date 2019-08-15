@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ModalController, MenuController } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 import * as $ from 'jquery'
 
@@ -10,7 +10,7 @@ import * as $ from 'jquery'
 
 })
 export class DasheditprofilePage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, private menuCtrl: MenuController) { }
   back() {
     this.navCtrl.push('DashboardPage', {}, {animate: false});
   }
@@ -30,6 +30,11 @@ export class DasheditprofilePage {
     // $("#imageUpload").change(function() {
     //     readURL(this);
     // });
+  }
+
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 }
 

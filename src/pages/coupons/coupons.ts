@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, MenuController } from 'ionic-angular';
 // import { CouponDetailPage } from '../coupon-detail/coupon-detail';
 
 /**
@@ -16,7 +16,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 })
 export class CouponsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController, private menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
@@ -30,6 +30,10 @@ export class CouponsPage {
 
   couponDetail(){
     this.navCtrl.push("CouponDetailPage", {}, {animate:false})
+  }
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 
 }

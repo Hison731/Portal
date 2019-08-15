@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { ChatwindowPage } from '../chatwindow/chatwindow';
 import { ImageViewerController } from 'ionic-img-viewer';
 
@@ -18,8 +18,12 @@ import { ImageViewerController } from 'ionic-img-viewer';
 export class ChatPage {
   _imageViewerCtrl: ImageViewerController;
   public isSearchbarOpened = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams, imageViewerCtrl: ImageViewerController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, imageViewerCtrl: ImageViewerController, private menuCtrl: MenuController) {
     this._imageViewerCtrl = imageViewerCtrl;
+  }
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 
   ionViewDidLoad() {

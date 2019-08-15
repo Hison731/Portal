@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Events, MenuController } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { HomePage } from '../home/home';
 import { AuthProvider } from '../../providers/auth/auth';
@@ -23,7 +23,7 @@ export class LoginPage {
     username: '',
     password: ''
   }
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public authProvider: AuthProvider, public dataProvider: DataProvider, public events: Events) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public authProvider: AuthProvider, public dataProvider: DataProvider, public events: Events, private menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
@@ -51,6 +51,11 @@ export class LoginPage {
 
   gotosignup() {
     this.navCtrl.setRoot("SignupPage")
+  }
+
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 
 }

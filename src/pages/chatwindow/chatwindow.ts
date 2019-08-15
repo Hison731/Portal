@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, MenuController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -12,7 +12,12 @@ export class ChatwindowPage {
   @ViewChild('chat_input') messageInput: ElementRef;
   editorMsg = '';
   @ViewChild(Content) content: Content;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
+  }
+
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 
   ionViewDidLoad() {

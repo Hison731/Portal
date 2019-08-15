@@ -9,7 +9,7 @@ import { IonicPage, NavController, MenuController} from 'ionic-angular';
 
 })
 export class DresultPage {
-  constructor(public navCtrl: NavController, public menu: MenuController) {}
+  constructor(public navCtrl: NavController, public menu: MenuController, private menuCtrl: MenuController) {}
   dispensary() {
     this.navCtrl.push('DispensaryPage', {}, {animate: false});
   }
@@ -17,6 +17,11 @@ export class DresultPage {
     this.menu.enable(true, 'menu2');
     this.menu.enable(false, 'menu1');
     this.menu.toggle();
+  }
+
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
+import { NavController, IonicPage, MenuController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -7,7 +7,7 @@ import { NavController, IonicPage } from 'ionic-angular';
   templateUrl: 'weedgram.html'
 })
 export class WeedgramPage {
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, private menuCtrl: MenuController) { }
   allcomment() {
     this.navCtrl.push('CommentPage', {}, {animate: false});
   }
@@ -48,5 +48,9 @@ export class WeedgramPage {
       }
       return false;
     });
+  }
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 }

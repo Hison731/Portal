@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController, AlertController, MenuController } from 'ionic-angular';
 // import { DataProvider } from '../../providers/data/data';
  
 @IonicPage()  
@@ -9,7 +9,7 @@ import { IonicPage, NavController, ModalController, AlertController } from 'ioni
 
 })
 export class MarijuanaPage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public alertCtrl: AlertController) { }
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public alertCtrl: AlertController, private menuCtrl: MenuController) { }
   showAlert() {
     const alert = this.alertCtrl.create({
       title: 'Find Your Marijuana Coupons',
@@ -18,6 +18,10 @@ export class MarijuanaPage {
       cssClass: 'alertCustomCss'
     });
     alert.present();
+  }
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController} from 'ionic-angular';
+import { IonicPage, NavController, ModalController, MenuController, AlertController} from 'ionic-angular';
 import * as $ from 'jquery'
  @IonicPage()  
 @Component({
@@ -8,7 +8,7 @@ import * as $ from 'jquery'
 
 })
 export class CompanyprofilePage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController) { 
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, private menuCtrl: MenuController, public alertCtrl: AlertController) { 
   }
   ionViewDidLoad() {
     var showChar = 120;
@@ -48,9 +48,27 @@ export class CompanyprofilePage {
       return false;
     });
   }
-  // openModal() {
-  //   let myModal = this.modalCtrl.create(SampleModalPage);
-  //   myModal.present();
-  // }
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
+  }
+  showCoupon() {
+    const alert = this.alertCtrl.create({
+      message: `
+      <div class="content">
+        <img src="../../assets/imgs/main_avatar.png" class="avatar_img">
+        <h5>Company Name</h5>
+        <div class="desc">
+          <p>Here is the description of the coupon. Here is the description</p>
+        </div>
+        <p>Expires: 8-17-2019</p>
+        <img src="../../assets/imgs/logo2.png" class="bottom_logo">
+      </div>`,
+      buttons: ['OK'],
+      cssClass: 'showCouponCss'
+    });
+    alert.present();
+  }
+
 }
 

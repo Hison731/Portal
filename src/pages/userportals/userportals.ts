@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController} from 'ionic-angular';
+import { IonicPage, NavController, ModalController, MenuController} from 'ionic-angular';
 // import { DataProvider } from '../../providers/data/data';
  
 @IonicPage()  
@@ -9,7 +9,7 @@ import { IonicPage, NavController, ModalController} from 'ionic-angular';
 
 })
 export class UserportalsPage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, private menuCtrl: MenuController) { }
   editprofile() {
     this.navCtrl.push('EditprofilePage', {}, {animate: false});
   }
@@ -24,6 +24,10 @@ export class UserportalsPage {
   }
   chatpage(){
     this.navCtrl.push('ChatPage', {}, { animate: false });
+  }
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 }
 

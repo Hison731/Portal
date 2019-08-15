@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ModalController, MenuController } from 'ionic-angular';
 // import * as $ from 'jquery'
 
 @IonicPage()
@@ -9,7 +9,7 @@ import { IonicPage, NavController, NavParams, LoadingController, ModalController
 
 })
 export class CmediaPage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController) { }
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, private menuCtrl: MenuController) { }
   back() {
     this.navCtrl.push('UserportalsPage', {}, {animate: false});
   }
@@ -29,6 +29,10 @@ export class CmediaPage {
     // $("#imageUpload").change(function() {
     //     readURL(this);
     // });
+  }
+  // right menu2 disable
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false, 'menu2');
   }
 }
 

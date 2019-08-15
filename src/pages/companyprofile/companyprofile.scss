@@ -136,8 +136,12 @@ page-companyprofile {
       display: flex;
       justify-content: space-evenly;
       align-items: baseline;
-      img{
-        max-width: 40px;
+      .menuicon_img{
+        max-width: 33px;
+        height: auto !important;
+      }
+      .couponicon_img{
+        max-width: 47px;
         height: auto !important;
       }
       i{

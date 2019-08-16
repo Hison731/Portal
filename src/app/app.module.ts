@@ -12,7 +12,7 @@ import { DataProvider } from '../providers/data/data';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthProvider } from '../providers/auth/auth';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // test modal
 // import { SampleModalPage } from '../pages/sample-modal/sample-modal';
 
@@ -27,7 +27,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
     IonicImageViewerModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    IonicSelectableModule
+    IonicSelectableModule,
+    BrowserAnimationsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

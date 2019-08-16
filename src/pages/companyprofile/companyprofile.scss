@@ -135,14 +135,18 @@ page-companyprofile {
     .controll_div{
       display: flex;
       justify-content: space-evenly;
-      align-items: baseline;
+      // align-items: baseline;
       .menuicon_img{
         max-width: 33px;
         height: auto !important;
+        margin-bottom: -5px;
+        margin-top: -2px;
       }
       .couponicon_img{
-        max-width: 47px;
+        max-width: 53px;
         height: auto !important;
+        margin-bottom: -7px;
+        margin-top: -7px;
       }
       i{
         font-size: 45px;
@@ -155,6 +159,10 @@ page-companyprofile {
         text-align: center;
         font-size: 24px;
         width: 25%;
+        position: relative;
+        .fa-comment-o{
+          margin-top: -2px;
+        }
       }
     }
   }

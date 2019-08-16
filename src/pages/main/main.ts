@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage, MenuController, AlertController } from 'ionic-angular';
 
+
 @IonicPage()
 @Component({
   selector: 'page-main',
@@ -15,6 +16,7 @@ export class MainPage {
   ionViewDidEnter() {
     this.menuCtrl.enable(false, 'menu2');
   }
+  // show popup
   showWeedgram() {
     setTimeout(() => {
       const alert = this.alertCtrl.create({
@@ -35,6 +37,17 @@ export class MainPage {
         cssClass: 'showWeedgramCss'
       });
       alert.present();
-    }, 2000);
+    }, 500);
   }
+  //touch close
+  closePopup(){
+    $('ion-alert').css('display', 'none');
+  }
+
+  // tooltip
+  // tooltipEvent: 'click' | 'press' = 'click';
+  tooltipEvent: 'hover';
+  showArrow: boolean = false;
+  duration: number = 3000;
+
 }

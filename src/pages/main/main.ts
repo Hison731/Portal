@@ -40,8 +40,12 @@ export class MainPage {
     }, 500);
   }
   //touch close
+  // private alert: Alert;
   closePopup(){
+    // this.alert.dismiss();
+    // $('ion-alert').remove();
     $('ion-alert').css('display', 'none');
+    // this.menuCtrl.enable(true, 'menu1');
   }
 
   // tooltip

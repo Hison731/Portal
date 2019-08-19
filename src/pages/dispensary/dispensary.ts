@@ -1,29 +1,79 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, MenuController, ModalController, AlertController } from 'ionic-angular';
-// import { DataProvider } from '../../providers/data/data';
+import { Geolocation } from '@ionic-native/geolocation';
+import 'rxjs/add/operator/map';
 
-@IonicPage() 
+declare var google;
+@IonicPage()
 @Component({
   selector: 'page-dispensary',
   templateUrl: 'dispensary.html'
 
 })
 export class DispensaryPage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public menu: MenuController, public alertCtrl: AlertController, private menuCtrl: MenuController) {
+  @ViewChild('map') mapContainer: ElementRef;
+  map: any;
+
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public menu: MenuController, public alertCtrl: AlertController, private menuCtrl: MenuController, public geolocation: Geolocation) {
     menu.enable(true);
   }
-  ionViewDidEnter() {
+  // ionViewDidEnter() {
+  //   this.menuCtrl.enable(true, 'menu2');
+  // }
+
+  ionViewDidLoad() {
     this.menuCtrl.enable(true, 'menu2');
+    // google map
+    this.displayGoogleMap();
+    this.addMarker();
   }
 
-  dresult() {
-    this.navCtrl.push('DresultPage', {}, {animate: false});
+  // display map function
+  displayGoogleMap() {
+    let latLng = new google.maps.LatLng(32.7886006, -117.0974963);
+    let mapOptions = {
+      center: latLng,
+      disableDefaultUI: true,
+      zoom: 10,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: true,
+      zoomControl: true,
+      scaleControl: true,
+      streetViewControl: true,
+      fullscreenControl: true
+    }
+    this.map = new google.maps.Map(this.mapContainer.nativeElement, mapOptions);
   }
-  openMenu() {
-    this.menu.enable(true, 'menu2');
-    this.menu.enable(false, 'menu1');
-    this.menu.toggle();
+
+  //  marker add
+  addMarker() {
+
+    var position = new google.maps.LatLng(32.7886006, -117.0974963);
+    var Marker = new google.maps.Marker({
+      position: position,
+      icon: {
+        url: "../../assets/imgs/dispensary-map.png",
+      },
+    });
+    let content = "<h4>Information!</h4>";
+    this.addInfoWindow(Marker, content);
+    Marker.setMap(this.map);
   }
+
+  // when click the mark, show the content alert
+  addInfoWindow(marker, content) {
+
+    let infoWindow = new google.maps.InfoWindow({
+      content: content
+    });
+
+    google.maps.event.addListener(marker, 'click', () => {
+      // infoWindow.open(this.map, marker);
+      this.showDoctor()
+    });
+
+  }
+  // marker content alert
   showDoctor() {
     const alert = this.alertCtrl.create({
       message: `
@@ -44,6 +94,20 @@ export class DispensaryPage {
     });
     alert.present();
   }
+
+  // go result page
+  dresult() {
+    this.navCtrl.push('DresultPage', {}, { animate: false });
+  }
+
+  // show side menu
+  openMenu() {
+    this.menu.enable(true, 'menu2');
+    this.menu.enable(false, 'menu1');
+    this.menu.toggle();
+  }
+
+
 }
 
 

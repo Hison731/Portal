@@ -38,7 +38,6 @@ export class LocationPage {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     this.map = new google.maps.Map(this.mapContainer.nativeElement, mapOptions);
-
   }
 
   getMarkersList() {
@@ -92,7 +91,7 @@ export class LocationPage {
   }
 
   addMarkersToMap(marker) {
-    console.log(marker)
+    console.log(marker.portalImage)
     var position = new google.maps.LatLng(marker.latitude, marker.longitude);
     var Marker = new google.maps.Marker({ position: position, title: marker.name, icon: marker.portalImage });
     // let content = museumMarker.title;

@@ -19,7 +19,7 @@ export class MyApp {
     this.initializeApp();
     this.pages = [
       {title: 'Home', component: "HomePage"},
-      // { title: 'Map', component: LocationPage },
+      // { title: 'Map', component: "LocationPage" },
       {title: 'Dispensary Delivery Doctor', component: "DispensaryPage"},
       {title: 'Chat', component: "ChatPage"},
       {title: 'Marijuana Strains', component: "StrainsPage"},
@@ -31,7 +31,7 @@ export class MyApp {
       {title: 'Companyprofile', component: "CompanyprofilePage"},
       {title: 'Marijuana', component: "MarijuanaPage"},
       {title: 'Marijuananews', component: "MarijuananewsPage"},
-      {title: 'Main', component: "MainPage"}
+      {title: 'Main', component: "MainPage"},
     ];
 
     if (localStorage.getItem("userCredentials")) {

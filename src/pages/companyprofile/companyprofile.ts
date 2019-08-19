@@ -1,16 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, ModalController, MenuController, AlertController} from 'ionic-angular';
-import * as $ from 'jquery'
- @IonicPage()  
+import { Geolocation } from '@ionic-native/geolocation';
+// import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+declare var google;
+@IonicPage()  
 @Component({
   selector: 'page-companyprofile',
   templateUrl: 'companyprofile.html'
 
 })
 export class CompanyprofilePage {
-  constructor(public modalCtrl: ModalController, public navCtrl: NavController, private menuCtrl: MenuController, public alertCtrl: AlertController) { 
+  @ViewChild('map') mapContainer: ElementRef;
+  map: any;
+
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, private menuCtrl: MenuController, public alertCtrl: AlertController, public geolocation: Geolocation) { 
   }
   ionViewDidLoad() {
+    // google map
+    this.displayGoogleMap();
+    this.addMarker();
+    // truncate 
     var showChar = 120;
     var ellipsestext = "...";
 
@@ -48,6 +59,33 @@ export class CompanyprofilePage {
       return false;
     });
   }
+
+  // display map function
+  displayGoogleMap() {
+    let latLng = new google.maps.LatLng(32.7886006, -117.0974963);
+    let mapOptions = {
+      center: latLng,
+      disableDefaultUI: true,
+      zoom: 10,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      fullscreenControl: true
+
+    }
+    this.map = new google.maps.Map(this.mapContainer.nativeElement, mapOptions);
+  }
+
+  addMarker(){
+
+    var position = new google.maps.LatLng(32.7886006, -117.0974963);
+    var Marker = new google.maps.Marker({ 
+          position: position,
+          icon: {
+            url: "../../assets/imgs/dispensary-map.png",
+          },
+        });
+    Marker.setMap(this.map);
+  }
+  
   // right menu2 disable
   ionViewDidEnter() {
     this.menuCtrl.enable(false, 'menu2');

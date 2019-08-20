@@ -1,0 +1,45 @@
+<ion-header>
+    <portal-header></portal-header>
+</ion-header>
+<ion-footer>
+    <portal-footer></portal-footer>
+</ion-footer>
+<ion-content class="menu-items">
+    <div class="title-white" ion-fixed>
+        <span><ion-icon name="close" (click)="back()" class="back_icon"></ion-icon></span>
+        <p>Media</p>
+        <span><ion-icon name="checkmark" class="check_icon"></ion-icon></span>
+    </div>
+    <form action="" class="input_form">
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload"></label>
+            </div>
+            <div class="avatar-preview">
+                <!-- <div id="imagePreview" style="background-image: url(../../assets/imgs/main_avatar.png);"> -->
+                <div id="imagePreview">
+                </div>
+            </div>
+        </div>
+        <p class="photo_title">Add Media</p>
+
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Description</ion-label>
+                <ion-textarea rows="3"></ion-textarea>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Tag Users:</ion-label>
+                <ion-input type="text" value="" name="c_name"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Tag Marijuana Strains:</ion-label>
+                <ion-input type="text" value=""></ion-input>
+            </ion-item>
+        </ion-list>
+        <div padding>
+            <button ion-button block class="save_btn">Save Media</button>
+        </div>
+    </form>
+</ion-content>

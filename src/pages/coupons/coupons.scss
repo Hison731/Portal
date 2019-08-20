@@ -1,0 +1,9 @@
+page-coupons {
+      ion-card, ion-item{
+        background: transparent !important;
+        border-bottom: 1px solid #fff;
+    }
+    h2{
+        color:color($colors, light, base) !important;
+    }    
+}
